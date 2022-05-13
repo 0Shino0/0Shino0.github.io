@@ -364,7 +364,7 @@
 <script>
     // 每天切换 banner 图.  Switch banner image every day.      new Date().getDay()
     // 随机一张图 Math.round(Math.random()*(y-x)+x)
-    const x = 0
+    const x = 0         /
     const y = 16
     var bannerUrl = "/medias/banner/" + Math.round(Math.random()*(y-x)+x)   + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
