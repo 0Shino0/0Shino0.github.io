@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Javascript, 0Shino0">
     <meta name="description" content="JavaScript简介：对常用的JavaScript数组方法和字符串方法进行总结，方便复习.
-遍历相关1234567891011- for          最基本的循环    用来专门遍历数组的      可以使用break和conti">
+
+遍历相关1234567891011- for          最基本的循环    用来专门遍历数组的      可以使用break和cont">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -498,6 +499,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>简介：对常用的JavaScript数组方法和字符串方法进行总结，方便复习.</p>
+<hr>
 <h4 id="遍历相关"><a href="#遍历相关" class="headerlink" title="遍历相关"></a>遍历相关</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- <span class="keyword">for</span>          最基本的循环    用来专门遍历数组的      可以使用<span class="keyword">break</span>和<span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">- <span class="keyword">for</span> <span class="keyword">in</span>       专门用来遍历对象的属性的，这个属性能遍历到还是遍历不到要看这个属性是不是</span><br><span class="line">  ​     <span class="comment">// for in 效率最低，因为除了遍历自身以外还要遍历原型</span></span><br><span class="line"></span><br><span class="line">- <span class="keyword">for</span> <span class="keyword">of</span>       </span><br><span class="line">  - ​     <span class="comment">// 专门遍历可迭代的数据  ...  (能用可迭代，就用三点) </span></span><br><span class="line">  - ​     <span class="comment">// 数组有迭代器</span></span><br><span class="line">  - ​     <span class="comment">// 对象没有</span></span><br><span class="line"></span><br><span class="line">- forEach      是一个数组的方法，效率极高  但是不可以使用<span class="keyword">break</span>和<span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
 
 
@@ -717,7 +719,7 @@
 </ul>
 <h4 id="元素的大小和位置"><a href="#元素的大小和位置" class="headerlink" title="元素的大小和位置"></a>元素的大小和位置</h4><h5 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h5><ul>
 <li><p><strong>client</strong>系列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">页可见区域宽： document.body.clientWidth;</span><br><span class="line">网页可见区域高： document.body.clientHeight;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">页可见区域宽： document.body.clientWidth;</span><br><span class="line">网页可见区域高： document.body.clientHeight;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>offset</strong>系列</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网页可见区域宽： document.body.offsetWidth   (包括边线的宽);</span><br><span class="line">网页可见区域高： document.body.offsetHeight (包括边线的宽);</span><br></pre></td></tr></table></figure>
@@ -726,7 +728,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">网页正文全文宽： document.body.scrollWidth;</span><br><span class="line">网页正文全文高： document.body.scrollHeight;</span><br><span class="line">网页被卷去的高： document.body.scrollTop;</span><br><span class="line">网页被卷去的左： document.body.scrollLeft;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h5 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h5>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">网页正文部分上： window.screenTop;</span><br><span class="line">网页正文部分左： window.screenLeft;</span><br><span class="line">屏幕分辨率的高： window.screen.height;</span><br><span class="line">屏幕分辨率的宽： window.screen.width;</span><br><span class="line">屏幕可用工作区高度： window.screen.availHeight;</span><br></pre></td></tr></table></figure>
-
 
 
                 
