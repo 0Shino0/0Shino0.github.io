@@ -5,12 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Javascript, 0Shino0">
-    <meta name="description" content="JavaScript元素的大小和位置PC
-client系列
-123页可见区域宽： document.body.clientWidth;网页可见区域高： document.body.clientHeight;
-
-offset系列
-12网页可见">
+    <meta name="description" content="JavaScript简介：对常用的JavaScript数组方法和字符串方法进行总结，方便复习.
+遍历相关1234567891011- for          最基本的循环    用来专门遍历数组的      可以使用break和conti">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -501,20 +497,7 @@ offset系列
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><h4 id="元素的大小和位置"><a href="#元素的大小和位置" class="headerlink" title="元素的大小和位置"></a>元素的大小和位置</h4><h5 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h5><ul>
-<li><p><strong>client</strong>系列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">页可见区域宽： document.body.clientWidth;</span><br><span class="line">网页可见区域高： document.body.clientHeight;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>offset</strong>系列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网页可见区域宽： document.body.offsetWidth   (包括边线的宽);</span><br><span class="line">网页可见区域高： document.body.offsetHeight (包括边线的宽);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>scroll</strong>系列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">网页正文全文宽： document.body.scrollWidth;</span><br><span class="line">网页正文全文高： document.body.scrollHeight;</span><br><span class="line">网页被卷去的高： document.body.scrollTop;</span><br><span class="line">网页被卷去的左： document.body.scrollLeft;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h5 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h5>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">网页正文部分上： window.screenTop;</span><br><span class="line">网页正文部分左： window.screenLeft;</span><br><span class="line">屏幕分辨率的高： window.screen.height;</span><br><span class="line">屏幕分辨率的宽： window.screen.width;</span><br><span class="line">屏幕可用工作区高度： window.screen.availHeight;</span><br></pre></td></tr></table></figure>
-
-
-
+                <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>简介：对常用的JavaScript数组方法和字符串方法进行总结，方便复习.</p>
 <h4 id="遍历相关"><a href="#遍历相关" class="headerlink" title="遍历相关"></a>遍历相关</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- <span class="keyword">for</span>          最基本的循环    用来专门遍历数组的      可以使用<span class="keyword">break</span>和<span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">- <span class="keyword">for</span> <span class="keyword">in</span>       专门用来遍历对象的属性的，这个属性能遍历到还是遍历不到要看这个属性是不是</span><br><span class="line">  ​     <span class="comment">// for in 效率最低，因为除了遍历自身以外还要遍历原型</span></span><br><span class="line"></span><br><span class="line">- <span class="keyword">for</span> <span class="keyword">of</span>       </span><br><span class="line">  - ​     <span class="comment">// 专门遍历可迭代的数据  ...  (能用可迭代，就用三点) </span></span><br><span class="line">  - ​     <span class="comment">// 数组有迭代器</span></span><br><span class="line">  - ​     <span class="comment">// 对象没有</span></span><br><span class="line"></span><br><span class="line">- forEach      是一个数组的方法，效率极高  但是不可以使用<span class="keyword">break</span>和<span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
 
 
@@ -551,7 +534,7 @@ offset系列
 <ul>
 <li>返回值</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">返回值</span><br><span class="line"></span><br><span class="line">返回一个布尔值 Boolean 。</span><br><span class="line">]如果在数组中（或 fromIndex 指定的范围中）找到了 valueToFind，则返回 true，否则返回 false。</span><br><span class="line">0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），</span><br><span class="line">但 false 不被认为与 0 相等。</span><br><span class="line">备注： 技术上来讲，includes() 使用 零值相等 算法来确定是否找到给定的元素。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">返回一个布尔值 Boolean 。</span><br><span class="line">]如果在数组中（或 fromIndex 指定的范围中）找到了 valueToFind，则返回 true，否则返回 false。</span><br><span class="line">0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），</span><br><span class="line">但 false 不被认为与 0 相等。</span><br><span class="line">备注： 技术上来讲，includes() 使用 零值相等 算法来确定是否找到给定的元素。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>示例</li>
@@ -586,7 +569,7 @@ offset系列
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">arr.sort([compareFunction])</span><br><span class="line"></span><br><span class="line">参数</span><br><span class="line">compareFunction 可选</span><br><span class="line">    用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的Unicode位点进行排序。</span><br><span class="line"></span><br><span class="line">    firstEl</span><br><span class="line">        第一个用于比较的元素。</span><br><span class="line">    secondEl</span><br><span class="line">        第二个用于比较的元素。</span><br><span class="line"></span><br><span class="line">返回值</span><br><span class="line">排序后的数组。请注意，数组已原地排序，并且不进行复制。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>注意</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- 也会影响原数组，默认会按照Unicode编码进行排序</span><br><span class="line"></span><br><span class="line">带有compareFunction 参数时,</span><br><span class="line">    如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前；</span><br><span class="line">    如果 compareFunction(a, b) 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</span><br><span class="line">    如果 compareFunction(a, b) 大于 0 ， b 会被排列到 a 之前。</span><br><span class="line">    compareFunction(a, b) 必须总是对相同的输入返回相同的比较结果，否则排序的结果将是不确定的。</span><br><span class="line">    </span><br><span class="line">    、、、通俗理解</span><br><span class="line">    比较函数应该具有两个参数 a 和 b，其返回值如下：</span><br><span class="line">若 a 小于 b，即 a - b 小于零，则返回一个小于零的值，数组将按照升序排列。</span><br><span class="line">若 a 等于 b，则返回 0。</span><br><span class="line">若 a 大于 b, 即 a - b 大于零，则返回一个大于零的值，数组将按照降序排列。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">也会影响原数组，默认会按照Unicode编码进行排序</span><br><span class="line"></span><br><span class="line">带有compareFunction 参数时,</span><br><span class="line">    如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前；</span><br><span class="line">    如果 compareFunction(a, b) 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</span><br><span class="line">    如果 compareFunction(a, b) 大于 0 ， b 会被排列到 a 之前。</span><br><span class="line">    compareFunction(a, b) 必须总是对相同的输入返回相同的比较结果，否则排序的结果将是不确定的。</span><br><span class="line">    </span><br><span class="line">    、、、通俗理解</span><br><span class="line">    比较函数应该具有两个参数 a 和 b，其返回值如下：</span><br><span class="line">若 a 小于 b，即 a - b 小于零，则返回一个小于零的值，数组将按照升序排列。</span><br><span class="line">若 a 等于 b，则返回 0。</span><br><span class="line">若 a 大于 b, 即 a - b 大于零，则返回一个大于零的值，数组将按照降序排列。</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">MDN</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/saifei/p/9043821.html">简单使用</a></p>
@@ -602,7 +585,7 @@ offset系列
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">array.filter(function(currentValue,index,arr), thisValue)</span><br><span class="line"></span><br><span class="line">function(currentValue, index,arr) 	</span><br><span class="line">必须。函数，数组中的每个元素都会执行这个函数</span><br><span class="line">函数参数:</span><br><span class="line">	currentValue 	必须。当前元素的值</span><br><span class="line">	index 			可选。当前元素的索引值</span><br><span class="line">	arr 			可选。当前元素属于的数组对象</span><br><span class="line">thisValue 		可选。对象作为该执行回调时使用，传递给函数，用作 &quot;this&quot; 的值。</span><br><span class="line">	如果省略了 thisValue ，&quot;this&quot; 的值为 &quot;undefined&quot;</span><br><span class="line"></span><br><span class="line">返回值</span><br><span class="line">一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>总结</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//用作过滤器</span><br><span class="line">array.filter((currentValue,index,arr) =&gt; &#123;</span><br><span class="line">		return (过滤条件)</span><br><span class="line">&#125;, thisValue)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//用作过滤器</span><br><span class="line">array.filter((currentValue,index,arr) =&gt; &#123;</span><br><span class="line">		return (过滤条件)</span><br><span class="line">&#125;, thisValue)</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>注意：</strong> filter() 不会对空数组进行检测。</p>
 </li>
@@ -677,7 +660,7 @@ offset系列
 </code></pre>
 <ul>
 <li><p>注意</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用splice()会影响到原数组，会将指定元素从原数组中删除，被删除的元素作为返回值返回</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用splice()会影响到原数组，会将指定元素从原数组中删除，被删除的元素作为返回值返回</span><br><span class="line">     </span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -719,7 +702,7 @@ offset系列
 </ul>
 <h5 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h5><ul>
 <li><p>描述</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**`trim()`** 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR等）。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`trim()`方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR等）。</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`trim()` 方法返回一个从两头去掉空白字符的字符串，并不影响原字符串本身。</span><br></pre></td></tr></table></figure>
 </li>
@@ -730,8 +713,21 @@ offset系列
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个代表调用字符串两端去掉空白的新字符串。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>兼容久环境、</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (!String.prototype.trim) &#123;</span><br><span class="line">  String.prototype.trim = function () &#123;</span><br><span class="line">    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, &#x27;&#x27;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (!String.prototype.trim) &#123;</span><br><span class="line">  String.prototype.trim = function () &#123;</span><br><span class="line">    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, &#x27;&#x27;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure></li>
 </ul>
+<h4 id="元素的大小和位置"><a href="#元素的大小和位置" class="headerlink" title="元素的大小和位置"></a>元素的大小和位置</h4><h5 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h5><ul>
+<li><p><strong>client</strong>系列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">页可见区域宽： document.body.clientWidth;</span><br><span class="line">网页可见区域高： document.body.clientHeight;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>offset</strong>系列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网页可见区域宽： document.body.offsetWidth   (包括边线的宽);</span><br><span class="line">网页可见区域高： document.body.offsetHeight (包括边线的宽);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>scroll</strong>系列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">网页正文全文宽： document.body.scrollWidth;</span><br><span class="line">网页正文全文高： document.body.scrollHeight;</span><br><span class="line">网页被卷去的高： document.body.scrollTop;</span><br><span class="line">网页被卷去的左： document.body.scrollLeft;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h5>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">网页正文部分上： window.screenTop;</span><br><span class="line">网页正文部分左： window.screenLeft;</span><br><span class="line">屏幕分辨率的高： window.screen.height;</span><br><span class="line">屏幕分辨率的宽： window.screen.width;</span><br><span class="line">屏幕可用工作区高度： window.screen.availHeight;</span><br></pre></td></tr></table></figure>
+
+
 
                 
             </div>
