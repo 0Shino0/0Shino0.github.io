@@ -2143,3 +2143,14 @@ p.search-result-summary{
     padding: 0;
     margin: 0;
 }
+
+/* 
+有时候请求busuanzi数据比较慢，然后浏览量和访问人数就会隐藏，可能是默认的，
+在matery.css中增加以下代码可以让它一直显示
+*/
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv,
+#busuanzi_value_site_uv{
+   display: inline !important;
+}
