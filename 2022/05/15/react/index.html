@@ -486,21 +486,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-15
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.6k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 mins. 分
+                    6 分
                 </div>
                 
 
@@ -526,159 +526,157 @@
 <li>基于组件：构建管理其状态的封装组件，然后将它们组合成复杂的 UI。由于组件逻辑是用 JavaScript 而不是模板编写的，因此您可以轻松地通过应用程序传递丰富的数据并将状态保持在 DOM 之外。</li>
 <li>一次学习，随处编写：我们不对您的技术堆栈的其余部分做出假设，因此您可以在 React 中开发新功能而无需重写现有代码。React 还可以使用 Node 在服务器上呈现，并使用React Native为移动应用程序提供动力。</li>
 </ul>
-<h4 id="jsx语法规则"><a href="#jsx语法规则" class="headerlink" title="jsx语法规则:"></a>jsx语法规则:</h4><p>1.创建虚拟DOM时，不要用引号</p>
-<p>2.标签中想混入js表达式，需要用{}包裹</p>
-<p>3.根标签只能有一个</p>
-<p>4.标签必须闭合</p>
-<p>5.样式的类名，不要用class，必须用className</p>
-<p>6.内联的样式要用下列形式style&#x3D; “{{}}"                
-
-    
-7.标签可以随意的编写:
-
-  (1).若标签首字母是【小写】的,则react会尝试将当前的jsx标签对应成一个html标签
-
-  - ​                  若对应成了,直接渲染,展示
-
-  - ​                  若无法对应,直接报错
-
-- ​(1).若标签首字母是【大写】的,react会查找Haha组件的定义的位置
-
-  - ​若找见了,直接渲染Haha组件
-
-
-  - ​若未找见,报错(Haha is not defined)
-
-
-#### 组件
-##### 函数式组件
-
-```jsx
-       <script type="text/babel"> 
-            //1.定义组件(函数式组件)
-            function MyComponent(){
-            console.log(this); //此处的this是undefined，因为经过babel的编译后，开启了严格模式。
-            return <h2>我是用函数定义的组件（适用于【简单组件】的定义）</h2>
-            }
-            function MyComponent2(){
-            console.log(this); //此处的this是undefined，因为经过babel的编译后，开启了严格模式。
-            return <h2>我是用函数定义的组件（适用于【简单组件】的定义2）</h2>
-            }
-            //2.渲染组件到页面
-            ReactDOM.render(<MyComponent/>,document.getElementById('test'))
-            ReactDOM.render(<MyComponent2/>,document.getElementById('test2'))
-            /* 
+<h4 id="jsx语法规则"><a href="#jsx语法规则" class="headerlink" title="jsx语法规则:"></a>jsx语法规则:</h4><ul>
+<li><p>1.创建虚拟DOM时，不要用引号</p>
+</li>
+<li><p>2.标签中想混入js表达式，需要用{}包裹</p>
+</li>
+<li><p>3.根标签只能有一个</p>
+</li>
+<li><p>4.标签必须闭合</p>
+</li>
+<li><p>5.样式的类名，不要用class，必须用className</p>
+</li>
+<li><p>6.内联的样式要用下列形式 ( 双括号会报错所以采取图片的形式展现 )<br><img src="/2022/05/15/react/React/style.png" alt="style"></p>
+</li>
+<li><p>7.标签可以随意的编写:</p>
+<ul>
+<li><p>(1).若标签首字母是【小写】的,则react会尝试将当前的jsx标签对应成一个html标签</p>
+<ul>
+<li><p>​                  若对应成了,直接渲染,展示</p>
+</li>
+<li><p>​                  若无法对应,直接报错</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>​(1).若标签首字母是【大写】的,react会查找Haha组件的定义的位置</p>
+<ul>
+<li><p>​若找见了,直接渲染Haha组件</p>
+</li>
+<li><p>​若未找见,报错(Haha is not defined)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><h5 id="函数式组件"><a href="#函数式组件" class="headerlink" title="函数式组件"></a>函数式组件</h5><pre class=" language-jsx"><code class="language-jsx">       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+            <span class="token comment" spellcheck="true">//1.定义组件(函数式组件)</span>
+            <span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//此处的this是undefined，因为经过babel的编译后，开启了严格模式。</span>
+            <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>我是用函数定义的组件（适用于【简单组件】的定义）<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+            <span class="token entity" title="&#125;">&amp;#125;</span>
+            <span class="token keyword">function</span> <span class="token function">MyComponent2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//此处的this是undefined，因为经过babel的编译后，开启了严格模式。</span>
+            <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>我是用函数定义的组件（适用于【简单组件】的定义<span class="token number">2</span>）<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+            <span class="token entity" title="&#125;">&amp;#125;</span>
+            <span class="token comment" spellcheck="true">//2.渲染组件到页面</span>
+            ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyComponent</span><span class="token punctuation">/></span></span><span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyComponent2</span><span class="token punctuation">/></span></span><span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test2'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true">/* 
             执行了ReactDOM.render后，发生了什么？
-            1.React发现了<MyComponent/>标签，去寻找MyComponent组件定义的位置，发现MyComponent是用函数定义的。
+            1.React发现了&lt;MyComponent/>标签，去寻找MyComponent组件定义的位置，发现MyComponent是用函数定义的。
             2.React调用MyComponent并获取MyComponent返回的虚拟DOM，随后转为真实DOM，随后渲染到页面。
-            */
-      </script>
-```
-
-##### 类式组件
-
-```jsx
-    <script type="text/babel"> 
-        //定义组件
-        class MyComponent extends React.Component{
-            //render是放在哪里的？ —————— MyComponent的原型对象上，是给MyComponent的					实例对象用的。
-            render(){
-                console.log(this); //MyComponent的实例对象 <==> MyComponent组件实例对象
-                return <h2>我是用类定义的组件（适用于【复杂组件】的定义）</h2>
-            }
-        }
-        //渲染组件到页面
-        ReactDOM.render(<MyComponent/>,document.getElementById('test'))
-        /* 
+            */</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<h5 id="类式组件"><a href="#类式组件" class="headerlink" title="类式组件"></a>类式组件</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+        <span class="token comment" spellcheck="true">//定义组件</span>
+        <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token entity" title="&#123;">&amp;#123;</span>
+            <span class="token comment" spellcheck="true">//render是放在哪里的？ —————— MyComponent的原型对象上，是给MyComponent的					实例对象用的。</span>
+            <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//MyComponent的实例对象 &lt;==> MyComponent组件实例对象</span>
+                <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>我是用类定义的组件（适用于【复杂组件】的定义）<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+            <span class="token entity" title="&#125;">&amp;#125;</span>
+        <span class="token entity" title="&#125;">&amp;#125;</span>
+        <span class="token comment" spellcheck="true">//渲染组件到页面</span>
+        ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyComponent</span><span class="token punctuation">/></span></span><span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">/* 
                 执行了ReactDOM.render后，发生了什么？
-                        1.React发现了<MyComponent/>标签，去寻找MyComponent组件定义的位置，发现MyComponent是用类定义的。
+                        1.React发现了&lt;MyComponent/>标签，去寻找MyComponent组件定义的位置，发现MyComponent是用类定义的。
                         2.React new了一个MyComponent实例对象--m
                         3.通过m调用到了MyComponent原型上的render方法，并获取到了返回的虚拟DOM，随后转为真实DOM，放在页面。
-        */
-    </script>
-```
-
-##### 生命周期相关
-**旧**(react16.4之前)
-
-  1. 初始化阶段: 由ReactDOM.render()触发---初次渲染
-      	  1.	constructor()
-          2.	componentWillMount()
-          3.	render()
-          4.	==componentDidMount() \=\=\=\=> 常用
-             					一般在这个钩子中做一些初始化的事，例如：开启定时器、发送网络请求、订阅消息==
-  2. 更新阶段: 由组件内部this.setSate()或父组件render触发this.forceUpdate()
-     	1.	shouldComponentUpdate() 注意：强制更新不走“阀门”
-     	2.	componentWillUpdate()
-     	3.	==render()==
-           componentDidUpdate()
-  3. 卸载组件: 由ReactDOM.unmountComponentAtNode()触发
-     1. ==componentWillUnmount()  \=\=\=\=> 常用==
-
-  ==一般在这个钩子中做一些收尾的事，例如：关闭定时器、取消订阅消息==
-
-![react生命周期(旧)](\React\react生命周期(旧).png)
-
-- **新**(react16.4之后)
-
-![react生命周期(新)](React\react生命周期(新).png)
-
-##### 组件总结
-- **最重要的三组件**
-  - componentDidMount() 
-  - render()
-  - componentWillUnmount() 
-
- **组件的三大属性**
-
-- **state**
-
-  - 用来存储状态
-
-  - 严重注意:**状态(state)中值是不能直接修改的**！！！下面这一行就是直接修改
-
-```jsx
-    this.state.isHot = true;
-```
-
-    **需要通过this.setState()方法来修改**
-
-- **props**
-
-  - 用于接收标签中传递的数据
-
-- **refs**
-
-  - 简介：对标签的一种标识，用于获取数据。类式标签中的id
-
-  - **三种形式**
-
-    - 字符串形式:
-
-    ```jsx
-        <input ref="input1" type="text" placeholder="点击按钮提示输入">
-    ```
-
-    - **回调形式(推荐):**
-
-    ```jsx
-        <input ref="{c" => {this.input1 = c}} type&#x3D;”text” placeholder&#x3D;”点击按钮提示输入”&#x2F;&gt;<br>    &#96;&#96;&#96;</p>
-<pre><code>- createRef形式:
-
-```jsx
-    container1 = React.createRef()    //创建一个createRef() ，只能存储一个ref
-    
-    render()&#123;
-        return(
-            &lt;div&gt;
-                &lt;input ref=&#123;this.container1&#125; type=&quot;text&quot; placeholder=&quot;点击按钮提示输入&quot;/&gt;    
-                &lt;button onClick=&#123;this.showData&#125;&gt;点我提示数据&lt;/button&gt;
-                &lt;input ref=&#123;this.container2&#125; onBlur=&#123;this.showData2&#125; type=&quot;text&quot; placeholder=&quot;点击焦点提示输入&quot;/&gt;
-                        &lt;/div&gt;
-                    )
-                &#125;
-```
+        */</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
+<h5 id="生命周期相关"><a href="#生命周期相关" class="headerlink" title="生命周期相关"></a>生命周期相关</h5><p><strong>旧</strong>(react16.4之前)</p>
+<ol>
+<li>初始化阶段: 由ReactDOM.render()触发—初次渲染<br>   1.	constructor()<br> 2.	componentWillMount()<br> 3.	render()<br> 4.	&#x3D;&#x3D;componentDidMount() ====&gt; 常用<br>                        一般在这个钩子中做一些初始化的事，例如：开启定时器、发送网络请求、订阅消息&#x3D;&#x3D;</li>
+<li>更新阶段: 由组件内部this.setSate()或父组件render触发this.forceUpdate()<br>1.	shouldComponentUpdate() 注意：强制更新不走“阀门”<br>2.	componentWillUpdate()<br>3.	&#x3D;&#x3D;render()&#x3D;&#x3D;<br>  componentDidUpdate()</li>
+<li>卸载组件: 由ReactDOM.unmountComponentAtNode()触发<ol>
+<li>&#x3D;&#x3D;componentWillUnmount()  ====&gt; 常用&#x3D;&#x3D;</li>
+</ol>
+</li>
+</ol>
+<p>  &#x3D;&#x3D;一般在这个钩子中做一些收尾的事，例如：关闭定时器、取消订阅消息&#x3D;&#x3D;</p>
+<p><img src="/2022/05/15/react/React/react-life-old.png" alt="react生命周期(旧)"></p>
+<ul>
+<li><strong>新</strong>(react16.4之后)</li>
+</ul>
+<p><img src="/2022/05/15/react/React/react-life-new.png" alt="react生命周期(新)"></p>
+<h5 id="组件总结"><a href="#组件总结" class="headerlink" title="组件总结"></a>组件总结</h5><ul>
+<li><strong>最重要的三组件</strong><ul>
+<li>componentDidMount() </li>
+<li>render()</li>
+<li>componentWillUnmount()</li>
+</ul>
+</li>
+</ul>
+<p> <strong>组件的三大属性</strong></p>
+<ul>
+<li><p><strong>state</strong></p>
+<ul>
+<li><p>用来存储状态</p>
+</li>
+<li><p>严重注意:<strong>状态(state)中值是不能直接修改的</strong>！！！下面这一行就是直接修改</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>isHot <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code>**需要通过this.setState()方法来修改**
+</code></pre>
+<ul>
+<li><p><strong>props</strong></p>
+<ul>
+<li>用于接收标签中传递的数据</li>
+</ul>
+</li>
+<li><p><strong>refs</strong></p>
+<ul>
+<li><p>简介：对标签的一种标识，用于获取数据。类式标签中的id</p>
+</li>
+<li><p><strong>三种形式</strong></p>
+<ul>
+<li>字符串形式:</li>
+</ul>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input1<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击按钮提示输入<span class="token punctuation">"</span>/</span><span class="token punctuation">></span></span>
+</code></pre>
+<ul>
+<li><strong>回调形式(推荐):</strong></li>
+</ul>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token operator">&lt;</span>input ref<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>c <span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>input1 <span class="token operator">=</span> c<span class="token entity" title="&#125;">&amp;#125;</span><span class="token entity" title="&#125;">&amp;#125;</span> type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"点击按钮提示输入"</span><span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+<ul>
+<li>createRef形式:</li>
+</ul>
+<pre class=" language-jsx"><code class="language-jsx">    container1 <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">//创建一个createRef() ，只能存储一个ref</span>
+    
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;this.container1&amp;#125;</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击按钮提示输入<span class="token punctuation">"</span>/</span><span class="token punctuation">></span></span>    
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;this.showData&amp;#125;</span><span class="token punctuation">></span></span>点我提示数据<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;this.container2&amp;#125;</span> <span class="token attr-name">onBlur</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;this.showData2&amp;#125;</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击焦点提示输入<span class="token punctuation">"</span>/</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token punctuation">)</span>
+                <span class="token entity" title="&#125;">&amp;#125;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
 <h5 id="React中的事件处理"><a href="#React中的事件处理" class="headerlink" title="React中的事件处理"></a>React中的事件处理</h5><ul>
 <li>通过onXxx属性指定事件处理函数(注意大小写)</li>
 </ul>
@@ -1215,7 +1213,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">23k</span>
+                        class="white-color">9.4k</span>
             
             
             
