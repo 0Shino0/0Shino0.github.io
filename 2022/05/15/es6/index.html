@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP, 0Shino0">
-    <meta name="description" content="HTTP定义
-超文本传输协议（Hyper Text Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。请求和响应消息的头以ASC">
+    <meta name="keywords" content="ES6, 0Shino0">
+    <meta name="description" content="箭头函数
+定义：箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+
+特点：
+1234567891">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +32,7 @@
     </style>
 
 
-    <title>HTTP | 0Shino0</title>
+    <title>ES6 | 0Shino0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -319,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP</h1>
+                    <h1 class="description center-align post-title">ES6</h1>
                 </div>
             </div>
         </div>
@@ -438,9 +441,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -452,14 +459,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-14
+                    2022-05-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-14
+                    2022-05-15
                 </div>
                 
 
@@ -493,29 +500,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
-<li>超文本传输协议（Hyper Text Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。请求和响应消息的头以ASCII形式给出；而消息内容则具有一个类似MIME的格式。这个简单模型是早期Web成功的有功之臣，因为它使开发和部署非常地直截了当。                    ————百度</li>
+                <h5 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h5><ul>
+<li><p>定义：<strong>箭头函数表达式</strong>的语法比<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a>或<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+</li>
+<li><p>特点：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1.this 的值是静态的 (等于 外层作用域下this的值)</span><br><span class="line">let getName2 =() =&gt;&#123;</span><br><span class="line">    console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">getName2.call(&#123;&#125;)</span><br><span class="line"></span><br><span class="line">2.不能作为构造函数使用</span><br><span class="line">const Person = () =&gt;&#123;&#125;</span><br><span class="line">let me = new Person();</span><br><span class="line"></span><br><span class="line">3.不能使用 arguments</span><br><span class="line">function fn()&#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">    //arguments是一个伪数组</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2,3,4,5,6);</span><br><span class="line">fn = () =&gt;&#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2,3,4,5,6);</span><br><span class="line"></span><br><span class="line">4.箭头函数简写</span><br><span class="line">一 不写小括号，当新参有且只有一个的时候</span><br><span class="line">二 不写花括号, 当代码体只有一条语句的时候, 并且语句的执行结果为函数返回值的 (如果不</span><br><span class="line">let pow = num =&gt;&#123;</span><br><span class="line">    return num * num;</span><br><span class="line">&#125;</span><br><span class="line">console.log(pow);</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><h5 id="利用http模块创建一个简单的服务器"><a href="#利用http模块创建一个简单的服务器" class="headerlink" title="利用http模块创建一个简单的服务器"></a>利用http模块创建一个简单的服务器</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引入 http 模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.调用方法 创建服务器对象</span></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    * request 请求报文的封装对象</span></span><br><span class="line"><span class="comment">    * response 响应报文的封装对象</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="keyword">function</span>(<span class="params">request,response</span>)&#123;</span><br><span class="line"></span><br><span class="line">    response.<span class="title function_">end</span>(<span class="string">&#x27;Hello HTTP server&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">    </span><br><span class="line"><span class="comment">// 3.监听端口  启动服务</span></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    端口号    计算的服务端口窗口  总共65536个  8000 3000 9000 8080</span></span><br><span class="line"><span class="comment">    默认端口 80 </span></span><br><span class="line"><span class="comment">    ctrl + c 停止服务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;服务器已经启动，端口 8000 坚挺中......&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="…运算符"><a href="#…运算符" class="headerlink" title="…运算符"></a>…运算符</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// ...运算符    是扩展运算符</span><br><span class="line">      //  打包和拆包    要么是数组要么是对象</span><br><span class="line">      // 对于打包只有一种情况是打包并且打包只能打包数组</span><br></pre></td></tr></table></figure>
 
-<h5 id="将服务器拆分为-不同组件"><a href="#将服务器拆分为-不同组件" class="headerlink" title="将服务器拆分为 不同组件"></a>将服务器拆分为 不同组件</h5><p>  主函数 <strong><code>app.js</code></strong></p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const server = require(&#x27;./server&#x27;);</span><br><span class="line"></span><br><span class="line">server(8000);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 数组的打包和拆包</span><br><span class="line"></span><br><span class="line">let arr = [1,2,3,4]</span><br><span class="line">// 拆包     数组可以直接拆包</span><br><span class="line">console.log(...arr);</span><br><span class="line">console.log(1,2,3,4,...arr);</span><br><span class="line"></span><br><span class="line">// 数组打包</span><br><span class="line">function add(a,b,...arr)&#123;</span><br><span class="line">    console.log(arr);</span><br><span class="line">    console.log(arr instanceof Array);</span><br><span class="line">&#125;</span><br><span class="line">add(1,2,3,4,5,6,7,8,9,10)</span><br><span class="line"></span><br><span class="line">// 对象只能拆包     不能直接拆包</span><br><span class="line">  let obj = &#123;</span><br><span class="line">      name:&#x27;zly&#x27;,</span><br><span class="line">      age:33</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  console.log(&#123;...obj&#125;);</span><br></pre></td></tr></table></figure>
 
-<p> 回调函数 <strong><code>callback.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = (request,response) =&gt;&#123;</span><br><span class="line">    response.end(&#x27;Hello NPM&#x27;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><h5 id="暴露模块的方式"><a href="#暴露模块的方式" class="headerlink" title="暴露模块的方式"></a>暴露模块的方式</h5>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//使用【分别暴露】</span><br><span class="line">export const teacher1 = &#123;name:&#x27;强哥&#x27;,age:15&#125;</span><br><span class="line">export const teacher2 = &#123;name:&#x27;歌神&#x27;,age:17&#125;</span><br><span class="line"></span><br><span class="line">//使用【统一暴露】</span><br><span class="line">const stu1 = &#123;name:&#x27;王宇&#x27;,age:18&#125;</span><br><span class="line">const stu2 = &#123;name:&#x27;宇航&#x27;,age:19&#125;</span><br><span class="line">export &#123;stu1,stu2&#125;</span><br><span class="line"></span><br><span class="line">//使用【默认暴露】</span><br><span class="line">export default &#123;</span><br><span class="line">    school:&#x27;尚硅谷&#x27;,</span><br><span class="line">    address:&#x27;宏福科技园&#x27;,</span><br><span class="line">    subjects:[&#x27;前端&#x27;,&#x27;java&#x27;,&#x27;大数据&#x27;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p> 服务对象 <strong><code>server.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function (port) &#123;</span><br><span class="line">    const http = require(&#x27;http&#x27;);</span><br><span class="line"></span><br><span class="line">    // 2.调用方法 创建服务器对象</span><br><span class="line">    /* </span><br><span class="line">    * request 请求报文的封装对象</span><br><span class="line">    * response 响应报文的封装对象</span><br><span class="line">    */</span><br><span class="line">    const callback = require(&#x27;./callback&#x27;);</span><br><span class="line">    const serverCb = require(&#x27;./serverOkCallback&#x27;)</span><br><span class="line">    const server = http.createServer(callback);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 3.监听端口  启动服务</span><br><span class="line">    server.listen(port, serverCb);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  监听端口 <strong><code>serverOkCallback.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = () =&gt;&#123;</span><br><span class="line">    console.log(&#x27;服务器已经启动，端口坚挺中......&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  在<code>server.js</code>中我们可以做很多事情</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 获取请求报文  GET    /s?wd=关键字 (URL)   HTTP/1.1</span><br><span class="line">// 1.请求的类型</span><br><span class="line">// console.log(request.method);</span><br><span class="line">// console.log(request.method);</span><br><span class="line"></span><br><span class="line">// 2.请求的URL</span><br><span class="line">// console.log(request.url);</span><br><span class="line"></span><br><span class="line">// 3.HTTP协议版本</span><br><span class="line">// console.log(request.httpVersion);</span><br><span class="line"></span><br><span class="line">// 4.获取URL中的路径部分</span><br><span class="line">// 二 调用方法获取参数</span><br><span class="line">// console.log(url.parse(request.url).pathname); </span><br><span class="line"></span><br><span class="line">// 5.获取查询字符串</span><br><span class="line">// console.log(url.parse(request.url,true).query);</span><br><span class="line"></span><br><span class="line">// 6.请求头信息</span><br><span class="line">// console.log(request.headers);</span><br></pre></td></tr></table></figure>
-
-<p>  也可以添加事件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 提取请求体数据 POST请求</span><br><span class="line"></span><br><span class="line">// 1.声明一个字符串变量</span><br><span class="line">let body = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">// 2.绑定data事件</span><br><span class="line">request.on(&#x27;data&#x27;,chunk =&gt;&#123;</span><br><span class="line">    // 拼接</span><br><span class="line">    body += chunk.toString();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 3.绑定end事件</span><br><span class="line">request.on(&#x27;end&#x27;,()=&gt;&#123;</span><br><span class="line">    console.log(body);</span><br><span class="line">    // 调用 qs 对象的方法</span><br><span class="line">    console.log(qs.parse(body));</span><br><span class="line">    response.end(&#x27;body recevie&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<h5 id="引入暴露模块方式"><a href="#引入暴露模块方式" class="headerlink" title="引入暴露模块方式"></a>引入暴露模块方式</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//引入【分别暴露】的模块</span><br><span class="line">import &#123;data,showData,showMsg&#125; from &#x27;./module1&#x27;</span><br><span class="line"></span><br><span class="line">//引入【分别暴露】的模块+重命名</span><br><span class="line">import &#123;data as data2&#125; from &#x27;./module2&#x27;</span><br><span class="line"></span><br><span class="line">//引入【分别暴露】+ 打包引入</span><br><span class="line">import * as module1 from &#x27;./module1&#x27;</span><br><span class="line"></span><br><span class="line">//引入【统一暴露】支持上面三种引入方式</span><br><span class="line">import &#123;school as d,getLaoliu,person,&#125; from &#x27;./module3&#x27;</span><br><span class="line"></span><br><span class="line">//引入【默认暴露】</span><br><span class="line">import module4 from &#x27;./module4&#x27;</span><br><span class="line"></span><br><span class="line">//引入多种暴露方式的模块</span><br><span class="line">import module5,&#123;teacher1,teacher2,stu1,stu2&#125; from &#x27;./module5&#x27;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -542,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://0shino0.github.io/2022/05/14/http/">https://0shino0.github.io/2022/05/14/http/</a>
+                    <a href="https://0shino0.github.io/2022/05/15/es6/">https://0shino0.github.io/2022/05/15/es6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,7 +576,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -751,17 +752,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/14/ajax-axios/">
+                <a href="/2022/05/15/es6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="AJAX_AXIOS">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="ES6">
                         
-                        <span class="card-title">AJAX_AXIOS</span>
+                        <span class="card-title">ES6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -771,9 +773,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -781,6 +783,15 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -792,13 +803,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/14/zheng-ze-biao-da-shi/">
+                <a href="/2022/05/14/ajax-axios/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="正则表达式">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="AJAX_AXIOS">
                         
-                        <span class="card-title">正则表达式</span>
+                        <span class="card-title">AJAX_AXIOS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
