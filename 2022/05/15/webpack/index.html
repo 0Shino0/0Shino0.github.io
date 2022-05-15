@@ -4,12 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6, 0Shino0">
-    <meta name="description" content="箭头函数
-定义：箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
-
-特点：
-  1.this 的">
+    <meta name="keywords" content="webpack, 0Shino0">
+    <meta name="description" content="webpack简介
+webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency graph)，然后将你项目中所需">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,7 +29,7 @@
     </style>
 
 
-    <title>ES6 | 0Shino0</title>
+    <title>webpack | 0Shino0</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/libs/awesome/css/all.min.css">
@@ -322,12 +319,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6</h1>
+                    <h1 class="description center-align post-title">webpack</h1>
                 </div>
             </div>
         </div>
@@ -473,7 +470,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    621
+                    646
                 </div>
                 
 
@@ -500,100 +497,101 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h5><ul>
-<li><p>定义：<strong>箭头函数表达式</strong>的语法比<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a>或<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
-</li>
-<li><p>特点：</p>
-<pre><code>  1.this 的值是静态的 (等于 外层作用域下this的值)
-  let getName2 =() =&gt;&#123;
-      console.log(this);
-  &#125;
-  getName2.call(&#123;&#125;)
-  
-  2.不能作为构造函数使用
-  const Person = () =&gt;&#123;&#125;
-  let me = new Person();
-  
-  3.不能使用 arguments
-  function fn()&#123;
-      console.log(arguments);
-      //arguments是一个伪数组
-  &#125;
-  fn(1,2,3,4,5,6);
-  fn = () =&gt;&#123;
-      console.log(arguments);
-  &#125;
-  fn(1,2,3,4,5,6);
-  
-  4.箭头函数简写
-  一 不写小括号，当新参有且只有一个的时候
-  二 不写花括号, 当代码体只有一条语句的时候, 并且语句的执行结果为函数返回值的 (如果不
-  let pow = num =&gt;&#123;
-      return num * num;
-  &#125;
-  console.log(pow);
-</code></pre>
-</li>
+                <h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><ul>
+<li>webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency graph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles，它们均为静态资源，用于展示你的内容。————<a target="_blank" rel="noopener" href="https://webpack.docschina.org/concepts/">webpack文档</a></li>
 </ul>
-<h5 id="…运算符"><a href="#…运算符" class="headerlink" title="…运算符"></a>…运算符</h5><pre><code>      // ...运算符    是扩展运算符
-         //  打包和拆包    要么是数组要么是对象
-         // 对于打包只有一种情况是打包并且打包只能打包数组
-</code></pre>
-<pre><code>    // 数组的打包和拆包
+<h4 id="简单的配置文件"><a href="#简单的配置文件" class="headerlink" title="简单的配置文件"></a>简单的配置文件</h4><pre><code>    /* 
+    1. 该文件是webpack的配置文件，所有的webpack的任务、用到的loader、plugins都要配置在这里
+    2. 该文件要符合CJS模块化规范 
+    */
 
-    let arr = [1,2,3,4]
-    // 拆包     数组可以直接拆包
-    console.log(...arr);
-    console.log(1,2,3,4,...arr);
+    // 引入Node中一个内置的path模块，专门用于解决路劲问题
+    const &#123;resolve&#125; = require(&#39;path&#39;);
+    // 引入html-webpack-plugin ，用于加工html文件
+    const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;);
+    // 引入
+    // const Webpack = require(&#39;webpack&#39;);
+    // const WebpackDevServer = require(&#39;webpack-dev-server&#39;);
 
-    // 数组打包
-    function add(a,b,...arr)&#123;
-        console.log(arr);
-        console.log(arr instanceof Array);
+    //css  相关loader配置
+    const baseCssLoader = [&#39;style-loader&#39;,&#39;css-loader&#39;]
+    // 使用CJS的模块化规范，暴露一个对象，该对象就是webpack的详细配置对象（规则）
+    module.exports = &#123;
+    mode: &#39;development&#39;, //工作模式
+    entry: &#39;./src/js/app.js&#39;,  //入口
+    output: &#123;  //出口（输出）
+        path: resolve(__dirname, &#39;build&#39;),  //输出文件的路径
+        filename: &#39;js/app.js&#39;,  //输出文件名字
+    &#125;,
+    // module.rules中配置的一个一个的loader
+    module: &#123;
+        rules: [
+        // 配置解析css
+        &#123;
+            test:/\.css$/,
+            use:[...baseCssLoader]
+        &#125;,
+        // 配置解析less
+        &#123;
+            test:/\.less$/,
+            use:[
+            ...baseCssLoader,// creates style nodes from JS strings and translates CSS into CommonJS
+            &#39;less-loader&#39;  // compiles Less to CSS
+        ]
+        &#125;,
+        // 配置解析样式中的图片
+        &#123;
+            test: /\.(png|jpg|gif|bmp)$/,
+            use: [&#123;
+            loader:&#39;url-loader&#39;,
+            options:&#123;
+                outputPath:&#39;imgs&#39;,  //配置图片加工后，，存放的位置
+                // publicPath:&#39;/build/imgs&#39;  //配置图片引入时前缀的路径
+                name:&#39;[hash:5].[ext]&#39;, //配置生成图片的名字+后缀
+                limit:8 * 1024    //图片大小，小于8kb时，将图片转为base64编码 
+            &#125;
+            &#125;
+            ],
+        &#125;,
+        // 配置解析html中的图片
+        &#123;
+            test:/\.(html)$/,
+            use:[&#39;html-loader&#39;]
+        &#125;,
+        // 配置解析字体文件
+        &#123;
+        exclude: /\.(html|less|css|js|json|png|jpg|bmp|gif)$/,
+            use: [&#123;
+            loader:&#39;file-loader&#39;,
+            options:&#123;
+                outputPath:&#39;media&#39;,  //配置图片加工后，，存放的位置
+                // publicPath:&#39;/build/imgs&#39;  //配置图片引入时前缀的路径
+                name:&#39;[hash:5].[ext]&#39;, //配置生成图片的名字+后缀
+                
+            &#125;
+            &#125;
+            ],
+        &#125;,
+
+        ],
+
+    &#125;,
+    // plugins中专门用于配置插件，插件必须经过实例化这一环节
+    plugins:[
+        new HtmlWebpackPlugin(&#123;
+        template:&#39;./src/index.html&#39;  //模板的位置
+        &#125;)
+
+    ],
+    // 配置devServer
+    devServer:&#123;
+        // static:&#39;./build&#39;,
+        port:5500,  //开启服务器的端口号
+        open:true,  //自动打开浏览器
+        hot:true    //模块热更新(热膜替换)
     &#125;
-    add(1,2,3,4,5,6,7,8,9,10)
-    
-    // 对象只能拆包     不能直接拆包
-      let obj = &#123;
-          name:&#39;zly&#39;,
-          age:33
-      &#125;
 
-      console.log(&#123;...obj&#125;);
-</code></pre>
-<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><h5 id="暴露模块的方式"><a href="#暴露模块的方式" class="headerlink" title="暴露模块的方式"></a>暴露模块的方式</h5><pre><code>  //使用【分别暴露】
-  export const teacher1 = &#123;name:&#39;强哥&#39;,age:15&#125;
-  export const teacher2 = &#123;name:&#39;歌神&#39;,age:17&#125;
-  
-  //使用【统一暴露】
-  const stu1 = &#123;name:&#39;王宇&#39;,age:18&#125;
-  const stu2 = &#123;name:&#39;宇航&#39;,age:19&#125;
-  export &#123;stu1,stu2&#125;
-  
-  //使用【默认暴露】
-  export default &#123;
-      school:&#39;尚硅谷&#39;,
-      address:&#39;宏福科技园&#39;,
-      subjects:[&#39;前端&#39;,&#39;java&#39;,&#39;大数据&#39;]
-  &#125;
-</code></pre>
-<h5 id="引入暴露模块方式"><a href="#引入暴露模块方式" class="headerlink" title="引入暴露模块方式"></a>引入暴露模块方式</h5><pre><code>  //引入【分别暴露】的模块
-  import &#123;data,showData,showMsg&#125; from &#39;./module1&#39;
-  
-  //引入【分别暴露】的模块+重命名
-  import &#123;data as data2&#125; from &#39;./module2&#39;
-  
-  //引入【分别暴露】+ 打包引入
-  import * as module1 from &#39;./module1&#39;
-  
-  //引入【统一暴露】支持上面三种引入方式
-  import &#123;school as d,getLaoliu,person,&#125; from &#39;./module3&#39;
-  
-  //引入【默认暴露】
-  import module4 from &#39;./module4&#39;
-  
-  //引入多种暴露方式的模块
-  import module5,&#123;teacher1,teacher2,stu1,stu2&#125; from &#39;./module5&#39;
+    &#125;;
 </code></pre>
 
                 
@@ -621,7 +619,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://0shino0.github.io/2022/05/15/es6/">https://0shino0.github.io/2022/05/15/es6/</a>
+                    <a href="https://0shino0.github.io/2022/05/15/webpack/">https://0shino0.github.io/2022/05/15/webpack/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -834,9 +832,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/05/15/webpack/">
                     <div class="card-image">
@@ -854,9 +853,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -865,6 +864,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -883,13 +883,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/14/ajax-axios/">
+                <a href="/2022/05/15/es6/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="AJAX_AXIOS">
+                        <img src="https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/medias/featureimages/10.jpg" class="responsive-img" alt="ES6">
                         
-                        <span class="card-title">AJAX_AXIOS</span>
+                        <span class="card-title">ES6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -900,7 +900,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
                             </span>
                         <span class="publish-author">
                             

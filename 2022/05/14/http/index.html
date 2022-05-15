@@ -17,17 +17,6 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '');
-</script>
-
 
     
     <style>
@@ -53,7 +42,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/0Shino0/0Shino0.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -481,7 +470,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    624
+                    622
                 </div>
                 
 
@@ -511,26 +500,106 @@
                 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
 <li>超文本传输协议（Hyper Text Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。请求和响应消息的头以ASCII形式给出；而消息内容则具有一个类似MIME的格式。这个简单模型是早期Web成功的有功之臣，因为它使开发和部署非常地直截了当。                    ————百度</li>
 </ul>
-<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><h5 id="利用http模块创建一个简单的服务器"><a href="#利用http模块创建一个简单的服务器" class="headerlink" title="利用http模块创建一个简单的服务器"></a>利用http模块创建一个简单的服务器</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引入 http 模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.调用方法 创建服务器对象</span></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    * request 请求报文的封装对象</span></span><br><span class="line"><span class="comment">    * response 响应报文的封装对象</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="keyword">function</span>(<span class="params">request,response</span>)&#123;</span><br><span class="line"></span><br><span class="line">    response.<span class="title function_">end</span>(<span class="string">&#x27;Hello HTTP server&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">    </span><br><span class="line"><span class="comment">// 3.监听端口  启动服务</span></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    端口号    计算的服务端口窗口  总共65536个  8000 3000 9000 8080</span></span><br><span class="line"><span class="comment">    默认端口 80 </span></span><br><span class="line"><span class="comment">    ctrl + c 停止服务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;服务器已经启动，端口 8000 坚挺中......&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><h5 id="利用http模块创建一个简单的服务器"><a href="#利用http模块创建一个简单的服务器" class="headerlink" title="利用http模块创建一个简单的服务器"></a>利用http模块创建一个简单的服务器</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 1.引入 http 模块</span>
+  <span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment" spellcheck="true">// 2.调用方法 创建服务器对象</span>
+  <span class="token comment" spellcheck="true">/* 
+      * request 请求报文的封装对象
+      * response 响应报文的封装对象
+  */</span>
+  <span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span>response<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'Hello HTTP server'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+  <span class="token comment" spellcheck="true">// 3.监听端口  启动服务</span>
+  <span class="token comment" spellcheck="true">/* 
+      端口号    计算的服务端口窗口  总共65536个  8000 3000 9000 8080
+      默认端口 80 
+      ctrl + c 停止服务
+  */</span>
+  server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'服务器已经启动，端口 8000 坚挺中......'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+  
+</code></pre>
 <h5 id="将服务器拆分为-不同组件"><a href="#将服务器拆分为-不同组件" class="headerlink" title="将服务器拆分为 不同组件"></a>将服务器拆分为 不同组件</h5><p>  主函数 <strong><code>app.js</code></strong></p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const server = require(&#x27;./server&#x27;);</span><br><span class="line"></span><br><span class="line">server(8000);</span><br></pre></td></tr></table></figure>
+<pre><code>const server = require(&#39;./server&#39;);
 
+server(8000);
+</code></pre>
 <p> 回调函数 <strong><code>callback.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = (request,response) =&gt;&#123;</span><br><span class="line">    response.end(&#x27;Hello NPM&#x27;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+<pre><code>    module.exports = (request,response) =&gt;&#123;
+        response.end(&#39;Hello NPM&#39;);
+    &#125;;
+</code></pre>
 <p> 服务对象 <strong><code>server.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function (port) &#123;</span><br><span class="line">    const http = require(&#x27;http&#x27;);</span><br><span class="line"></span><br><span class="line">    // 2.调用方法 创建服务器对象</span><br><span class="line">    /* </span><br><span class="line">    * request 请求报文的封装对象</span><br><span class="line">    * response 响应报文的封装对象</span><br><span class="line">    */</span><br><span class="line">    const callback = require(&#x27;./callback&#x27;);</span><br><span class="line">    const serverCb = require(&#x27;./serverOkCallback&#x27;)</span><br><span class="line">    const server = http.createServer(callback);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 3.监听端口  启动服务</span><br><span class="line">    server.listen(port, serverCb);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>    module.exports = function (port) &#123;
+        const http = require(&#39;http&#39;);
 
+        // 2.调用方法 创建服务器对象
+        /* 
+        * request 请求报文的封装对象
+        * response 响应报文的封装对象
+        */
+        const callback = require(&#39;./callback&#39;);
+        const serverCb = require(&#39;./serverOkCallback&#39;)
+        const server = http.createServer(callback);
+
+
+        // 3.监听端口  启动服务
+        server.listen(port, serverCb);
+    &#125;
+</code></pre>
 <p>  监听端口 <strong><code>serverOkCallback.js</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = () =&gt;&#123;</span><br><span class="line">    console.log(&#x27;服务器已经启动，端口坚挺中......&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code>    module.exports = () =&gt;&#123;
+        console.log(&#39;服务器已经启动，端口坚挺中......&#39;);
+    &#125;
+</code></pre>
 <p>  在<code>server.js</code>中我们可以做很多事情</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 获取请求报文  GET    /s?wd=关键字 (URL)   HTTP/1.1</span><br><span class="line">// 1.请求的类型</span><br><span class="line">// console.log(request.method);</span><br><span class="line">// console.log(request.method);</span><br><span class="line"></span><br><span class="line">// 2.请求的URL</span><br><span class="line">// console.log(request.url);</span><br><span class="line"></span><br><span class="line">// 3.HTTP协议版本</span><br><span class="line">// console.log(request.httpVersion);</span><br><span class="line"></span><br><span class="line">// 4.获取URL中的路径部分</span><br><span class="line">// 二 调用方法获取参数</span><br><span class="line">// console.log(url.parse(request.url).pathname); </span><br><span class="line"></span><br><span class="line">// 5.获取查询字符串</span><br><span class="line">// console.log(url.parse(request.url,true).query);</span><br><span class="line"></span><br><span class="line">// 6.请求头信息</span><br><span class="line">// console.log(request.headers);</span><br></pre></td></tr></table></figure>
+<pre><code>    // 获取请求报文  GET    /s?wd=关键字 (URL)   HTTP/1.1
+    // 1.请求的类型
+    // console.log(request.method);
+    // console.log(request.method);
 
+    // 2.请求的URL
+    // console.log(request.url);
+
+    // 3.HTTP协议版本
+    // console.log(request.httpVersion);
+
+    // 4.获取URL中的路径部分
+    // 二 调用方法获取参数
+    // console.log(url.parse(request.url).pathname); 
+
+    // 5.获取查询字符串
+    // console.log(url.parse(request.url,true).query);
+
+    // 6.请求头信息
+    // console.log(request.headers);
+</code></pre>
 <p>  也可以添加事件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 提取请求体数据 POST请求</span><br><span class="line"></span><br><span class="line">// 1.声明一个字符串变量</span><br><span class="line">let body = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">// 2.绑定data事件</span><br><span class="line">request.on(&#x27;data&#x27;,chunk =&gt;&#123;</span><br><span class="line">    // 拼接</span><br><span class="line">    body += chunk.toString();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 3.绑定end事件</span><br><span class="line">request.on(&#x27;end&#x27;,()=&gt;&#123;</span><br><span class="line">    console.log(body);</span><br><span class="line">    // 调用 qs 对象的方法</span><br><span class="line">    console.log(qs.parse(body));</span><br><span class="line">    response.end(&#x27;body recevie&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code>    // 提取请求体数据 POST请求
 
+    // 1.声明一个字符串变量
+    let body = &#39;&#39;;
+
+    // 2.绑定data事件
+    request.on(&#39;data&#39;,chunk =&gt;&#123;
+        // 拼接
+        body += chunk.toString();
+    &#125;);
+
+    // 3.绑定end事件
+    request.on(&#39;end&#39;,()=&gt;&#123;
+        console.log(body);
+        // 调用 qs 对象的方法
+        console.log(qs.parse(body));
+        response.end(&#39;body recevie&#39;);
+    &#125;)
+</code></pre>
 
                 
             </div>
@@ -985,17 +1054,19 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7.3k</span>
+                        class="white-color">7.9k</span>
             
             
             
                 
             
+
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+                    <span id="busuanzi_value_site_pv" class="white-color" ></span>
                 </span>
+            
             
             
                 <span id="busuanzi_container_site_uv">
