@@ -1,4 +1,5 @@
 https://0shino0.github.io/2022/05/15/webpack/
+https://0shino0.github.io/bangumis/index.html
 https://0shino0.github.io/2022/05/13/javascript/
 https://0shino0.github.io/2022/05/14/ajax-axios/
 https://0shino0.github.io/2022/05/14/http/
