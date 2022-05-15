@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://0shino0.github.io/2022/05/15/react/</loc>
+    
+    <lastmod>2022-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://0shino0.github.io/2022/05/14/zheng-ze-biao-da-shi/</loc>
     
     <lastmod>2022-05-15</lastmod>
@@ -120,6 +129,13 @@
   
   <url>
     <loc>https://0shino0.github.io/tags/js/</loc>
+    <lastmod>2022-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://0shino0.github.io/tags/jsx/</loc>
     <lastmod>2022-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
