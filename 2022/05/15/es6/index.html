@@ -495,7 +495,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    621
+                    623
                 </div>
                 
 
@@ -526,96 +526,96 @@
 <li><p>定义：<strong>箭头函数表达式</strong>的语法比<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a>或<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
 </li>
 <li><p>特点：</p>
-<pre><code>  1.this 的值是静态的 (等于 外层作用域下this的值)
-  let getName2 =() =&gt;&#123;
-      console.log(this);
-  &#125;
-  getName2.call(&#123;&#125;)
+<pre class=" language-js"><code class="language-js">  <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">this</span> 的值是静态的 <span class="token punctuation">(</span>等于 外层作用域下<span class="token keyword">this</span>的值<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> getName2 <span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  getName2<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
   
-  2.不能作为构造函数使用
-  const Person = () =&gt;&#123;&#125;
-  let me = new Person();
+  <span class="token number">2</span><span class="token punctuation">.</span>不能作为构造函数使用
+  <span class="token keyword">const</span> Person <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> me <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-  3.不能使用 arguments
-  function fn()&#123;
-      console.log(arguments);
-      //arguments是一个伪数组
-  &#125;
-  fn(1,2,3,4,5,6);
-  fn = () =&gt;&#123;
-      console.log(arguments);
-  &#125;
-  fn(1,2,3,4,5,6);
+  <span class="token number">3</span><span class="token punctuation">.</span>不能使用 arguments
+  <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//arguments是一个伪数组</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-  4.箭头函数简写
+  <span class="token number">4</span><span class="token punctuation">.</span>箭头函数简写
   一 不写小括号，当新参有且只有一个的时候
-  二 不写花括号, 当代码体只有一条语句的时候, 并且语句的执行结果为函数返回值的 (如果不
-  let pow = num =&gt;&#123;
-      return num * num;
-  &#125;
-  console.log(pow);
+  二 不写花括号<span class="token punctuation">,</span> 当代码体只有一条语句的时候<span class="token punctuation">,</span> 并且语句的执行结果为函数返回值的 <span class="token punctuation">(</span>如果不
+  <span class="token keyword">let</span> pow <span class="token operator">=</span> num <span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> num <span class="token operator">*</span> num<span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>pow<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h5 id="…运算符"><a href="#…运算符" class="headerlink" title="…运算符"></a>…运算符</h5><pre><code>      // ...运算符    是扩展运算符
-         //  打包和拆包    要么是数组要么是对象
-         // 对于打包只有一种情况是打包并且打包只能打包数组
+<h5 id="…运算符"><a href="#…运算符" class="headerlink" title="…运算符"></a>…运算符</h5><pre class=" language-js"><code class="language-js">      <span class="token comment" spellcheck="true">// ...运算符    是扩展运算符</span>
+         <span class="token comment" spellcheck="true">//  打包和拆包    要么是数组要么是对象</span>
+         <span class="token comment" spellcheck="true">// 对于打包只有一种情况是打包并且打包只能打包数组</span>
 </code></pre>
-<pre><code>    // 数组的打包和拆包
+<pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">// 数组的打包和拆包</span>
 
-    let arr = [1,2,3,4]
-    // 拆包     数组可以直接拆包
-    console.log(...arr);
-    console.log(1,2,3,4,...arr);
+    <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">// 拆包     数组可以直接拆包</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    // 数组打包
-    function add(a,b,...arr)&#123;
-        console.log(arr);
-        console.log(arr instanceof Array);
-    &#125;
-    add(1,2,3,4,5,6,7,8,9,10)
+    <span class="token comment" spellcheck="true">// 数组打包</span>
+    <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
     
-    // 对象只能拆包     不能直接拆包
-      let obj = &#123;
-          name:&#39;zly&#39;,
-          age:33
-      &#125;
+    <span class="token comment" spellcheck="true">// 对象只能拆包     不能直接拆包</span>
+      <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          name<span class="token punctuation">:</span><span class="token string">'zly'</span><span class="token punctuation">,</span>
+          age<span class="token punctuation">:</span><span class="token number">33</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-      console.log(&#123;...obj&#125;);
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">...</span>obj<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><h5 id="暴露模块的方式"><a href="#暴露模块的方式" class="headerlink" title="暴露模块的方式"></a>暴露模块的方式</h5><pre><code>  //使用【分别暴露】
-  export const teacher1 = &#123;name:&#39;强哥&#39;,age:15&#125;
-  export const teacher2 = &#123;name:&#39;歌神&#39;,age:17&#125;
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><h5 id="暴露模块的方式"><a href="#暴露模块的方式" class="headerlink" title="暴露模块的方式"></a>暴露模块的方式</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//使用【分别暴露】</span>
+  <span class="token keyword">export</span> <span class="token keyword">const</span> teacher1 <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'强哥'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">15</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">const</span> teacher2 <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'歌神'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">17</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   
-  //使用【统一暴露】
-  const stu1 = &#123;name:&#39;王宇&#39;,age:18&#125;
-  const stu2 = &#123;name:&#39;宇航&#39;,age:19&#125;
-  export &#123;stu1,stu2&#125;
+  <span class="token comment" spellcheck="true">//使用【统一暴露】</span>
+  <span class="token keyword">const</span> stu1 <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'王宇'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">18</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> stu2 <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'宇航'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">19</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>stu1<span class="token punctuation">,</span>stu2<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   
-  //使用【默认暴露】
-  export default &#123;
-      school:&#39;尚硅谷&#39;,
-      address:&#39;宏福科技园&#39;,
-      subjects:[&#39;前端&#39;,&#39;java&#39;,&#39;大数据&#39;]
-  &#125;
+  <span class="token comment" spellcheck="true">//使用【默认暴露】</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      school<span class="token punctuation">:</span><span class="token string">'尚硅谷'</span><span class="token punctuation">,</span>
+      address<span class="token punctuation">:</span><span class="token string">'宏福科技园'</span><span class="token punctuation">,</span>
+      subjects<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'前端'</span><span class="token punctuation">,</span><span class="token string">'java'</span><span class="token punctuation">,</span><span class="token string">'大数据'</span><span class="token punctuation">]</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h5 id="引入暴露模块方式"><a href="#引入暴露模块方式" class="headerlink" title="引入暴露模块方式"></a>引入暴露模块方式</h5><pre><code>  //引入【分别暴露】的模块
-  import &#123;data,showData,showMsg&#125; from &#39;./module1&#39;
+<h5 id="引入暴露模块方式"><a href="#引入暴露模块方式" class="headerlink" title="引入暴露模块方式"></a>引入暴露模块方式</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//引入【分别暴露】的模块</span>
+  <span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>data<span class="token punctuation">,</span>showData<span class="token punctuation">,</span>showMsg<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module1'</span>
   
-  //引入【分别暴露】的模块+重命名
-  import &#123;data as data2&#125; from &#39;./module2&#39;
+  <span class="token comment" spellcheck="true">//引入【分别暴露】的模块+重命名</span>
+  <span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>data <span class="token keyword">as</span> data2<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module2'</span>
   
-  //引入【分别暴露】+ 打包引入
-  import * as module1 from &#39;./module1&#39;
+  <span class="token comment" spellcheck="true">//引入【分别暴露】+ 打包引入</span>
+  <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> module1 <span class="token keyword">from</span> <span class="token string">'./module1'</span>
   
-  //引入【统一暴露】支持上面三种引入方式
-  import &#123;school as d,getLaoliu,person,&#125; from &#39;./module3&#39;
+  <span class="token comment" spellcheck="true">//引入【统一暴露】支持上面三种引入方式</span>
+  <span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>school <span class="token keyword">as</span> d<span class="token punctuation">,</span>getLaoliu<span class="token punctuation">,</span>person<span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module3'</span>
   
-  //引入【默认暴露】
-  import module4 from &#39;./module4&#39;
+  <span class="token comment" spellcheck="true">//引入【默认暴露】</span>
+  <span class="token keyword">import</span> module4 <span class="token keyword">from</span> <span class="token string">'./module4'</span>
   
-  //引入多种暴露方式的模块
-  import module5,&#123;teacher1,teacher2,stu1,stu2&#125; from &#39;./module5&#39;
+  <span class="token comment" spellcheck="true">//引入多种暴露方式的模块</span>
+  <span class="token keyword">import</span> module5<span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>teacher1<span class="token punctuation">,</span>teacher2<span class="token punctuation">,</span>stu1<span class="token punctuation">,</span>stu2<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module5'</span>
 </code></pre>
 
                 
@@ -1127,7 +1127,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7.9k</span>
+                        class="white-color">7.8k</span>
             
             
             

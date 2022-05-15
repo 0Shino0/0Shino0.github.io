@@ -492,7 +492,7 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    646
+                    632
                 </div>
                 
 
@@ -522,98 +522,98 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
                 <h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><ul>
 <li>webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency graph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles，它们均为静态资源，用于展示你的内容。————<a target="_blank" rel="noopener" href="https://webpack.docschina.org/concepts/">webpack文档</a></li>
 </ul>
-<h4 id="简单的配置文件"><a href="#简单的配置文件" class="headerlink" title="简单的配置文件"></a>简单的配置文件</h4><pre><code>    /* 
+<h4 id="简单的配置文件"><a href="#简单的配置文件" class="headerlink" title="简单的配置文件"></a>简单的配置文件</h4><pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">/* 
     1. 该文件是webpack的配置文件，所有的webpack的任务、用到的loader、plugins都要配置在这里
     2. 该文件要符合CJS模块化规范 
-    */
+    */</span>
 
-    // 引入Node中一个内置的path模块，专门用于解决路劲问题
-    const &#123;resolve&#125; = require(&#39;path&#39;);
-    // 引入html-webpack-plugin ，用于加工html文件
-    const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;);
-    // 引入
-    // const Webpack = require(&#39;webpack&#39;);
-    // const WebpackDevServer = require(&#39;webpack-dev-server&#39;);
+    <span class="token comment" spellcheck="true">// 引入Node中一个内置的path模块，专门用于解决路劲问题</span>
+    <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>resolve<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 引入html-webpack-plugin ，用于加工html文件</span>
+    <span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 引入</span>
+    <span class="token comment" spellcheck="true">// const Webpack = require('webpack');</span>
+    <span class="token comment" spellcheck="true">// const WebpackDevServer = require('webpack-dev-server');</span>
 
-    //css  相关loader配置
-    const baseCssLoader = [&#39;style-loader&#39;,&#39;css-loader&#39;]
-    // 使用CJS的模块化规范，暴露一个对象，该对象就是webpack的详细配置对象（规则）
-    module.exports = &#123;
-    mode: &#39;development&#39;, //工作模式
-    entry: &#39;./src/js/app.js&#39;,  //入口
-    output: &#123;  //出口（输出）
-        path: resolve(__dirname, &#39;build&#39;),  //输出文件的路径
-        filename: &#39;js/app.js&#39;,  //输出文件名字
-    &#125;,
-    // module.rules中配置的一个一个的loader
-    module: &#123;
-        rules: [
-        // 配置解析css
-        &#123;
-            test:/\.css$/,
-            use:[...baseCssLoader]
-        &#125;,
-        // 配置解析less
-        &#123;
-            test:/\.less$/,
-            use:[
-            ...baseCssLoader,// creates style nodes from JS strings and translates CSS into CommonJS
-            &#39;less-loader&#39;  // compiles Less to CSS
-        ]
-        &#125;,
-        // 配置解析样式中的图片
-        &#123;
-            test: /\.(png|jpg|gif|bmp)$/,
-            use: [&#123;
-            loader:&#39;url-loader&#39;,
-            options:&#123;
-                outputPath:&#39;imgs&#39;,  //配置图片加工后，，存放的位置
-                // publicPath:&#39;/build/imgs&#39;  //配置图片引入时前缀的路径
-                name:&#39;[hash:5].[ext]&#39;, //配置生成图片的名字+后缀
-                limit:8 * 1024    //图片大小，小于8kb时，将图片转为base64编码 
-            &#125;
-            &#125;
-            ],
-        &#125;,
-        // 配置解析html中的图片
-        &#123;
-            test:/\.(html)$/,
-            use:[&#39;html-loader&#39;]
-        &#125;,
-        // 配置解析字体文件
-        &#123;
-        exclude: /\.(html|less|css|js|json|png|jpg|bmp|gif)$/,
-            use: [&#123;
-            loader:&#39;file-loader&#39;,
-            options:&#123;
-                outputPath:&#39;media&#39;,  //配置图片加工后，，存放的位置
-                // publicPath:&#39;/build/imgs&#39;  //配置图片引入时前缀的路径
-                name:&#39;[hash:5].[ext]&#39;, //配置生成图片的名字+后缀
+    <span class="token comment" spellcheck="true">//css  相关loader配置</span>
+    <span class="token keyword">const</span> baseCssLoader <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span><span class="token string">'css-loader'</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">// 使用CJS的模块化规范，暴露一个对象，该对象就是webpack的详细配置对象（规则）</span>
+    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    mode<span class="token punctuation">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//工作模式</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./src/js/app.js'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//入口</span>
+    output<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//出口（输出）</span>
+        path<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'build'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//输出文件的路径</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'js/app.js'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//输出文件名字</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// module.rules中配置的一个一个的loader</span>
+    module<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment" spellcheck="true">// 配置解析css</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            test<span class="token punctuation">:</span><span class="token regex">/\.css$/</span><span class="token punctuation">,</span>
+            use<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token operator">...</span>baseCssLoader<span class="token punctuation">]</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 配置解析less</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            test<span class="token punctuation">:</span><span class="token regex">/\.less$/</span><span class="token punctuation">,</span>
+            use<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token operator">...</span>baseCssLoader<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// creates style nodes from JS strings and translates CSS into CommonJS</span>
+            <span class="token string">'less-loader'</span>  <span class="token comment" spellcheck="true">// compiles Less to CSS</span>
+        <span class="token punctuation">]</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 配置解析样式中的图片</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            test<span class="token punctuation">:</span> <span class="token regex">/\.(png|jpg|gif|bmp)$/</span><span class="token punctuation">,</span>
+            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            loader<span class="token punctuation">:</span><span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                outputPath<span class="token punctuation">:</span><span class="token string">'imgs'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//配置图片加工后，，存放的位置</span>
+                <span class="token comment" spellcheck="true">// publicPath:'/build/imgs'  //配置图片引入时前缀的路径</span>
+                name<span class="token punctuation">:</span><span class="token string">'[hash:5].[ext]'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置生成图片的名字+后缀</span>
+                limit<span class="token punctuation">:</span><span class="token number">8</span> <span class="token operator">*</span> <span class="token number">1024</span>    <span class="token comment" spellcheck="true">//图片大小，小于8kb时，将图片转为base64编码 </span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 配置解析html中的图片</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            test<span class="token punctuation">:</span><span class="token regex">/\.(html)$/</span><span class="token punctuation">,</span>
+            use<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'html-loader'</span><span class="token punctuation">]</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 配置解析字体文件</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        exclude<span class="token punctuation">:</span> <span class="token regex">/\.(html|less|css|js|json|png|jpg|bmp|gif)$/</span><span class="token punctuation">,</span>
+            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            loader<span class="token punctuation">:</span><span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                outputPath<span class="token punctuation">:</span><span class="token string">'media'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//配置图片加工后，，存放的位置</span>
+                <span class="token comment" spellcheck="true">// publicPath:'/build/imgs'  //配置图片引入时前缀的路径</span>
+                name<span class="token punctuation">:</span><span class="token string">'[hash:5].[ext]'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置生成图片的名字+后缀</span>
                 
-            &#125;
-            &#125;
-            ],
-        &#125;,
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
 
-        ],
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    &#125;,
-    // plugins中专门用于配置插件，插件必须经过实例化这一环节
-    plugins:[
-        new HtmlWebpackPlugin(&#123;
-        template:&#39;./src/index.html&#39;  //模板的位置
-        &#125;)
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// plugins中专门用于配置插件，插件必须经过实例化这一环节</span>
+    plugins<span class="token punctuation">:</span><span class="token punctuation">[</span>
+        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        template<span class="token punctuation">:</span><span class="token string">'./src/index.html'</span>  <span class="token comment" spellcheck="true">//模板的位置</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
 
-    ],
-    // 配置devServer
-    devServer:&#123;
-        // static:&#39;./build&#39;,
-        port:5500,  //开启服务器的端口号
-        open:true,  //自动打开浏览器
-        hot:true    //模块热更新(热膜替换)
-    &#125;
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 配置devServer</span>
+    devServer<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// static:'./build',</span>
+        port<span class="token punctuation">:</span><span class="token number">5500</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//开启服务器的端口号</span>
+        open<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//自动打开浏览器</span>
+        hot<span class="token punctuation">:</span><span class="token boolean">true</span>    <span class="token comment" spellcheck="true">//模块热更新(热膜替换)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-    &#125;;
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -1127,7 +1127,7 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7.9k</span>
+                        class="white-color">7.8k</span>
             
             
             
