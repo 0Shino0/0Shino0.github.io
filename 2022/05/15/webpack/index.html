@@ -492,7 +492,7 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    632
+                    572
                 </div>
                 
 
@@ -528,7 +528,7 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
     */</span>
 
     <span class="token comment" spellcheck="true">// 引入Node中一个内置的path模块，专门用于解决路劲问题</span>
-    <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>resolve<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>resolve<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 引入html-webpack-plugin ，用于加工html文件</span>
     <span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 引入</span>
@@ -538,82 +538,82 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
     <span class="token comment" spellcheck="true">//css  相关loader配置</span>
     <span class="token keyword">const</span> baseCssLoader <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span><span class="token string">'css-loader'</span><span class="token punctuation">]</span>
     <span class="token comment" spellcheck="true">// 使用CJS的模块化规范，暴露一个对象，该对象就是webpack的详细配置对象（规则）</span>
-    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
     mode<span class="token punctuation">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//工作模式</span>
     entry<span class="token punctuation">:</span> <span class="token string">'./src/js/app.js'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//入口</span>
-    output<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//出口（输出）</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//出口（输出）</span>
         path<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'build'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//输出文件的路径</span>
         filename<span class="token punctuation">:</span> <span class="token string">'js/app.js'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//输出文件名字</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
     <span class="token comment" spellcheck="true">// module.rules中配置的一个一个的loader</span>
-    module<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    module<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
         rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
         <span class="token comment" spellcheck="true">// 配置解析css</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
             test<span class="token punctuation">:</span><span class="token regex">/\.css$/</span><span class="token punctuation">,</span>
             use<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token operator">...</span>baseCssLoader<span class="token punctuation">]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 配置解析less</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
             test<span class="token punctuation">:</span><span class="token regex">/\.less$/</span><span class="token punctuation">,</span>
             use<span class="token punctuation">:</span><span class="token punctuation">[</span>
             <span class="token operator">...</span>baseCssLoader<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// creates style nodes from JS strings and translates CSS into CommonJS</span>
             <span class="token string">'less-loader'</span>  <span class="token comment" spellcheck="true">// compiles Less to CSS</span>
         <span class="token punctuation">]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 配置解析样式中的图片</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
             test<span class="token punctuation">:</span> <span class="token regex">/\.(png|jpg|gif|bmp)$/</span><span class="token punctuation">,</span>
-            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
             loader<span class="token punctuation">:</span><span class="token string">'url-loader'</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            options<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
                 outputPath<span class="token punctuation">:</span><span class="token string">'imgs'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//配置图片加工后，，存放的位置</span>
                 <span class="token comment" spellcheck="true">// publicPath:'/build/imgs'  //配置图片引入时前缀的路径</span>
                 name<span class="token punctuation">:</span><span class="token string">'[hash:5].[ext]'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置生成图片的名字+后缀</span>
                 limit<span class="token punctuation">:</span><span class="token number">8</span> <span class="token operator">*</span> <span class="token number">1024</span>    <span class="token comment" spellcheck="true">//图片大小，小于8kb时，将图片转为base64编码 </span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
             <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 配置解析html中的图片</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
             test<span class="token punctuation">:</span><span class="token regex">/\.(html)$/</span><span class="token punctuation">,</span>
             use<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'html-loader'</span><span class="token punctuation">]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 配置解析字体文件</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
         exclude<span class="token punctuation">:</span> <span class="token regex">/\.(html|less|css|js|json|png|jpg|bmp|gif)$/</span><span class="token punctuation">,</span>
-            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
             loader<span class="token punctuation">:</span><span class="token string">'file-loader'</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            options<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
                 outputPath<span class="token punctuation">:</span><span class="token string">'media'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//配置图片加工后，，存放的位置</span>
                 <span class="token comment" spellcheck="true">// publicPath:'/build/imgs'  //配置图片引入时前缀的路径</span>
                 name<span class="token punctuation">:</span><span class="token string">'[hash:5].[ext]'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置生成图片的名字+后缀</span>
                 
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
             <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
 
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
     <span class="token comment" spellcheck="true">// plugins中专门用于配置插件，插件必须经过实例化这一环节</span>
     plugins<span class="token punctuation">:</span><span class="token punctuation">[</span>
-        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
         template<span class="token punctuation">:</span><span class="token string">'./src/index.html'</span>  <span class="token comment" spellcheck="true">//模板的位置</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
 
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token comment" spellcheck="true">// 配置devServer</span>
-    devServer<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    devServer<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// static:'./build',</span>
         port<span class="token punctuation">:</span><span class="token number">5500</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//开启服务器的端口号</span>
         open<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//自动打开浏览器</span>
         hot<span class="token punctuation">:</span><span class="token boolean">true</span>    <span class="token comment" spellcheck="true">//模块热更新(热膜替换)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -862,9 +862,9 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="React">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="React基础">
                         
-                        <span class="card-title">React</span>
+                        <span class="card-title">React基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1125,7 +1125,7 @@ webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.4k</span>
+                        class="white-color">9k</span>
             
             
             
