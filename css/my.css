@@ -1,1 +1,14 @@
 /* Here is your custom css styles. */
+/* 改变 nav 字体颜色 */
+header .nav-text-gray {
+    color: #18191C !important;
+}
+
+.logo-span,
+.logo-name{
+    color: #18191C;
+}
+
+.fa-search {
+    color: #333333
+}

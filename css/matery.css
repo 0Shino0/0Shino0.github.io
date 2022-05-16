@@ -288,11 +288,6 @@ header .nav-transparent {
     box-shadow: none;
 }
 
-/* 改变 nav 字体颜色 */
-header .nav-text-gray {
-    color: #18191C !important;
-}
-
 header nav .brand-span {
     font-size: 1.45rem;
 }
