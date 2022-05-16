@@ -493,14 +493,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -700,6 +700,61 @@
 <ul>
 <li><strong>函数的柯里化</strong>：通过函数调用继续返回函数的方式，实现<strong>多次接收参数最后 统一处理 的函数编码形式</strong></li>
 </ul>
+<h3 id="React脚手架"><a href="#React脚手架" class="headerlink" title="React脚手架"></a>React脚手架</h3><h4 id="react脚手架包含内容"><a href="#react脚手架包含内容" class="headerlink" title="react脚手架包含内容"></a>react脚手架包含内容</h4><ol>
+<li><p>xxx脚手架: 用来帮助程序员快速创建一个基于xxx库的模板项目</p>
+<ol>
+<li><p>包含了所有需要的配置（语法检查、jsx编译、devServer…）</p>
+</li>
+<li><p>下载好了所有相关的依赖</p>
+</li>
+<li><p>可以直接运行一个简单效果</p>
+</li>
+</ol>
+</li>
+<li><p>react提供了一个用于创建react项目的脚手架库: create-react-app</p>
+</li>
+<li><p>项目的整体技术架构为:  react + webpack + es6 + eslint</p>
+</li>
+<li><p>使用脚手架开发的项目的特点: 模块化, 组件化, 工程化</p>
+</li>
+</ol>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><h5 id="创建项目并启动"><a href="#创建项目并启动" class="headerlink" title="创建项目并启动"></a>创建项目并启动</h5><ul>
+<li><p><strong>第一步</strong>，全局安装：</p>
+<pre class=" language-jsx"><code class="language-jsx">    npm i <span class="token operator">-</span>g create<span class="token operator">-</span>react<span class="token operator">-</span>app
+</code></pre>
+</li>
+<li><p><strong>第二步</strong>，切换到想创项目的目录，使用命令：</p>
+<pre class=" language-jsx"><code class="language-jsx">    create<span class="token operator">-</span>react<span class="token operator">-</span>app hello<span class="token operator">-</span>react
+</code></pre>
+</li>
+<li><p><strong>第三步</strong>，进入项目文件夹：</p>
+<pre class=" language-jsx"><code class="language-jsx">    cd hello<span class="token operator">-</span>react
+</code></pre>
+</li>
+<li><p><strong>第四步</strong>，启动项目：</p>
+<pre class=" language-jsx"><code class="language-jsx">    npm start
+</code></pre>
+</li>
+</ul>
+<h4 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h4><pre class=" language-jsx"><code class="language-jsx">    <span class="token keyword">public</span> <span class="token operator">--</span><span class="token operator">--</span> 静态资源文件夹
+            favicon<span class="token punctuation">.</span>icon <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 网站页签图标
+            index<span class="token punctuation">.</span>html <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 主页面
+            logo192<span class="token punctuation">.</span>png <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> logo图
+            logo512<span class="token punctuation">.</span>png <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> logo图
+            manifest<span class="token punctuation">.</span>json <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> 应用加壳的配置文件
+            robots<span class="token punctuation">.</span>txt <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 爬虫协议文件
+    src <span class="token operator">--</span><span class="token operator">--</span> 源码文件夹
+            App<span class="token punctuation">.</span>css <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> App组件的样式
+            App<span class="token punctuation">.</span>js <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> App组件
+            App<span class="token punctuation">.</span>test<span class="token punctuation">.</span>js <span class="token operator">--</span><span class="token operator">--</span> 用于给App做测试
+            index<span class="token punctuation">.</span>css <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 样式
+            index<span class="token punctuation">.</span>js <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> 入口文件
+            logo<span class="token punctuation">.</span>svg <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> logo图
+            reportWebVitals<span class="token punctuation">.</span>js
+                <span class="token operator">--</span><span class="token operator">-</span> <span class="token function">页面性能分析文件</span><span class="token punctuation">(</span>需要web<span class="token operator">-</span>vitals库的支持<span class="token punctuation">)</span>
+            setupTests<span class="token punctuation">.</span>js
+                <span class="token operator">--</span><span class="token operator">--</span> <span class="token function">组件单元测试的文件</span><span class="token punctuation">(</span>需要jest<span class="token operator">-</span>dom库的支持<span class="token punctuation">)</span>
+</code></pre>
 
                 
             </div>
@@ -1156,7 +1211,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">11.1k</span>
             
             
             

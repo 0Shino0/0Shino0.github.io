@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="React-cli, 0Shino0">
-    <meta name="description" content="">
+    <meta name="keywords" content="React高级, 0Shino0">
+    <meta name="description" content="react-router三、路由的基本使用    1.明确好界面中的导航区、展示区
+    2.导航区的a标签改为Link标签
+                &amp;lt;Link to=&#34;/xxxxx&#34;&gt;Demo&amp;lt;/Link&gt;
+    ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +31,7 @@
     </style>
 
 
-    <title>React-cli | 0Shino0</title>
+    <title>React高级 | 0Shino0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -340,12 +343,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">React-cli</h1>
+                    <h1 class="description center-align post-title">React高级</h1>
                 </div>
             </div>
         </div>
@@ -459,9 +462,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/jsx/">
+                                <span class="chip bg-color">jsx</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -487,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -514,7 +521,123 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="react-router"><a href="#react-router" class="headerlink" title="react-router"></a>react-router</h3><h4 id="三、路由的基本使用"><a href="#三、路由的基本使用" class="headerlink" title="三、路由的基本使用"></a>三、路由的基本使用</h4><pre class=" language-jsx"><code class="language-jsx">    <span class="token number">1</span><span class="token punctuation">.</span>明确好界面中的导航区、展示区
+    <span class="token number">2</span><span class="token punctuation">.</span>导航区的a标签改为Link标签
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/xxxxx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">></span></span>
+    <span class="token number">3</span><span class="token punctuation">.</span>展示区写Route标签进行路径的匹配
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>/xxxx<span class="token punctuation">'</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Demo<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+    <span class="token number">4</span><span class="token punctuation">.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span><span class="token punctuation">></span></span>的最外侧包裹了一个<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BrowserRouter</span><span class="token punctuation">></span></span>或<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>HashRouter</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4 id="四、路由与一般组件"><a href="#四、路由与一般组件" class="headerlink" title="四、路由与一般组件"></a>四、路由与一般组件</h4><pre class=" language-jsx"><code class="language-jsx">    <span class="token number">1</span><span class="token punctuation">.</span>写法不同：
+                一般组件：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Demo</span><span class="token punctuation">/></span></span>
+                路由组件：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/demo<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Demo<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+    <span class="token number">2</span><span class="token punctuation">.</span>存放位置不同：
+                一般组件：components
+                路由组件：pages
+    <span class="token number">3</span><span class="token punctuation">.</span>接收到的props不同：
+                一般组件：写组件标签时传递了什么，就能收到什么
+                路由组件：接收到三个固定的属性
+                    history<span class="token punctuation">:</span>
+                        go<span class="token punctuation">:</span> ƒ <span class="token function">go</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+                        goBack<span class="token punctuation">:</span> ƒ <span class="token function">goBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                        goForward<span class="token punctuation">:</span> ƒ <span class="token function">goForward</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                        push<span class="token punctuation">:</span> ƒ <span class="token function">push</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> state<span class="token punctuation">)</span>
+                        replace<span class="token punctuation">:</span> ƒ <span class="token function">replace</span><span class="token punctuation">(</span>pastate<span class="token punctuation">)</span>
+                    location<span class="token punctuation">:</span>
+                        pathname<span class="token punctuation">:</span> <span class="token string">"/about"</span>
+                        search<span class="token punctuation">:</span> <span class="token string">""</span>
+                        state<span class="token punctuation">:</span> undefined
+                    match<span class="token punctuation">:</span>
+                        params<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+                        path<span class="token punctuation">:</span> <span class="token string">"/about"</span>
+                        url<span class="token punctuation">:</span> <span class="token string">"/about"</span>
+</code></pre>
+<h4 id="五、NavLink与封装NavLink"><a href="#五、NavLink与封装NavLink" class="headerlink" title="五、NavLink与封装NavLink"></a>五、NavLink与封装NavLink</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>NavLink可以实现路由链接的高亮，通过activeClassName指定样式名
+</code></pre>
+<h4 id="六、Switch的使用"><a href="#六、Switch的使用" class="headerlink" title="六、Switch的使用"></a>六、Switch的使用</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>通常情况下，path和component是一一对应的关系。
+                <span class="token number">2</span><span class="token punctuation">.</span><span class="token function">Switch可以提高路由匹配效率</span><span class="token punctuation">(</span>单一匹配<span class="token punctuation">)</span>。
+</code></pre>
+<h4 id="七、解决多级路-径刷新页面样式丢失的问题"><a href="#七、解决多级路-径刷新页面样式丢失的问题" class="headerlink" title="七、解决多级路 径刷新页面样式丢失的问题"></a>七、解决多级路 径刷新页面样式丢失的问题</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">public</span><span class="token operator">/</span>index<span class="token punctuation">.</span>html 中 引入样式时不写 <span class="token punctuation">.</span><span class="token operator">/</span> 写 <span class="token operator">/</span> （常用）
+                <span class="token number">2</span><span class="token punctuation">.</span><span class="token keyword">public</span><span class="token operator">/</span>index<span class="token punctuation">.</span>html 中 引入样式时不写 <span class="token punctuation">.</span><span class="token operator">/</span> 写 <span class="token operator">%</span>PUBLIC_URL<span class="token operator">%</span> （常用）
+                <span class="token number">3</span><span class="token punctuation">.</span>使用HashRouter
+</code></pre>
+<h4 id="八、路由的严格匹配与模糊匹配"><a href="#八、路由的严格匹配与模糊匹配" class="headerlink" title="八、路由的严格匹配与模糊匹配"></a>八、路由的严格匹配与模糊匹配</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>默认使用的是模糊匹配（简单记：【输入的路径】必须包含要【匹配的路径】，且顺序要一致）
+                <span class="token number">2</span><span class="token punctuation">.</span>开启严格匹配：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">exact</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token boolean">true</span><span class="token punctuation">}</span></span><span class="token attr-name">;</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/about<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>About<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                <span class="token number">3</span><span class="token punctuation">.</span>严格匹配不要随便开启，需要再开，有些时候开启会导致无法继续匹配二级路由
+</code></pre>
+<h4 id="九、Redirect的使用"><a href="#九、Redirect的使用" class="headerlink" title="九、Redirect的使用"></a>九、Redirect的使用</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>一般写在所有路由注册的最下方，当所有路由都无法匹配时，跳转到Redirect指定的路由
+                <span class="token number">2</span><span class="token punctuation">.</span>具体编码：
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Switch</span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/about<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>About<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/home<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Home<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Redirect</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/about<span class="token punctuation">"</span>/</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Switch</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4 id="十、嵌套路由"><a href="#十、嵌套路由" class="headerlink" title="十、嵌套路由"></a>十、嵌套路由</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>注册子路由时要写上父路由的path值
+                <span class="token number">2</span><span class="token punctuation">.</span>路由的匹配是按照注册路由的顺序进行的
+</code></pre>
+<h4 id="十一、向路由组件传递参数"><a href="#十一、向路由组件传递参数" class="headerlink" title="十一、向路由组件传递参数"></a>十一、向路由组件传递参数</h4><pre class=" language-jsx"><code class="language-jsx">                <span class="token number">1</span><span class="token punctuation">.</span>params参数
+                            <span class="token function">路由链接</span><span class="token punctuation">(</span>携带参数<span class="token punctuation">)</span>：<span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">'/demo/test/tom/18'</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token operator">></span>详情<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">></span></span>
+                            <span class="token function">注册路由</span><span class="token punctuation">(</span>声明接收<span class="token punctuation">)</span>：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/demo/test/:name/:age<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Test<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                            接收参数：<span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>match<span class="token punctuation">.</span>params
+                <span class="token number">2</span><span class="token punctuation">.</span>search参数
+                            <span class="token function">路由链接</span><span class="token punctuation">(</span>携带参数<span class="token punctuation">)</span>：<span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">'/demo/test?name=tom&amp;age=18'</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token operator">></span>详情<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">></span></span>
+                            <span class="token function">注册路由</span><span class="token punctuation">(</span>无需声明，正常注册即可<span class="token punctuation">)</span>：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/demo/test<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Test<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                            接收参数：<span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location<span class="token punctuation">.</span>search
+                            备注：获取到的search是urlencoded编码字符串，需要借助querystring解析
+                <span class="token number">3</span><span class="token punctuation">.</span>state参数
+                            <span class="token function">路由链接</span><span class="token punctuation">(</span>携带参数<span class="token punctuation">)</span>：<span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token punctuation">{</span><span class="token punctuation">;</span>pathname<span class="token punctuation">:</span><span class="token string">'/demo/test'</span><span class="token punctuation">,</span>state<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'tom'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token operator">></span>详情<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">></span></span>
+                            <span class="token function">注册路由</span><span class="token punctuation">(</span>无需声明，正常注册即可<span class="token punctuation">)</span>：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/demo/test<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Test<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+                            接收参数：<span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location<span class="token punctuation">.</span>state
+                            备注：刷新也可以保留住参数
+</code></pre>
+<h4 id="十二、编程式路由导航"><a href="#十二、编程式路由导航" class="headerlink" title="十二、编程式路由导航"></a>十二、编程式路由导航</h4><pre class=" language-jsx"><code class="language-jsx">    借助<span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history对象上的API对操作路由跳转、前进、后退
+            <span class="token operator">-</span><span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token operator">-</span><span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token operator">-</span><span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">goBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token operator">-</span><span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">goForward</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token operator">-</span><span class="token keyword">this</span><span class="token punctuation">.</span>prosp<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="十三、BrowserRouter与HashRouter的区别"><a href="#十三、BrowserRouter与HashRouter的区别" class="headerlink" title="十三、BrowserRouter与HashRouter的区别"></a>十三、BrowserRouter与HashRouter的区别</h4><pre class=" language-jsx"><code class="language-jsx">        <span class="token number">1</span><span class="token punctuation">.</span>底层原理不一样：
+                    BrowserRouter使用的是H5的history API，不兼容IE9及以下版本。
+                    HashRouter使用的是URL的哈希值。
+        <span class="token number">2</span><span class="token punctuation">.</span>path表现形式不一样
+                    BrowserRouter的路径中没有#<span class="token punctuation">,</span>例如：localhost<span class="token punctuation">:</span><span class="token number">3000</span><span class="token operator">/</span>demo<span class="token operator">/</span>test
+                    HashRouter的路径包含#<span class="token punctuation">,</span>例如：localhost<span class="token punctuation">:</span><span class="token number">3000</span><span class="token operator">/</span>#<span class="token operator">/</span>demo<span class="token operator">/</span>test
+        <span class="token number">3</span><span class="token punctuation">.</span>刷新后对路由state参数的影响
+                    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>BrowserRouter没有任何影响，因为state保存在history对象中。
+                    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>HashRouter刷新后会导致路由state参数的丢失！！！
+        <span class="token number">4</span><span class="token punctuation">.</span>备注：HashRouter可以用于解决一些路径错误相关的问题。
+</code></pre>
+<h4 id="十四、antd的按需引入-自定主题"><a href="#十四、antd的按需引入-自定主题" class="headerlink" title="十四、antd的按需引入+自定主题"></a>十四、antd的按需引入+自定主题</h4><pre class=" language-jsx"><code class="language-jsx">    <span class="token number">1</span><span class="token punctuation">.</span>安装依赖：yarn add react<span class="token operator">-</span>app<span class="token operator">-</span>rewired customize<span class="token operator">-</span>cra babel<span class="token operator">-</span>plugin<span class="token operator">-</span><span class="token keyword">import</span> less less<span class="token operator">-</span>loader
+    <span class="token number">2</span><span class="token punctuation">.</span>修改<span class="token keyword">package</span><span class="token punctuation">.</span>json
+            <span class="token operator">...</span><span class="token punctuation">.</span>
+                <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+                    <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token string">"react-app-rewired start"</span><span class="token punctuation">,</span>
+                    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"react-app-rewired build"</span><span class="token punctuation">,</span>
+                    <span class="token string">"test"</span><span class="token punctuation">:</span> <span class="token string">"react-app-rewired test"</span><span class="token punctuation">,</span>
+                    <span class="token string">"eject"</span><span class="token punctuation">:</span> <span class="token string">"react-scripts eject"</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token number">3</span><span class="token punctuation">.</span>根目录下创建config<span class="token operator">-</span>overrides<span class="token punctuation">.</span>js
+            <span class="token comment" spellcheck="true">//配置具体的修改规则</span>
+            <span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token punctuation">;</span> override<span class="token punctuation">,</span> fixBabelImports<span class="token punctuation">,</span>addLessLoader<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'customize-cra'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">override</span><span class="token punctuation">(</span>
+                <span class="token function">fixBabelImports</span><span class="token punctuation">(</span><span class="token string">'import'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+                    libraryName<span class="token punctuation">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span>
+                    libraryDirectory<span class="token punctuation">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token function">addLessLoader</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
+                    lessOptions<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
+                        javascriptEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        modifyVars<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span> <span class="token string">'@primary-color'</span><span class="token punctuation">:</span> <span class="token string">'green'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token number">4</span><span class="token punctuation">.</span>备注：不用在组件里亲自引入样式了，即：<span class="token keyword">import</span> <span class="token string">'antd/dist/antd.css'</span>应该删掉
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -540,7 +663,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://0shino0.github.io/2022/05/16/react-cli/">https://0shino0.github.io/2022/05/16/react-cli/</a>
+                    <a href="https://0shino0.github.io/2022/05/16/react3/">https://0shino0.github.io/2022/05/16/react3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -577,7 +700,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/jsx/">
+                                    <span class="chip bg-color">jsx</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -754,13 +881,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/05/16/react-cli/">
+                <a href="/2022/05/16/react3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="React-cli">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="React高级">
                         
-                        <span class="card-title">React-cli</span>
+                        <span class="card-title">React高级</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -782,6 +909,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jsx/">
+                        <span class="chip bg-color">jsx</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -960,7 +1095,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">11.1k</span>
             
             
             
