@@ -4,12 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6, 0Shino0">
-    <meta name="description" content="箭头函数
-定义：箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+    <meta name="keywords" content="Diffing算法原理, 0Shino0">
+    <meta name="description" content="Diffing算法简介    - 当对比两棵树时，React 首先比较两棵树的根节点。不同类型的根节点元素会有不同的形态。
+    对比不同类型的元素
 
-特点：
-  1.this 的">
+    - 当根节点为不同类型的元素时，React 会拆卸原有的树并且建立起新的树。举">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,7 +31,7 @@
     </style>
 
 
-    <title>ES6 | 0Shino0</title>
+    <title>Diffing算法原理 | 0Shino0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -344,12 +343,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6</h1>
+                    <h1 class="description center-align post-title">Diffing算法原理</h1>
                 </div>
             </div>
         </div>
@@ -465,8 +464,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/js/">
-                                <span class="chip bg-color">js</span>
+                            <a href="/tags/jsx/">
+                                <span class="chip bg-color">jsx</span>
                             </a>
                         
                     </div>
@@ -481,28 +480,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-15
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-15
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    17k
+                    6.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    28 mins. 分
+                    10 mins. 分
                 </div>
                 
 
@@ -522,101 +521,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h5><ul>
-<li><p>定义：<strong>箭头函数表达式</strong>的语法比<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a>或<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+                <h3 id="Diffing算法"><a href="#Diffing算法" class="headerlink" title="Diffing算法"></a>Diffing算法</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre class=" language-jsx"><code class="language-jsx">    <span class="token operator">-</span> 当对比两棵树时，React 首先比较两棵树的根节点。不同类型的根节点元素会有不同的形态。
+    对比不同类型的元素
+
+    <span class="token operator">-</span> 当根节点为不同类型的元素时，React 会拆卸原有的树并且建立起新的树。举个例子，当一个
+    元素从 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span> 变成 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">></span></span>，从 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Article</span><span class="token punctuation">></span></span> 变成 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Comment</span><span class="token punctuation">></span></span>，或从 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span><span class="token punctuation">></span></span> 变成 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span> 都会触发一个完整的重建流程。
+
+    <span class="token operator">-</span> 当卸载一棵树时，对应的 DOM 节点也会被销毁。组件实例将执行 <span class="token function">componentWillUnmoun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    方法。当建立一棵新的树时，对应的 DOM 节点会被创建以及插入到 DOM 中。组件实例将执行 
+    <span class="token function">UNSAFE_componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法，紧接着 <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法。所有与之前的
+    树相关联的 state 也会被销毁。
+</code></pre>
+<p>———— <a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/reconciliation.html#the-diffing-algorithm">react文档</a></p>
+<hr>
+<h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><ul>
+<li><p>1:  diffing 算法最小颗粒度是标签  (只可以精确到标签的位置)<br>  diffing 算法最小颗粒度是标签  (会一直递归循环遍历下去)</p>
 </li>
-<li><p>特点：</p>
-<pre class=" language-js"><code class="language-js">  <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">this</span> 的值是静态的 <span class="token punctuation">(</span>等于 外层作用域下<span class="token keyword">this</span>的值<span class="token punctuation">)</span>
-  <span class="token keyword">let</span> getName2 <span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">;</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  getName2<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-  
-  <span class="token number">2</span><span class="token punctuation">.</span>不能作为构造函数使用
-  <span class="token keyword">const</span> Person <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> me <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token number">3</span><span class="token punctuation">.</span>不能使用 arguments
-  <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token comment" spellcheck="true">//arguments是一个伪数组</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">;</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token number">4</span><span class="token punctuation">.</span>箭头函数简写
-  一 不写小括号，当新参有且只有一个的时候
-  二 不写花括号<span class="token punctuation">,</span> 当代码体只有一条语句的时候<span class="token punctuation">,</span> 并且语句的执行结果为函数返回值的 <span class="token punctuation">(</span>如果不
-  <span class="token keyword">let</span> pow <span class="token operator">=</span> num <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> num <span class="token operator">*</span> num<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>pow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li><p>2：只要状态改变就会触发 render 函数 (实时修改状态)  (状态修改就会触发render函数);<br>在React&#x2F;Vue 中 key属性有什么作用？ (index 的内部原理是什么？)</p>
+</li>
+</ul>
+<h5 id="渲染中key的选择"><a href="#渲染中key的选择" class="headerlink" title="渲染中key的选择"></a>渲染中key的选择</h5><ul>
+<li><p>3.开发中如何选择key?:</p>
+<ul>
+<li><p>​     1.最好使用每条数据的唯一标识作为key,比如id、手机号、身份证号、学号等唯一值。</p>
+</li>
+<li><p>​     2.如果确定只是简单的展示数据,用index也是可以的。</p>
+</li>
+</ul>
+<pre class=" language-jsx"><code class="language-jsx">  经典面试题<span class="token punctuation">:</span>
+        <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> react<span class="token operator">/</span>vue中的key有什么作用<span class="token operator">?</span> <span class="token punctuation">(</span>key的内部原理是什么<span class="token operator">?</span><span class="token punctuation">)</span>
+        <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 为什么遍历列表时<span class="token punctuation">,</span> key最好不要用index<span class="token operator">?</span>
+        
+        <span class="token number">1</span><span class="token punctuation">.</span>虚拟DOM中key的作用
+            <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>简单的说<span class="token punctuation">:</span>key是虚拟DOM对象的标识<span class="token punctuation">,</span>在更新显示时key起着极其重要的作用。
+            
+            <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>详细的说<span class="token punctuation">:</span>当状态中的数据发生变化时<span class="token punctuation">,</span> react会根据【新数据】生成【新的虚拟DOM】<span class="token punctuation">,</span>
+            随后React进行【新虚拟DOM】与【旧虚拟DOM】的diff比较<span class="token punctuation">,</span>比较规则如下<span class="token punctuation">:</span>
+            
+                        a<span class="token punctuation">.</span>I旧虚拟DOM中找到了与新虚拟DOM相同的key<span class="token punctuation">:</span>
+                                <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>若虚拟DOM中内容没变<span class="token punctuation">,</span>直接使用之前的真实DOM
+                                <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>若虚拟DOM中内容变了<span class="token punctuation">,</span>则生成新的真实DOM<span class="token punctuation">,</span>随后替换掉页面中之前的真实DOM
+                        
+                        b<span class="token punctuation">.</span>旧虚拟DOM中未找到与新虚拟DOM相同的key
+                        根据数据创建新的真实DOM<span class="token punctuation">,</span>随后渲染到到页面
+                        
+        <span class="token number">2</span><span class="token punctuation">.</span>用index作为key可能会引发的问题<span class="token punctuation">:</span>
+                    <span class="token number">1</span><span class="token punctuation">.</span>若对数据进行<span class="token punctuation">:</span>逆序添加、逆序删除等破坏顺序操作<span class="token punctuation">:</span>
+                            会产生没有必要的真实DOM更新<span class="token operator">==</span><span class="token operator">></span>界面效果没问题<span class="token punctuation">,</span>但效率低。
+                    
+                    <span class="token number">2</span><span class="token punctuation">.</span>如果结构中还包含输入类的DOM<span class="token punctuation">:</span>
+                            会产生错误DOM更新<span class="token operator">==</span><span class="token operator">></span>界面有问题。
+                            
+                    <span class="token number">3</span><span class="token punctuation">,</span>注意<span class="token operator">!</span>如果不存在对数据的逆序添加、逆序删除等破坏顺序操作<span class="token punctuation">,</span>
+                    仅用于渲染列表用于展示<span class="token punctuation">,</span>使用index作为key是没有问题的。
 </code></pre>
 </li>
 </ul>
-<h5 id="…运算符"><a href="#…运算符" class="headerlink" title="…运算符"></a>…运算符</h5><pre class=" language-js"><code class="language-js">      <span class="token comment" spellcheck="true">// ...运算符    是扩展运算符</span>
-         <span class="token comment" spellcheck="true">//  打包和拆包    要么是数组要么是对象</span>
-         <span class="token comment" spellcheck="true">// 对于打包只有一种情况是打包并且打包只能打包数组</span>
-</code></pre>
-<pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">// 数组的打包和拆包</span>
-
-    <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span>
-    <span class="token comment" spellcheck="true">// 拆包     数组可以直接拆包</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">// 数组打包</span>
-    <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
-    
-    <span class="token comment" spellcheck="true">// 对象只能拆包     不能直接拆包</span>
-      <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
-          name<span class="token punctuation">:</span><span class="token string">'zly'</span><span class="token punctuation">,</span>
-          age<span class="token punctuation">:</span><span class="token number">33</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token operator">...</span>obj<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><h5 id="暴露模块的方式"><a href="#暴露模块的方式" class="headerlink" title="暴露模块的方式"></a>暴露模块的方式</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//使用【分别暴露】</span>
-  <span class="token keyword">export</span> <span class="token keyword">const</span> teacher1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'强哥'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">export</span> <span class="token keyword">const</span> teacher2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'歌神'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  
-  <span class="token comment" spellcheck="true">//使用【统一暴露】</span>
-  <span class="token keyword">const</span> stu1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'王宇'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> stu2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span><span class="token string">'宇航'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">export</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>stu1<span class="token punctuation">,</span>stu2<span class="token punctuation">}</span><span class="token punctuation">;</span>
-  
-  <span class="token comment" spellcheck="true">//使用【默认暴露】</span>
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
-      school<span class="token punctuation">:</span><span class="token string">'尚硅谷'</span><span class="token punctuation">,</span>
-      address<span class="token punctuation">:</span><span class="token string">'宏福科技园'</span><span class="token punctuation">,</span>
-      subjects<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'前端'</span><span class="token punctuation">,</span><span class="token string">'java'</span><span class="token punctuation">,</span><span class="token string">'大数据'</span><span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<h5 id="引入暴露模块方式"><a href="#引入暴露模块方式" class="headerlink" title="引入暴露模块方式"></a>引入暴露模块方式</h5><pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">//引入【分别暴露】的模块</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>data<span class="token punctuation">,</span>showData<span class="token punctuation">,</span>showMsg<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module1'</span>
-  
-  <span class="token comment" spellcheck="true">//引入【分别暴露】的模块+重命名</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>data <span class="token keyword">as</span> data2<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module2'</span>
-  
-  <span class="token comment" spellcheck="true">//引入【分别暴露】+ 打包引入</span>
-  <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> module1 <span class="token keyword">from</span> <span class="token string">'./module1'</span>
-  
-  <span class="token comment" spellcheck="true">//引入【统一暴露】支持上面三种引入方式</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>school <span class="token keyword">as</span> d<span class="token punctuation">,</span>getLaoliu<span class="token punctuation">,</span>person<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module3'</span>
-  
-  <span class="token comment" spellcheck="true">//引入【默认暴露】</span>
-  <span class="token keyword">import</span> module4 <span class="token keyword">from</span> <span class="token string">'./module4'</span>
-  
-  <span class="token comment" spellcheck="true">//引入多种暴露方式的模块</span>
-  <span class="token keyword">import</span> module5<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">;</span>teacher1<span class="token punctuation">,</span>teacher2<span class="token punctuation">,</span>stu1<span class="token punctuation">,</span>stu2<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./module5'</span>
-</code></pre>
 
                 
             </div>
@@ -643,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://0shino0.github.io/2022/05/15/es6/">https://0shino0.github.io/2022/05/15/es6/</a>
+                    <a href="https://0shino0.github.io/2022/05/16/diffing/">https://0shino0.github.io/2022/05/16/diffing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -681,8 +641,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/js/">
-                                    <span class="chip bg-color">js</span>
+                                <a href="/tags/jsx/">
+                                    <span class="chip bg-color">jsx</span>
                                 </a>
                             
                         </div>
@@ -856,17 +816,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/15/webpack/">
+                <a href="/2022/05/16/diffing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="webpack">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Diffing算法原理">
                         
-                        <span class="card-title">webpack</span>
+                        <span class="card-title">Diffing算法原理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -876,9 +837,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -887,11 +848,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/js/">
-                        <span class="chip bg-color">js</span>
+                    <a href="/tags/jsx/">
+                        <span class="chip bg-color">jsx</span>
                     </a>
                     
                 </div>
@@ -905,13 +867,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/14/ajax-axios/">
+                <a href="/2022/05/15/react/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="AJAX_AXIOS">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="React基础">
                         
-                        <span class="card-title">AJAX_AXIOS</span>
+                        <span class="card-title">React基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -922,7 +884,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
                             </span>
                         <span class="publish-author">
                             
@@ -935,8 +897,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/js/">
-                        <span class="chip bg-color">js</span>
+                    <a href="/tags/jsx/">
+                        <span class="chip bg-color">jsx</span>
                     </a>
                     
                 </div>
