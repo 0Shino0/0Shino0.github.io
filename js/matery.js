@@ -127,6 +127,8 @@ $(function () {
     });
 
     /*监听滚动条位置*/
+    // 改变 nav导航字体颜色
+    let $nav_text = $('.hide-on-med-and-down>a')
     let $nav = $('#headNav');
     let $backTop = $('.top-scroll');
     // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
@@ -140,9 +142,13 @@ $(function () {
     function showOrHideNavBg(position) {
         let showPosition = 100;
         if (position < showPosition) {
+            $nav_text.removeClass('nav-text-gray')
+
             $nav.addClass('nav-transparent');
             $backTop.slideUp(300);
         } else {
+            $nav_text.addClass('nav-text-gray')
+
             $nav.removeClass('nav-transparent');
             $backTop.slideDown(300);
         }
