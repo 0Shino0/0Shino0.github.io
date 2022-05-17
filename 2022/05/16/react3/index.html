@@ -494,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    12 分
                 </div>
                 
 
@@ -636,6 +636,229 @@
                 <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
             <span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token number">4</span><span class="token punctuation">.</span>备注：不用在组件里亲自引入样式了，即：<span class="token keyword">import</span> <span class="token string">'antd/dist/antd.css'</span>应该删掉
+</code></pre>
+<h3 id="react-redux"><a href="#react-redux" class="headerlink" title="react-redux"></a>react-redux</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>  1.redux是一个独立专门用于做状态管理的JS库(不react插件库)<br>  2.它可以用在react、angular、vue等项目中，但本与react配合使用<br>  3.作用：集中式管理react应用中多个组件共享的态</p>
+<h4 id="什么时候需要使用"><a href="#什么时候需要使用" class="headerlink" title="什么时候需要使用"></a>什么时候需要使用</h4><p>  1.某个组件的状态，需要让其他组件可以随时拿到（共享）。<br>  2.一个组件需要改变另一个组件的状态（通信）。<br>  3.总体原则：能不用就不用, 如果不用比较吃力才考虑使用。</p>
+<h4 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h4><p><img src="/2022/05/16/react3/redux.png" alt="redux"></p>
+<h4 id="redux的三个核心概念"><a href="#redux的三个核心概念" class="headerlink" title="redux的三个核心概念"></a>redux的三个核心概念</h4><h5 id="action"><a href="#action" class="headerlink" title="action"></a>action</h5><p>1.动作的对象<br>2.包含2个属性</p>
+<pre class=" language-jsx"><code class="language-jsx">    type：标识属性<span class="token punctuation">,</span> 值为字符串<span class="token punctuation">,</span> 唯一<span class="token punctuation">,</span> 必要属性
+    data：数据属性<span class="token punctuation">,</span> 值类型任意<span class="token punctuation">,</span> 可选属性
+</code></pre>
+<p>3.例子：</p>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token punctuation">{</span><span class="token punctuation">;</span> type<span class="token punctuation">:</span> <span class="token string">'ADD_STUDENT'</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="reducer"><a href="#reducer" class="headerlink" title="reducer"></a>reducer</h5><p>1.用于初始化状态、加工状态。<br>2.加工时，根据旧的state和action， 产生新的state的纯函数。</p>
+<h5 id="store"><a href="#store" class="headerlink" title="store"></a>store</h5><p>1.将state、action、reducer联系在一起的对象<br>2.如何得到此对象?</p>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token number">1</span><span class="token punctuation">)</span><span class="token keyword">import</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>createStore<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'redux'</span>
+    <span class="token number">2</span><span class="token punctuation">)</span><span class="token keyword">import</span> reducer <span class="token keyword">from</span> <span class="token string">'./reducers'</span>
+    <span class="token number">3</span><span class="token punctuation">)</span><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">)</span>
+</code></pre>
+<p>3.此对象的功能?</p>
+<pre class=" language-jsx"><code class="language-jsx">    <span class="token number">1</span><span class="token punctuation">)</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 得到state
+    <span class="token number">2</span><span class="token punctuation">)</span><span class="token function">dispatch</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">:</span> 分发action<span class="token punctuation">,</span> 触发reducer调用<span class="token punctuation">,</span> 产生新的state
+    <span class="token number">3</span><span class="token punctuation">)</span><span class="token function">subscribe</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span><span class="token punctuation">:</span> 注册监听<span class="token punctuation">,</span> 当产生了新的state时<span class="token punctuation">,</span> 自动调用
+</code></pre>
+<h4 id="redux的核心API"><a href="#redux的核心API" class="headerlink" title="redux的核心API"></a>redux的核心API</h4><h5 id="createstore"><a href="#createstore" class="headerlink" title="createstore()"></a>createstore()</h5><p>作用：创建包含指定reducer的store对象</p>
+<h5 id="store对象"><a href="#store对象" class="headerlink" title="store对象"></a>store对象</h5><p>1.作用: redux库最核心的管理对象<br>2.它内部维护着:</p>
+<pre class=" language-​jsx"><code class="language-​jsx">    1)state
+​	 2)reducer
+</code></pre>
+<p>3.核心方法:</p>
+<pre class=" language-jsx"><code class="language-jsx">​	<span class="token number">1</span><span class="token punctuation">)</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+​	<span class="token number">2</span><span class="token punctuation">)</span><span class="token function">dispatch</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+​	<span class="token number">3</span><span class="token punctuation">)</span><span class="token function">subscribe</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span>
+</code></pre>
+<p>4.具体编码:</p>
+<pre class=" language-jsx"><code class="language-jsx">​	<span class="token number">1</span><span class="token punctuation">)</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+​	<span class="token number">2</span><span class="token punctuation">)</span>store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">;</span>type<span class="token punctuation">:</span><span class="token string">'INCREMENT'</span><span class="token punctuation">,</span> number<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+​	<span class="token number">3</span><span class="token punctuation">)</span>store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>render<span class="token punctuation">)</span>
+</code></pre>
+<h5 id="applyMiddleware"><a href="#applyMiddleware" class="headerlink" title="applyMiddleware()"></a>applyMiddleware()</h5><p>作用：应用上基于redux的中间件(插件库)</p>
+<h5 id="combineReducers"><a href="#combineReducers" class="headerlink" title="combineReducers()"></a>combineReducers()</h5><p>作用：合并多个reducer函数</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="1-setState"><a href="#1-setState" class="headerlink" title="1. setState"></a>1. setState</h4><h5 id="setState更新状态的2种写法"><a href="#setState更新状态的2种写法" class="headerlink" title="setState更新状态的2种写法"></a>setState更新状态的2种写法</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token function">setState</span><span class="token punctuation">(</span>stateChange<span class="token punctuation">,</span> <span class="token punctuation">[</span>callback<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>对象式的setState
+            <span class="token number">1</span><span class="token punctuation">.</span><span class="token function">stateChange为状态改变对象</span><span class="token punctuation">(</span>该对象可以体现出状态的更改<span class="token punctuation">)</span>
+            <span class="token number">2</span><span class="token punctuation">.</span>callback是可选的回调函数<span class="token punctuation">,</span> <span class="token function">它在状态更新完毕、界面也更新后</span><span class="token punctuation">(</span>render调用后<span class="token punctuation">)</span>才被调用
+                    
+    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token function">setState</span><span class="token punctuation">(</span>updater<span class="token punctuation">,</span> <span class="token punctuation">[</span>callback<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>函数式的setState
+            <span class="token number">1</span><span class="token punctuation">.</span>updater为返回stateChange对象的函数。
+            <span class="token number">2</span><span class="token punctuation">.</span>updater可以接收到state和props。
+            <span class="token number">4</span><span class="token punctuation">.</span>callback是可选的回调函数<span class="token punctuation">,</span> <span class="token function">它在状态更新、界面也更新后</span><span class="token punctuation">(</span>render调用后<span class="token punctuation">)</span>才被调用。
+    总结<span class="token punctuation">:</span>
+        <span class="token number">1</span><span class="token punctuation">.</span><span class="token function">对象式的setState是函数式的setState的简写方式</span><span class="token punctuation">(</span>语法糖<span class="token punctuation">)</span>
+        <span class="token number">2</span><span class="token punctuation">.</span>使用原则：
+                <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>如果新状态不依赖于原状态 <span class="token operator">===</span><span class="token operator">></span> 使用对象方式
+                <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>如果新状态依赖于原状态 <span class="token operator">===</span><span class="token operator">></span> 使用函数方式
+                <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">如果需要在setState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>执行后获取最新的状态数据<span class="token punctuation">,</span> 
+                    要在第二个callback函数中读取
+</code></pre>
+<hr>
+<h4 id="2-lazyLoad"><a href="#2-lazyLoad" class="headerlink" title="2. lazyLoad"></a>2. lazyLoad</h4><h5 id="路由组件的lazyLoad"><a href="#路由组件的lazyLoad" class="headerlink" title="路由组件的lazyLoad"></a>路由组件的lazyLoad</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token comment" spellcheck="true">//1.通过React的lazy函数配合import()函数动态加载路由组件 ===> 路由组件代码会被分开打包</span>
+    <span class="token keyword">const</span> Login <span class="token operator">=</span> <span class="token function">lazy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/pages/Login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token comment" spellcheck="true">//2.通过&lt;Suspense>指定在加载得到路由打包文件前显示一个自定义loading界面</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Suspense</span> <span class="token attr-name">fallback={;&lt;h1</span><span class="token punctuation">></span></span>loading<span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token operator">></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Switch</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/xxx<span class="token punctuation">"</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>Xxxx<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Redirect</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/login<span class="token punctuation">"</span>/</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Switch</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Suspense</span><span class="token punctuation">></span></span>
+</code></pre>
+<hr>
+<h4 id="3-Hooks"><a href="#3-Hooks" class="headerlink" title="3. Hooks"></a>3. Hooks</h4><h5 id="1-React-Hook-x2F-Hooks是什么"><a href="#1-React-Hook-x2F-Hooks是什么" class="headerlink" title="1. React Hook&#x2F;Hooks是什么?"></a>1. React Hook&#x2F;Hooks是什么?</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Hook是React <span class="token number">16.8</span><span class="token punctuation">.</span><span class="token number">0</span>版本增加的新特性<span class="token operator">/</span>新语法
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 可以让你在函数组件中使用 state 以及其他的 React 特性
+</code></pre>
+<h5 id="2-三个常用的Hook"><a href="#2-三个常用的Hook" class="headerlink" title="2. 三个常用的Hook"></a>2. 三个常用的Hook</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> State Hook<span class="token punctuation">:</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Effect Hook<span class="token punctuation">:</span> React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Ref Hook<span class="token punctuation">:</span> React<span class="token punctuation">.</span><span class="token function">useRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h5 id="3-State-Hook"><a href="#3-State-Hook" class="headerlink" title="3. State Hook"></a>3. State Hook</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> State Hook让函数组件也可以有state状态<span class="token punctuation">,</span> 并进行状态数据的读写操作
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 语法<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>xxx<span class="token punctuation">,</span> setXxx<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span>  
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>说明<span class="token punctuation">:</span>
+        参数<span class="token punctuation">:</span> 第一次初始化指定的值在内部作缓存
+        返回值<span class="token punctuation">:</span> 包含<span class="token number">2</span>个元素的数组<span class="token punctuation">,</span> 第<span class="token number">1</span>个为内部当前状态值<span class="token punctuation">,</span> 第<span class="token number">2</span>个为更新状态值的函数
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token function">setXxx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">2</span>种写法<span class="token punctuation">:</span>
+        <span class="token function">setXxx</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">:</span> 参数为非函数值<span class="token punctuation">,</span> 直接指定新的状态值<span class="token punctuation">,</span> 内部用其覆盖原来的状态值
+        <span class="token function">setXxx</span><span class="token punctuation">(</span>value <span class="token operator">=</span><span class="token operator">></span> newValue<span class="token punctuation">)</span><span class="token punctuation">:</span> 参数为函数<span class="token punctuation">,</span> 接收原本的状态值<span class="token punctuation">,</span> 返回新的状态值<span class="token punctuation">,</span> 内部用其覆盖原来的状态值
+</code></pre>
+<h5 id="4-Effect-Hook"><a href="#4-Effect-Hook" class="headerlink" title="4. Effect Hook"></a>4. Effect Hook</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Effect Hook <span class="token function">可以让你在函数组件中执行副作用操作</span><span class="token punctuation">(</span>用于模拟类组件中的生命周期钩子<span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> React中的副作用操作<span class="token punctuation">:</span>
+        发ajax请求数据获取
+        设置订阅 <span class="token operator">/</span> 启动定时器
+        手动更改真实DOM
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 语法和说明<span class="token punctuation">:</span> 
+        <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">;</span> 
+          <span class="token comment" spellcheck="true">// 在此可以执行任何带副作用操作</span>
+          <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 在组件卸载前执行</span>
+            <span class="token comment" spellcheck="true">// 在此做一些收尾工作, 比如清除定时器/取消订阅等</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>stateValue<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 如果指定的是[], 回调函数只会在第一次render()后执行</span>
+    
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 可以把 useEffect Hook 看做如下三个函数的组合
+        <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+</code></pre>
+<h5 id="5-Ref-Hook"><a href="#5-Ref-Hook" class="headerlink" title="5. Ref Hook"></a>5. Ref Hook</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Ref Hook可以在函数组件中存储<span class="token operator">/</span>查找组件内的标签或任意其它数据
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 语法<span class="token punctuation">:</span> <span class="token keyword">const</span> refContainer <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 作用<span class="token punctuation">:</span>保存标签对象<span class="token punctuation">,</span>功能与React<span class="token punctuation">.</span><span class="token function">createRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>一样
+</code></pre>
+<hr>
+<h4 id="4-Fragment"><a href="#4-Fragment" class="headerlink" title="4. Fragment"></a>4. Fragment</h4><h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Fragment</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Fragment</span><span class="token punctuation">></span></span>
+    <span class="token operator">&lt;</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+<h5 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h5><blockquote>
+<p>可以不用必须有一个真实的DOM根标签了</p>
+</blockquote>
+<hr>
+
+<h4 id="5-Context"><a href="#5-Context" class="headerlink" title="5. Context"></a>5. Context</h4><h5 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h5><blockquote>
+<p>一种组件间通信方式, 常用于【祖组件】与【后代组件】间通信</p>
+</blockquote>
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token number">1</span><span class="token punctuation">)</span> 创建Context容器对象：
+    <span class="token keyword">const</span> XxxContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
+    
+<span class="token number">2</span><span class="token punctuation">)</span> 渲染子组时，外面包裹xxxContext<span class="token punctuation">.</span>Provider<span class="token punctuation">,</span> 通过value属性给后代组件传递数据：
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xxxContext.Provider</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>数据<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">></span></span>
+        子组件
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>xxxContext.Provider</span><span class="token punctuation">></span></span>
+    
+<span class="token number">3</span><span class="token punctuation">)</span> 后代组件读取数据：
+
+    <span class="token comment" spellcheck="true">//第一种方式:仅适用于类组件 </span>
+      <span class="token keyword">static</span> contextType <span class="token operator">=</span> xxxContext  <span class="token comment" spellcheck="true">// 声明接收context</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token comment" spellcheck="true">// 读取context中的value数据</span>
+      
+    <span class="token comment" spellcheck="true">//第二种方式: 函数组件与类组件都可以</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xxxContext.Consumer</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span><span class="token punctuation">;</span>
+          value <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span> <span class="token comment" spellcheck="true">// value就是context中的value数据</span>
+            要显示的内容
+          <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>xxxContext.Consumer</span><span class="token punctuation">></span></span>
+</code></pre>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><pre class=" language-jsx"><code class="language-jsx">    在应用开发中一般不用context<span class="token punctuation">,</span> 一般都它的封装react插件
+</code></pre>
+<hr>
+
+
+<h4 id="6-组件优化"><a href="#6-组件优化" class="headerlink" title="6. 组件优化"></a>6. 组件优化</h4><h5 id="Component的2个问题"><a href="#Component的2个问题" class="headerlink" title="Component的2个问题"></a>Component的2个问题</h5><blockquote>
+<ol>
+<li><p>只要执行setState(),即使不改变状态数据, 组件也会重新render()</p>
+</li>
+<li><p>只当前组件重新render(), 就会自动重新render子组件 &#x3D;&#x3D;&gt; 效率低</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="效率高的做法"><a href="#效率高的做法" class="headerlink" title="效率高的做法"></a>效率高的做法</h5><blockquote>
+<p> 只有当组件的state或props数据发生改变时才重新render()</p>
+</blockquote>
+<h5 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h5><blockquote>
+<p> Component中的shouldComponentUpdate()总是返回true</p>
+</blockquote>
+<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><pre class=" language-jsx"><code class="language-jsx">    办法<span class="token number">1</span><span class="token punctuation">:</span> 
+        <span class="token function">重写shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法
+        比较新旧state或props数据<span class="token punctuation">,</span> 如果有变化才返回<span class="token boolean">true</span><span class="token punctuation">,</span> 如果没有返回<span class="token boolean">false</span>
+    办法<span class="token number">2</span><span class="token punctuation">:</span>  
+        使用PureComponent
+        <span class="token function">PureComponent重写了shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 只有state或props数据有变化才返回<span class="token boolean">true</span>
+        注意<span class="token punctuation">:</span> 
+            只是进行state和props数据的浅比较<span class="token punctuation">,</span> 如果只是数据对象内部数据变了<span class="token punctuation">,</span> 返回<span class="token boolean">false</span>  
+            不要直接修改state数据<span class="token punctuation">,</span> 而是要产生新数据
+    项目中一般使用PureComponent来优化
+</code></pre>
+<hr>
+
+
+<h4 id="7-render-props"><a href="#7-render-props" class="headerlink" title="7. render props"></a>7. render props</h4><h5 id="如何向组件内部动态传入带内容的结构-标签"><a href="#如何向组件内部动态传入带内容的结构-标签" class="headerlink" title="如何向组件内部动态传入带内容的结构(标签)?"></a>如何向组件内部动态传入带内容的结构(标签)?</h5><pre class=" language-jsx"><code class="language-jsx">    Vue中<span class="token punctuation">:</span> 
+        使用slot技术<span class="token punctuation">,</span> 也就是通过组件标签体传入结构  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AA</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BB</span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AA</span><span class="token punctuation">></span></span>
+    React中<span class="token punctuation">:</span>
+        使用children props<span class="token punctuation">:</span> 通过组件标签体传入结构
+        使用render props<span class="token punctuation">:</span> 通过组件标签属性传入结构<span class="token punctuation">,</span> 一般用render函数属性
+</code></pre>
+<h5 id="children-props"><a href="#children-props" class="headerlink" title="children props"></a>children props</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>A</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>B</span><span class="token punctuation">></span></span>xxxx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>B</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>A</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    问题<span class="token punctuation">:</span> 如果B组件需要A组件内的数据<span class="token punctuation">,</span> <span class="token operator">==</span><span class="token operator">></span> 做不到 
+</code></pre>
+<h5 id="render-props"><a href="#render-props" class="headerlink" title="render props"></a>render props</h5><pre class=" language-jsx"><code class="language-jsx">    <span class="token operator">&lt;</span>A render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>C</span> <span class="token attr-name">data</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">;</span>data<span class="token punctuation">}</span></span><span class="token attr-name">;</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>C</span><span class="token punctuation">></span></span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>A</span><span class="token punctuation">></span></span>
+    A组件<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>内部state数据<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    C组件<span class="token punctuation">:</span> 读取A组件传入的数据显示 <span class="token punctuation">{</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>data<span class="token punctuation">}</span><span class="token punctuation">;</span> 
+</code></pre>
+<hr>
+
+<h4 id="8-错误边界"><a href="#8-错误边界" class="headerlink" title="8. 错误边界"></a>8. 错误边界</h4><h5 id="理解："><a href="#理解：" class="headerlink" title="理解："></a>理解：</h5><p>错误边界：用来捕获后代组件错误，渲染出备用页面</p>
+<h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><p>只能捕获后代组件生命周期产生的错误，不能捕获自己组件产生的错误和其他组件在合成事件、定时器中产生的错误</p>
+<h5 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h5><p>getDerivedStateFromError配合componentDidCatch</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// 生命周期函数，一旦后台组件报错，就会触发</span>
+<span class="token keyword">static</span> <span class="token function">getDerivedStateFromError</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 在render之前触发</span>
+    <span class="token comment" spellcheck="true">// 返回新的state</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+        hasError<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">componentDidCatch</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> info<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 统计页面的错误。发送请求发送到后台去</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="9-组件通信方式总结"><a href="#9-组件通信方式总结" class="headerlink" title="9. 组件通信方式总结"></a>9. 组件通信方式总结</h4><h5 id="方式："><a href="#方式：" class="headerlink" title="方式："></a>方式：</h5><pre class=" language-jsx"><code class="language-jsx">        props：
+            <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>children props
+            <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>render props
+        消息订阅<span class="token operator">-</span>发布：
+            pubs<span class="token operator">-</span>sub、event等等
+        集中式管理：
+            redux、dva等等
+        conText<span class="token punctuation">:</span>
+            生产者<span class="token operator">-</span>消费者模式
+</code></pre>
+<h5 id="组件间的关系"><a href="#组件间的关系" class="headerlink" title="组件间的关系"></a>组件间的关系</h5><pre class=" language-jsx"><code class="language-jsx">        父子组件：props
+        <span class="token function">兄弟组件</span><span class="token punctuation">(</span>非嵌套组件<span class="token punctuation">)</span>：消息订阅<span class="token operator">-</span>发布、集中式管理
+        <span class="token function">祖孙组件</span><span class="token punctuation">(</span>跨级组件<span class="token punctuation">)</span>：消息订阅<span class="token operator">-</span><span class="token function">发布、集中式管理、conText</span><span class="token punctuation">(</span>用的少<span class="token punctuation">)</span>
 </code></pre>
 
                 
@@ -1095,7 +1318,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.1k</span>
+                        class="white-color">13.1k</span>
             
             
             
