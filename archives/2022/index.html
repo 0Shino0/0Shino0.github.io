@@ -379,9 +379,25 @@
     // 每天切换 banner 图.  Switch banner image every day.      new Date().getDay()
     // 随机一张图 Math.round(Math.random()*(y-x)+x)
     var x = 0;
-    var y = 31;
-    var bannerUrl = "/medias/banner/" + Math.round(Math.random()*(y-x)+x)   + '.jpg';
+    var y = 29;
+    var bannerUrl = "/medias/banner/" + RandomImg(x,y);
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+    // 获取 随机图片路径
+    // Math.floor(Math.random()*(max-min+1)+min);
+    function RandomImg(x,y){
+        // 定义图片后缀   默认为.jpg
+        var suffix = '.jpg'
+        // 定义随机数
+        var random = Math.floor(Math.random()*(y-x+1)+x)
+        
+        if(random === 26){
+            // 如果图片路径 为一些特定的值 改变后缀
+            suffix = '.gif'
+        }
+        console.log(random+suffix);
+        return random+suffix
+    }
 </script>
 
 
