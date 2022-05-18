@@ -15,6 +15,6 @@ https://0shino0.github.io/contact/index.html
 https://0shino0.github.io/tags/index.html
 https://0shino0.github.io/friends/index.html
 https://0shino0.github.io/
-https://0shino0.github.io/tags/jsx/
 https://0shino0.github.io/tags/js/
+https://0shino0.github.io/tags/jsx/
 https://0shino0.github.io/tags/vue/
