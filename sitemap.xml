@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yyshino.top/2022/05/18/vue02/</loc>
+    <loc>https://yyshino.top/posts/4795.html</loc>
     
     <lastmod>2022-05-18</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/17/vue01/</loc>
+    <loc>https://yyshino.top/posts/43782.html</loc>
     
     <lastmod>2022-05-18</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/16/react3/</loc>
+    <loc>https://yyshino.top/posts/4944.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/15/react/</loc>
+    <loc>https://yyshino.top/posts/35233.html</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/13/javascript/</loc>
+    <loc>https://yyshino.top/posts/9809.html</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/16/diffing/</loc>
+    <loc>https://yyshino.top/posts/62098.html</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/14/zheng-ze-biao-da-shi/</loc>
+    <loc>https://yyshino.top/posts/46563.html</loc>
     
     <lastmod>2022-05-15</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/14/ajax-axios/</loc>
+    <loc>https://yyshino.top/posts/20614.html</loc>
     
     <lastmod>2022-05-15</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/15/es6/</loc>
+    <loc>https://yyshino.top/posts/13229.html</loc>
     
     <lastmod>2022-05-15</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/15/webpack/</loc>
+    <loc>https://yyshino.top/posts/15317.html</loc>
     
     <lastmod>2022-05-15</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://yyshino.top/2022/05/14/http/</loc>
+    <loc>https://yyshino.top/posts/35944.html</loc>
     
     <lastmod>2022-05-15</lastmod>
     
@@ -164,14 +164,14 @@
 
   
   <url>
-    <loc>https://yyshino.top/tags/jsx/</loc>
+    <loc>https://yyshino.top/tags/js/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yyshino.top/tags/js/</loc>
+    <loc>https://yyshino.top/tags/jsx/</loc>
     <lastmod>2022-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
