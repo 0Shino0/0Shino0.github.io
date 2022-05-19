@@ -8,7 +8,7 @@
       <link href="/posts/4795.html"/>
       <url>/posts/4795.html</url>
       
-        <content type="html"><![CDATA[<h3 id="Vue脚手架"><a href="#Vue脚手架" class="headerlink" title="Vue脚手架"></a>Vue脚手架</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="Vue脚手架"><a href="#Vue脚手架" class="headerlink" title="Vue脚手架"></a>Vue脚手架</h3><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><pre><code>    1)创建脚手架4/3的vue项目, 并运行    npm install -g @vue/cli    安装脚手架4/3的版本    vue create vue-demo        使用安装的脚手架创建一个新的vue项目    npm run serve              运行创建的项目命令    2)创建脚手架2的vue项目    npm install -g @vue/cli-init    vue init webpack vue-demo        npm run dev </code></pre>]]></content>
       
       
       
