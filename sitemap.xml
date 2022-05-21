@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yyshino.top/posts/43782.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yyshino.top/posts/33425.html</loc>
     
     <lastmod>2022-05-21</lastmod>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://yyshino.top/posts/4944.html</loc>
-    
-    <lastmod>2022-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yyshino.top/posts/43782.html</loc>
     
     <lastmod>2022-05-19</lastmod>
     
@@ -182,14 +182,14 @@
 
   
   <url>
-    <loc>https://yyshino.top/tags/jsx/</loc>
+    <loc>https://yyshino.top/tags/js/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yyshino.top/tags/js/</loc>
+    <loc>https://yyshino.top/tags/jsx/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
