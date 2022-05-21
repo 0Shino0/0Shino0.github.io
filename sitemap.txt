@@ -18,6 +18,6 @@ https://yyshino.top/contact/index.html
 https://yyshino.top/tags/index.html
 https://yyshino.top/friends/index.html
 https://yyshino.top/
-https://yyshino.top/tags/js/
 https://yyshino.top/tags/jsx/
+https://yyshino.top/tags/js/
 https://yyshino.top/tags/vue/
