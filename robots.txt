@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
 Allow: /posts/
+Allow: /page/
+Allow: /tags/
+Allow: /categories/
+Allow: /archives/
 Disallow: /about/
-Disallow: /archives/
 Disallow: /js/
 Disallow: /css/
 Disallow: /contact/
@@ -10,7 +13,4 @@ Disallow: /fonts/
 Disallow: /friends/
 Disallow: /libs/
 Disallow: /medias/
-Disallow: /page/
-Disallow: /tags/
-Disallow: /categories/
-Disallow: //bangumis/
+Disallow: /bangumis/
