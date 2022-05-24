@@ -4,7 +4,16 @@
   <url>
     <loc>https://yyshino.top/posts/51479.html</loc>
     
-    <lastmod>2022-05-23</lastmod>
+    <lastmod>2022-05-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yyshino.top/posts/43782.html</loc>
+    
+    <lastmod>2022-05-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://yyshino.top/posts/4795.html</loc>
-    
-    <lastmod>2022-05-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yyshino.top/posts/43782.html</loc>
     
     <lastmod>2022-05-23</lastmod>
     
@@ -200,14 +200,14 @@
 
   
   <url>
-    <loc>https://yyshino.top/tags/jsx/</loc>
+    <loc>https://yyshino.top/tags/js/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yyshino.top/tags/js/</loc>
+    <loc>https://yyshino.top/tags/jsx/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
