@@ -193,29 +193,29 @@
 
   <url>
     <loc>https://yyshino.top/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://yyshino.top/tags/js/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <loc>https://yyshino.top/tags/jsx/</loc>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yyshino.top/tags/jsx/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <loc>https://yyshino.top/tags/js/</loc>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yyshino.top/tags/vue/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -224,14 +224,14 @@
   
   <url>
     <loc>https://yyshino.top/categories/web%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yyshino.top/categories/web%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2022-05-23</lastmod>
+    <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
