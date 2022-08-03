@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>钓鱼佬入门</title>
+      <link href="/posts/50287.html"/>
+      <url>/posts/50287.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="知己知彼"><a href="#知己知彼" class="headerlink" title="知己知彼"></a>知己知彼</h2><h3 id="各鱼类习性"><a href="#各鱼类习性" class="headerlink" title="各鱼类习性"></a>各鱼类习性</h3><h4 id="鲤鱼"><a href="#鲤鱼" class="headerlink" title="鲤鱼"></a>鲤鱼</h4><ul><li><p>食物: 玉米 </p></li><li><p>栖息地: 底层鱼类</p></li><li><p>习惯:  水底不平，大小石头旁, 有安全感的地方</p></li></ul><h4 id="鲫鱼"><a href="#鲫鱼" class="headerlink" title="鲫鱼"></a>鲫鱼</h4><ul><li><p>食物: 麦粒</p></li><li><p>栖息地:  底层鱼类</p></li><li><p>习惯:</p></li></ul><h4 id="黄刺骨"><a href="#黄刺骨" class="headerlink" title="黄刺骨"></a>黄刺骨</h4><ul><li><p>食物: 蚯蚓</p></li><li><p>栖息地:  </p></li><li><p>习惯:</p></li></ul><h2 id="鱼饵-与-窝料"><a href="#鱼饵-与-窝料" class="headerlink" title="鱼饵 与 窝料"></a>鱼饵 与 窝料</h2><p>鱼饵</p><p>窝料</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 兴趣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TypeScript入门</title>
+      <link href="/posts/33883.html"/>
+      <url>/posts/33883.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="回顾js"><a href="#回顾js" class="headerlink" title="回顾js"></a>回顾js</h2><h3 id="原型protorype和原型链-proto"><a href="#原型protorype和原型链-proto" class="headerlink" title="原型protorype和原型链_proto_"></a>原型<code>protorype</code>和原型链<code>_proto_</code></h3><h2 id="TS安装"><a href="#TS安装" class="headerlink" title="TS安装"></a>TS安装</h2><h2 id="TS-class类"><a href="#TS-class类" class="headerlink" title="TS class类"></a>TS class类</h2><h3 id="方法重载-methodoverload"><a href="#方法重载-methodoverload" class="headerlink" title="方法重载 (methodoverload)"></a>方法重载 (methodoverload)</h3><h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><h3 id="构造器重载"><a href="#构造器重载" class="headerlink" title="构造器重载"></a>构造器重载</h3><h2 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><h4 id="静态属性-1"><a href="#静态属性-1" class="headerlink" title="静态属性"></a>静态属性</h4><p>static</p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="静态引用属性"><a href="#静态引用属性" class="headerlink" title="静态引用属性"></a>静态引用属性</h4><h4 id="静态基本类型属性"><a href="#静态基本类型属性" class="headerlink" title="静态基本类型属性"></a>静态基本类型属性</h4><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><h3 id="super的使用"><a href="#super的使用" class="headerlink" title="super的使用"></a>super的使用</h3><ul><li>super代表 <strong>父类的构造函数名</strong> 或 <strong>父类的类名</strong></li><li>通过”super”关键字只能访问基类的公共方法和受保护方法。</li><li>获取 &#x2F; 重写 父类方法</li></ul><h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><ul><li>public: 公开</li><li>protected: 可以在本类和子类中访问，不能再类的外部使用</li><li>private: 只允许在本类中访问</li><li>注意<ul><li>默认: public</li><li>父类方法的访问范围【访问修饰符】必须小于子类中方法重写的访问范围【访问修饰符】</li><li>父类方法不能是private</li></ul></li></ul><h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//TS类 双重性质  即是类型【new实例时TS类是类型】 当用TS类直接获取属性时就是对象</span><span class="token comment" spellcheck="true">//JS函数 双重性质  即是类型【new实例时JS函数也是类型】 当用JS类直接获取属性时就是对象</span></code></pre><h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p>as</p><h4 id="类型断言中的不能相互重叠问题"><a href="#类型断言中的不能相互重叠问题" class="headerlink" title="类型断言中的不能相互重叠问题:"></a>类型断言中的不能相互重叠问题:</h4><ul><li>两个类之间断言的规则:<ul><li>两个类中任意一个的属性和方法是另一个类的属性和方法完全相同或子集，则这两个类可以相互断言</li><li>否则这两个类就不能相互断言</li></ul></li><li>任何数据类型都可以转换成any 或unknown类型</li></ul><h4 id="适用性"><a href="#适用性" class="headerlink" title="适用性"></a>适用性</h4><ul><li>对象中的Symbol数据类型取值问题</li><li>加法计算,巧用as any。</li></ul><h2 id="TS类型守卫"><a href="#TS类型守卫" class="headerlink" title="TS类型守卫"></a>TS类型守卫</h2><ul><li>类型判断: <code>typeof</code><ul><li><code>typeof</code> 检测变量的类型范围包括：  “string” | “number” | “bigint” | “boolean” | “symbol” | “undefined” | “object” | “function” 等数据类型。</li><li><code>typeof</code>的局限性<ul><li>检测<code>null</code>: <code>typeof null</code> 的结果是 <code>object</code></li><li>检测数组变量: <code>typeof []</code> 的结果是 <code>object</code></li><li>检测<code>Set</code> <code>Map</code>变量:  结果也是 <code>object</code></li></ul></li><li>替代方案 <code>Object.protorype.toString.call()</code><ul><li>依然无法解决的问题:无法获取一个自定义的类的实例变量或构造函数的对象变量的真正创建类型，答案是使用 instanceof 来解决。</li></ul></li></ul></li><li>属性或者方法或者函数判断: <code>in</code></li><li>实例判断: <code>instanceof</code></li><li>字面量相等判断: <code>==</code> <code>===</code> <code>!=</code> <code>!==</code></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue后台通用管理系统总结</title>
       <link href="/posts/1327.html"/>
       <url>/posts/1327.html</url>
