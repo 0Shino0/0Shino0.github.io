@@ -39,9 +39,7 @@
 		if(barrage.close){
 			div_barrager_box.append(" <div class='close z'></div>");
 		}
-		
-		// 去除 blank 
-		// const content = $("<a title='' href='' ></a>").appendTo(id + " .barrage_box .p");
+
 		const content = $("<a title='' href='' target='_blank'></a>").appendTo(id + " .barrage_box .p");
 		content.attr({
 			'href': barrage.href,

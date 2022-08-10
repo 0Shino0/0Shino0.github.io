@@ -70,9 +70,7 @@ $(function () {
 
     /*文章内容详情的一些初始化特性*/
     let articleInit = function () {
-        
         $('#articleContent a').attr('target', '_blank');
-        // $('#articleContent a').attr('target', '_self');
 
         $('#articleContent img').each(function () {
             let imgPath = $(this).attr('src');
@@ -108,12 +106,7 @@ $(function () {
             subHtmlSelectorRelative: true
         });
 
-        // 一般情况下懒加载会和gallery插件会发生冲突，结果可能就是点开图片，
-        // 左翻右翻都是loading image。matery主题的解决方案是：
-        $(document).find('img[data-original]').each(function(){
-            $(this).parent().attr("href", $(this).attr("data-original"));
-        });
-
+        
         // progress bar init
         const progressElement = window.document.querySelector('.progress-bar');
         if (progressElement) {
@@ -133,8 +126,6 @@ $(function () {
     });
 
     /*监听滚动条位置*/
-    // 改变 nav导航字体颜色
-    let $nav_text = $('.hide-on-med-and-down>a')
     let $nav = $('#headNav');
     let $backTop = $('.top-scroll');
     // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
@@ -148,13 +139,9 @@ $(function () {
     function showOrHideNavBg(position) {
         let showPosition = 100;
         if (position < showPosition) {
-            $nav_text.removeClass('nav-text-gray')
-
             $nav.addClass('nav-transparent');
             $backTop.slideUp(300);
         } else {
-            $nav_text.addClass('nav-text-gray')
-
             $nav.removeClass('nav-transparent');
             $backTop.slideDown(300);
         }
