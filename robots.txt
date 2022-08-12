@@ -5,7 +5,7 @@ Allow: /page/
 Allow: /tags/
 Allow: /categories/
 Allow: /archives/
-Disallow: /about/
+Allow: /about/
 Disallow: /js/
 Disallow: /css/
 Disallow: /contact/
@@ -15,4 +15,4 @@ Disallow: /libs/
 Disallow: /medias/
 Disallow: /bangumis/
 Disallow: /.jpg$
-Sitemap: https://yyshino.top/sitemap
+Sitemap: https://blog.yyshino.top/sitemap
