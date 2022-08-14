@@ -327,13 +327,6 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/ts/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.yyshino.top/tags/vue/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -341,7 +334,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/miniapp/</loc>
+    <loc>https://blog.yyshino.top/tags/ts/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -349,6 +342,13 @@
   
   <url>
     <loc>https://blog.yyshino.top/tags/webpack-vue-react/</loc>
+    <lastmod>2022-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yyshino.top/tags/miniapp/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -369,14 +369,14 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E5%85%B4%E8%B6%A3/</loc>
+    <loc>https://blog.yyshino.top/tags/%E8%B8%A9%E5%9D%91/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+    <loc>https://blog.yyshino.top/tags/%E5%85%B4%E8%B6%A3/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
