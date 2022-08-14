@@ -25,9 +25,9 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.25741dac.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/style.8593fb4d.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
@@ -111,7 +111,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -522,7 +522,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -836,233 +836,16 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
-.cover-wrapper #parallax-window {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
-.parallax-mirror {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-mode: 'dark';
-  }
-  :root:not([color-scheme]) {
-    --color-site-body: #121212;
-    --color-read-bkg: #1f1f1f;
-    --color-read-post: #262626;
-    --color-site-bg: #1f1f1f;
-    --color-site-inner: rgba(238,238,238,0.871);
-    --color-site-footer: rgba(170,170,170,0.871);
-    --color-card: #262626;
-    --color-text: rgba(238,238,238,0.871);
-    --color-block: #434343;
-    --color-codeblock: #1f1f1f;
-    --color-inlinecode: #d56d28;
-    --color-h1: rgba(255,255,255,0.871);
-    --color-h2: rgba(255,255,255,0.871);
-    --color-h3: rgba(255,255,255,0.6);
-    --color-h4: rgba(255,255,255,0.6);
-    --color-h5: rgba(255,255,255,0.6);
-    --color-h6: rgba(255,255,255,0.6);
-    --color-p: rgba(217,217,217,0.871);
-    --color-list: rgba(217,217,217,0.871);
-    --color-list-hl: #63e0c4;
-    --color-meta: rgba(191,191,191,0.871);
-    --color-link: rgba(191,191,191,0.871);
-    --color-copyright-bkg: #21252b;
-  }
-  :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
-  }
-  :root:not([color-scheme]) .blur {
-    background: rgba(31,31,31,0.9) !important;
-  }
-  :root:not([color-scheme]) .white-box.blur {
-    background: rgba(38,38,38,0.9) !important;
-  }
-  :root:not([color-scheme]) .nav-main .u-search-input {
-    background: var(--color-card) !important;
-  }
-  :root:not([color-scheme]) #l_main .article .prev-next>a {
-    background: var(--color-block) !important;
-  }
-  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
-    background: var(--color-site-bg) !important;
-  }
-  :root:not([color-scheme]) .article blockquote {
-    background: var(--color-block) !important;
-  }
-  :root:not([color-scheme]) .article-title a {
-    color: var(--color-h1) !important;
-  }
-  :root:not([color-scheme]) details>summary {
-    color: var(--color-p) !important;
-    background: var(--color-site-bg) !important;
-  }
-  :root:not([color-scheme]) details {
-    border: 1px solid var(--color-site-bg) !important;
-    background: var(--color-site-bg) !important;
-  }
-  :root:not([color-scheme]) #u-search .modal,
-  :root:not([color-scheme]) #u-search .modal-header,
-  :root:not([color-scheme]) #u-search .modal-body {
-    background: var(--color-card) !important;
-  }
-  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
-    background: var(--color-block) !important;
-  }
-  :root:not([color-scheme]) .u-search-input:hover {
-    background: var(--color-block) !important;
-  }
-  :root:not([color-scheme]) .u-search-input:focus {
-    background: var(--color-site-body) !important;
-  }
-}
-[color-scheme='dark'] {
-  --color-site-body: #121212;
-  --color-read-bkg: #1f1f1f;
-  --color-read-post: #262626;
-  --color-site-bg: #1f1f1f;
-  --color-site-inner: rgba(238,238,238,0.871);
-  --color-site-footer: rgba(170,170,170,0.871);
-  --color-card: #262626;
-  --color-text: rgba(238,238,238,0.871);
-  --color-block: #434343;
-  --color-codeblock: #1f1f1f;
-  --color-inlinecode: #d56d28;
-  --color-h1: rgba(255,255,255,0.871);
-  --color-h2: rgba(255,255,255,0.871);
-  --color-h3: rgba(255,255,255,0.6);
-  --color-h4: rgba(255,255,255,0.6);
-  --color-h5: rgba(255,255,255,0.6);
-  --color-h6: rgba(255,255,255,0.6);
-  --color-p: rgba(217,217,217,0.871);
-  --color-list: rgba(217,217,217,0.871);
-  --color-list-hl: #63e0c4;
-  --color-meta: rgba(191,191,191,0.871);
-  --color-link: rgba(191,191,191,0.871);
-  --color-copyright-bkg: #21252b;
-}
-[color-scheme='dark'] img {
-  filter: brightness(70%) !important;
-}
-[color-scheme='dark'] .blur {
-  background: rgba(31,31,31,0.9) !important;
-}
-[color-scheme='dark'] .white-box.blur {
-  background: rgba(38,38,38,0.9) !important;
-}
-[color-scheme='dark'] .nav-main .u-search-input {
-  background: var(--color-card) !important;
-}
-[color-scheme='dark'] #l_main .article .prev-next>a {
-  background: var(--color-block) !important;
-}
-[color-scheme='dark'] #l_main .article .prev-next>a:hover {
-  background: var(--color-site-bg) !important;
-}
-[color-scheme='dark'] .article blockquote {
-  background: var(--color-block) !important;
-}
-[color-scheme='dark'] .article-title a {
-  color: var(--color-h1) !important;
-}
-[color-scheme='dark'] details>summary {
-  color: var(--color-p) !important;
-  background: var(--color-site-bg) !important;
-}
-[color-scheme='dark'] details {
-  border: 1px solid var(--color-site-bg) !important;
-  background: var(--color-site-bg) !important;
-}
-[color-scheme='dark'] #u-search .modal,
-[color-scheme='dark'] #u-search .modal-header,
-[color-scheme='dark'] #u-search .modal-body {
-  background: var(--color-card) !important;
-}
-[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
-  background: var(--color-block) !important;
-}
-[color-scheme='dark'] .u-search-input:hover {
-  background: var(--color-block) !important;
-}
-[color-scheme='dark'] .u-search-input:focus {
-  background: var(--color-site-body) !important;
-}
-@media screen and (max-width: 500px) {
-  [color-scheme='dark'] .l_header .m_search {
-    background: var(--color-site-bg) !important;
-  }
-}
 @font-face {
-  font-family: 'Dosis';
-  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/Dosis/Dosis-Medium.ttf");
+  font-family: 'UbuntuMono';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
-  font-family: 'Dosis';
-  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/Dosis/Dosis-Medium.ttf");
+  font-family: 'Varela Round';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1185,7 +968,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.25rem;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -1196,7 +979,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -1889,21 +1672,10 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
-@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
-  .l_header .m_search {
-    background: var(--color-site-bg) !important;
-  }
-}
 
   </style>
-  <link rel="stylesheet" href="/css/style.25741dac.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.25741dac.css"></noscript>
-    <script>
-      let userColorScheme=localStorage.getItem("color-scheme")
-      if(userColorScheme){
-        document.documentElement.setAttribute("color-scheme", userColorScheme);
-      }
-    </script>
+  <link rel="stylesheet" href="/css/style.8593fb4d.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.8593fb4d.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1975,11 +1747,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.25741dac.css"}},
+    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660477784909),
+    lastupdate: new Date(1660478451061),
     sidebar: {
-      for_page: ["qgroup","post","category","guide"],
+      for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -1993,17 +1765,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-light fa-info-circle light-blue","quection":"fa-light fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":false,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"fa-brands fa-creative-commons light-blue"},"aplayer":{"enable":true,"play":"fa-light fa-play light-blue","pause":"fa-light fa-pause light-blue","error":"fa-light fa-exclamation-square red"},"rightmenu":{"enable":true,"notice":true}},
+      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
-      aplayer: {
-        id: 5062959861,
-        enable:true
-      },
       
-      
-      
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.prevNext","hr","menus.links","hr","menus.darkMode","hr","plugins.articlePage","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":false,"musicAlwaysShow":true,"corsAnywhere":"https://cors.adc.ink/"},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"home","name":"回到首页","icon":"fa-duotone fa-home PETERRIVE","link":"/","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone PETERRIVE fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone PETERRIVE fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone PETERRIVE fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone PETERRIVE fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone PETERRIVE fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone PETERRIVE fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone PETERRIVE fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone PETERRIVE fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone PETERRIVE fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone PETERRIVE fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print TURQUOISE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open EMERALD","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-duotone fa-eclipse-alt WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}],"links":[{"id":"help","name":"常见问题","icon":"fa-duotone fa-question EMERALD","link":"/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-duotone fa-rss PETERRIVE","link":"/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-duotone fa-fan fa-spin AMETHYST","link":"/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-duotone fa-code-branch WETASPHALT","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-duotone fa-code-branch CONCRETE","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"prevNext":[{"id":"prev","name":"查看上一篇","icon":"fa-duotone fa-angles-left PETERRIVE","event":"volantis.rightmenu.jump('prev')","group":"prevNext"},{"id":"next","name":"查看下一篇","icon":"fa-duotone fa-angles-right PETERRIVE","event":"volantis.rightmenu.jump('next')","group":"prevNext"}]}}
       
     }
   }
@@ -2419,9 +2184,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
+            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
           
-            Volantis 5 <sup style="color:#00ff90">dev</sup>
           
         </a>
       
@@ -2435,15 +2200,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v5/getting-started/" title="文档"
+                href="/" title="博客"
                   
                   
-                    target="_self"
                   
-                  
-                    active-action="action-v5getting-started"
+                    active-action="action-home"
                   >
-                  <i class='fa-duotone fa-book faa-tada fa-fw'></i>文档
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2454,13 +2217,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/examples/" title="示例"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-examples"
+                    active-action="action-categories"
                   >
-                  <i class='fa-duotone fa-play-circle faa-tada fa-fw'></i>示例
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2471,13 +2234,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/faqs/" title="帮助"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-faqs"
+                    active-action="action-tags"
                   >
-                  <i class='fa-duotone fa-question-circle faa-tada fa-fw'></i>帮助
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2488,180 +2251,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/contributors/" title="鸣谢"
-                  
-                  
-                  
-                    active-action="action-contributors"
-                  >
-                  <i class='fa-duotone fa-heart fa-fw'></i>鸣谢
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="更多"
-                  
-                  
-                  >
-                  <i class='fa-duotone fa-ellipsis-v fa-fw'></i>更多
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
-                      
-            
-              <hr>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="本站源码"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xvolantis-docs"
-                  >
-                  本站源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" title="主题源码"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantis"
-                  >
-                  主题源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <hr>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/releases/" title="更新日志"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases"
-                  >
-                  更新日志
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="博客文章"
+                href="/archives/" title="归档"
                   
                   
                   
                     active-action="action-archives"
                   >
-                  博客文章
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
             
           
-                    
-                      
-            
-              <hr>
-            
           
-                    
-                      
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v4/getting-started/" title="旧版文档 v4"
+                href="/friends/" title="友链"
                   
                   
                   
-                    active-action="action-v4getting-started"
+                    active-action="action-friends"
                   >
-                  旧版文档 v4
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
             
           
-                    
-                      
+          
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v3/getting-started/" title="旧版文档 v3"
+                href="/about/" title="关于"
                   
                   
                   
-                    active-action="action-v3getting-started"
+                    active-action="action-about"
                   >
-                  旧版文档 v3
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v2/getting-started/" title="旧版文档 v2"
-                  
-                  
-                  
-                    active-action="action-v2getting-started"
-                  >
-                  旧版文档 v2
-                </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2690,15 +2321,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v5/getting-started/" title="文档"
+                href="/" title="博客"
                   
                   
-                    target="_self"
                   
-                  
-                    active-action="action-v5getting-started"
+                    active-action="action-home"
                   >
-                  <i class='fa-duotone fa-book faa-tada fa-fw'></i>文档
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2709,13 +2338,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/examples/" title="示例"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-examples"
+                    active-action="action-categories"
                   >
-                  <i class='fa-duotone fa-play-circle faa-tada fa-fw'></i>示例
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2726,13 +2355,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/faqs/" title="帮助"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-faqs"
+                    active-action="action-tags"
                   >
-                  <i class='fa-duotone fa-question-circle faa-tada fa-fw'></i>帮助
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2743,180 +2372,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/contributors/" title="鸣谢"
-                  
-                  
-                  
-                    active-action="action-contributors"
-                  >
-                  <i class='fa-duotone fa-heart fa-fw'></i>鸣谢
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="更多"
-                  
-                  
-                  >
-                  <i class='fa-duotone fa-ellipsis-v fa-fw'></i>更多
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
-                      
-            
-              <hr>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="本站源码"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xvolantis-docs"
-                  >
-                  本站源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" title="主题源码"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantis"
-                  >
-                  主题源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <hr>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/releases/" title="更新日志"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases"
-                  >
-                  更新日志
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="博客文章"
+                href="/archives/" title="归档"
                   
                   
                   
                     active-action="action-archives"
                   >
-                  博客文章
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
             
           
-                    
-                      
             
-              <hr>
-            
-          
-                    
-                      
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v4/getting-started/" title="旧版文档 v4"
+                href="/friends/" title="友链"
                   
                   
                   
-                    active-action="action-v4getting-started"
+                    active-action="action-friends"
                   >
-                  旧版文档 v4
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
             
           
-                    
-                      
+            
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v3/getting-started/" title="旧版文档 v3"
+                href="/about/" title="关于"
                   
                   
                   
-                    active-action="action-v3getting-started"
+                    active-action="action-about"
                   >
-                  旧版文档 v3
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/v2/getting-started/" title="旧版文档 v2"
-                  
-                  
-                  
-                    active-action="action-v2getting-started"
-                  >
-                  旧版文档 v2
-                </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2941,7 +2438,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="full" class='cover-wrapper  dock' style="display: ;">
         
-  <div id="parallax-window"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2950,62 +2447,49 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">Volantis</p>
     
     
-      <p class="subtitle">中文创作者社区</p>
-    
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
         
           
-            <a href="/"
+            <a href="/v4/getting-started/"
               
               
-              active-action="action-home">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a href="/v5/getting-started/"
-              
-              
-                target="_self"
-              
-              active-action="action-v5getting-started">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>文档</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              active-action="action-examples">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4af.svg'><p>示例</p>
+              active-action="action-v4getting-started">
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>文档</p>
             </a>
           
             <a href="/faqs/"
               
               
               active-action="action-faqs">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4ac.svg'><p>帮助</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              active-action="action-examples">
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f396.svg'><p>示例</p>
             </a>
           
             <a href="/contributors/"
               
               
               active-action="action-contributors">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f497.svg'><p>鸣谢</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f389.svg'><p>社区</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>归档</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
-            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
               
-              
-                target="_self"
               
               active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
               <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
@@ -3130,7 +2614,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <p>从鱼皮哪获取的Java路线图<img src="http://shinoimg.yyshino.top/img/202206250652302.jpg" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202206250652302.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="httpssegmentfault.coma1190000039704354"></p>
+        从鱼皮哪获取的Java路线图
 
 
       
@@ -3140,17 +2624,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-08-10T13:49:17+08:00">2022-08-10</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/60206.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3189,42 +2671,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="知己知彼"><a href="#知己知彼" class="headerlink" title="知己知彼"></a>知己知彼</h2><h3 id="各鱼类习性"><a href="#各鱼类习性" class="headerlink" title="各鱼类习性"></a>各鱼类习性</h3><h4 id="鲤鱼"><a href="#鲤鱼" class="headerlink" title="鲤鱼"></a>鲤鱼</h4><ul>
-<li><p>食物: 玉米 </p>
-</li>
-<li><p>栖息地: 底层鱼类</p>
-</li>
-<li><p>习惯:  水底不平，大小石头旁, 有安全感的地方</p>
-</li>
-</ul>
-<h4 id="草鱼"><a href="#草鱼" class="headerlink" title="草鱼"></a>草鱼</h4><ul>
-<li><p>食物: 玉米 </p>
-</li>
-<li><p>栖息地: 底层鱼类</p>
-</li>
-<li><p>习惯:  水底不平，大小石头旁, 有安全感的地方</p>
-</li>
-</ul>
-<h4 id="鲫鱼"><a href="#鲫鱼" class="headerlink" title="鲫鱼"></a>鲫鱼</h4><ul>
-<li><p>食物: 麦粒</p>
-</li>
-<li><p>栖息地:  底层鱼类</p>
-</li>
-<li><p>习惯:</p>
-</li>
-</ul>
-<h4 id="黄刺骨"><a href="#黄刺骨" class="headerlink" title="黄刺骨"></a>黄刺骨</h4><ul>
-<li><p>食物: 蚯蚓</p>
-</li>
-<li><p>栖息地:  </p>
-</li>
-<li><p>习惯:</p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="鱼饵-与-窝料"><a href="#鱼饵-与-窝料" class="headerlink" title="鱼饵 与 窝料"></a>鱼饵 与 窝料</h2><p>鱼饵</p>
-<p>窝料</p>
+        知己知彼各鱼类习性鲤鱼
+食物: 玉米 
 
-</div>
+栖息地: 底层鱼类
+
+习惯:  水底不平，大小石头旁, 有安全感的地方
+
+
+草鱼
+食物: 玉米 
+
+栖息地: 底层鱼类
+
+习惯:  水底不平，大小石头旁, 有安全感的地方
+
+
+鲫鱼
+食物: 麦粒
+
+栖息地:  底层鱼类
+
+习惯:
+
+
+黄刺骨
+食物: 蚯蚓
+
+栖息地:  
+
+习惯:
+
+
+鱼饵 与 窝料鱼饵
+窝料
+
+
       
     
   </div>
@@ -3232,17 +2714,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-07-31T15:45:22+08:00">2022-07-31</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/50287.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3281,60 +2761,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="回顾js"><a href="#回顾js" class="headerlink" title="回顾js"></a>回顾js</h2><h3 id="原型protorype和原型链-proto"><a href="#原型protorype和原型链-proto" class="headerlink" title="原型protorype和原型链_proto_"></a>原型<code>protorype</code>和原型链<code>_proto_</code></h3><h2 id="TS安装"><a href="#TS安装" class="headerlink" title="TS安装"></a>TS安装</h2><h2 id="TS-class类"><a href="#TS-class类" class="headerlink" title="TS class类"></a>TS class类</h2><h3 id="方法重载-methodoverload"><a href="#方法重载-methodoverload" class="headerlink" title="方法重载 (methodoverload)"></a>方法重载 (methodoverload)</h3><h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><h3 id="构造器重载"><a href="#构造器重载" class="headerlink" title="构造器重载"></a>构造器重载</h3><h2 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><h4 id="静态属性-1"><a href="#静态属性-1" class="headerlink" title="静态属性"></a>静态属性</h4><p>static</p>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="静态引用属性"><a href="#静态引用属性" class="headerlink" title="静态引用属性"></a>静态引用属性</h4><h4 id="静态基本类型属性"><a href="#静态基本类型属性" class="headerlink" title="静态基本类型属性"></a>静态基本类型属性</h4></div><div class="story post-story"><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><h3 id="super的使用"><a href="#super的使用" class="headerlink" title="super的使用"></a>super的使用</h3><ul>
-<li>super代表 <strong>父类的构造函数名</strong> 或 <strong>父类的类名</strong></li>
-<li>通过”super”关键字只能访问基类的公共方法和受保护方法。</li>
-<li>获取 &#x2F; 重写 父类方法</li>
-</ul>
-<h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><ul>
-<li>public: 公开</li>
-<li>protected: 可以在本类和子类中访问，不能再类的外部使用</li>
-<li>private: 只允许在本类中访问</li>
-<li>注意<ul>
-<li>默认: public</li>
-<li>父类方法的访问范围【访问修饰符】必须小于子类中方法重写的访问范围【访问修饰符】</li>
-<li>父类方法不能是private</li>
-</ul>
-</li>
-</ul>
-<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//TS类 双重性质  即是类型【new实例时TS类是类型】 当用TS类直接获取属性时就是对象</span>
-<span class="token comment" spellcheck="true">//JS函数 双重性质  即是类型【new实例时JS函数也是类型】 当用JS类直接获取属性时就是对象</span>
-</code></pre>
-</div><div class="story post-story"><h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p>as</p>
-<h4 id="类型断言中的不能相互重叠问题"><a href="#类型断言中的不能相互重叠问题" class="headerlink" title="类型断言中的不能相互重叠问题:"></a>类型断言中的不能相互重叠问题:</h4><ul>
-<li>两个类之间断言的规则:<ul>
-<li>两个类中任意一个的属性和方法是另一个类的属性和方法完全相同或子集，则这两个类可以相互断言</li>
-<li>否则这两个类就不能相互断言</li>
-</ul>
-</li>
-<li>任何数据类型都可以转换成any 或unknown类型</li>
-</ul>
-<h4 id="适用性"><a href="#适用性" class="headerlink" title="适用性"></a>适用性</h4><ul>
-<li>对象中的Symbol数据类型取值问题</li>
-<li>加法计算,巧用as any。</li>
-</ul>
-</div><div class="story post-story"><h2 id="TS类型守卫"><a href="#TS类型守卫" class="headerlink" title="TS类型守卫"></a>TS类型守卫</h2><ul>
-<li>类型判断: <code>typeof</code><ul>
-<li><code>typeof</code> 检测变量的类型范围包括：  “string” | “number” | “bigint” | “boolean” | “symbol” | “undefined” | “object” | “function” 等数据类型。</li>
-<li><code>typeof</code>的局限性<ul>
-<li>检测<code>null</code>: <code>typeof null</code> 的结果是 <code>object</code></li>
-<li>检测数组变量: <code>typeof []</code> 的结果是 <code>object</code></li>
-<li>检测<code>Set</code> <code>Map</code>变量:  结果也是 <code>object</code></li>
-</ul>
-</li>
-<li>替代方案 <code>Object.protorype.toString.call()</code><ul>
-<li>依然无法解决的问题:无法获取一个自定义的类的实例变量或构造函数的对象变量的真正创建类型，答案是使用 instanceof 来解决。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>属性或者方法或者函数判断: <code>in</code></li>
-<li>实例判断: <code>instanceof</code></li>
-<li>字面量相等判断: <code>==</code> <code>===</code> <code>!=</code> <code>!==</code></li>
-</ul>
-
-</div>
+        回顾js原型protorype和原型链_proto_TS安装TS class类方法重载 (methodoverload)函数重载构造器重载静态属性区别对象属性静态属性static
+分类静态引用属性静态基本类型属性继承extendssuper的使用
+super代表 父类的构造函数名 或 父类的类名
+通过”super”关键字只能访问基类的公共方法和受保护方法。
+获取 &#x2F; 重写 父类方法...
       
     
   </div>
@@ -3342,17 +2773,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-07-30T08:43:12+08:00">2022-07-30</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/33883.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3391,280 +2820,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="company-admin"><a href="#company-admin" class="headerlink" title="company-admin"></a>company-admin</h2><p>项目地址 <a target="_blank" rel="noopener" href="https://github.com/0Shino0/company-admin">https://github.com/0Shino0/company-admin</a></p>
-</div><div class="story post-story"><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
-<li>Vue3 + Element Plus + Sass 实现前台</li>
-<li>Koa2 + MongoDB 实现后台</li>
-<li>Vite项目构建</li>
-</ul>
-</div><div class="story post-story"><h2 id="前台"><a href="#前台" class="headerlink" title="前台"></a>前台</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p><code>.env.dev</code></p>
-<p><code>config</code></p>
-<p>配置不同环境的 api (方便调节 和 测试)</p>
-<ul>
-<li>dev<ul>
-<li>baseApi</li>
-<li>mockApi</li>
-</ul>
-</li>
-<li>test<ul>
-<li>baseApi</li>
-<li>mockApi</li>
-</ul>
-</li>
-<li>prod<ul>
-<li>baseApi</li>
-<li>mockApi</li>
-</ul>
-</li>
-</ul>
-<p>对外暴露 <code>config</code> &#x3D;&gt; 二次封装axios</p>
-<h3 id="二次封装axios"><a href="#二次封装axios" class="headerlink" title="二次封装axios"></a>二次封装axios</h3><ol>
-<li>创建axios实例对象</li>
-<li>请求拦截器<ul>
-<li>获取请求头headers</li>
-<li>获取token (如果请求头中存在token)</li>
-</ul>
-</li>
-<li>响应拦截器<ul>
-<li>比对状态码 code</li>
-<li>判断token是否超时</li>
-<li>返回 成功&#x2F; 错误提示</li>
-</ul>
-</li>
-<li>核心函数<ul>
-<li>一般默认发送 <code>get</code>请求 (将请求方法 转化为大写)</li>
-<li>判断 使用 mockApi 还是 baseApi</li>
-<li>对不同的 请求方法进行遍历</li>
-</ul>
-</li>
-</ol>
-<h3 id="二次封装-storage"><a href="#二次封装-storage" class="headerlink" title="二次封装 storage"></a>二次封装 storage</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * Storage二次封装
- * @author YyShino
- */</span>
-<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">'./../config'</span>
+        company-admin项目地址 https://github.com/0Shino0/company-admin
+技术栈
+Vue3 + Element Plus + Sass 实现前台
+Koa2 + MongoDB 实现后台
+Vite项目构建
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 存储</span>
-    <span class="token function">setItem</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> storage <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        storage<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
-        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>storage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">// 获取</span>
-    <span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// JSON.parse() 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换 (操作)。</span>
-        <span class="token keyword">return</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">"&amp;#123;&amp;#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">// 删除 一个</span>
-    <span class="token function">clearItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 读取</span>
-        <span class="token keyword">let</span> storage <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 删除</span>
-        <span class="token keyword">delete</span> storage<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 写入并 覆盖</span>
-        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>storage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">// 删除 全部</span>
-    <span class="token function">clearAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="公共组件封装"><a href="#公共组件封装" class="headerlink" title="公共组件封装"></a>公共组件封装</h3><ul>
-<li><p>BreadCrumb.vue (头部区域)</p>
-</li>
-<li><p>Home.vue (主要内容)</p>
-</li>
-<li><p>TreeMenu.vue (左侧菜单栏)</p>
-</li>
-</ul>
-<h3 id="Vue-Router-和-Vuex"><a href="#Vue-Router-和-Vuex" class="headerlink" title="Vue-Router 和 Vuex"></a>Vue-Router 和 Vuex</h3><p>Vue-Router</p>
-<ul>
-<li><p>注册路由 (routes)</p>
-<ul>
-<li>&#x2F;<ul>
-<li>Welcome</li>
-<li>动态添加路由</li>
-</ul>
-</li>
-<li>Login</li>
-<li>404</li>
-</ul>
-</li>
-<li><p>动态添加路由 (addRoute)</p>
-<ul>
-<li><p>系统管理</p>
-<ul>
-<li>User</li>
-<li>Menu</li>
-<li>Role</li>
-<li>Dept</li>
-</ul>
-</li>
-<li><p>审批管理</p>
-<ul>
-<li>Leave</li>
-<li>Approve</li>
-</ul>
-</li>
-<li><p>动态路由实现</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// router 主文件</span>
-<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">loadAsyncRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// console.log(loadAsyncRoutes());</span>
-    <span class="token keyword">let</span> userInfo <span class="token operator">=</span> storage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"userInfo"</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>userInfo<span class="token punctuation">.</span>token<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> menuList <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token keyword">await</span> API<span class="token punctuation">.</span><span class="token function">getPermissionList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// utils 为封装工具类</span>
-            <span class="token keyword">let</span> routes <span class="token operator">=</span> utils<span class="token punctuation">.</span><span class="token function">generateRoute</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            routes<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>route<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token string">`./../views/$&amp;#123;route.component&amp;#125;.vue`</span></span><span class="token punctuation">;</span>
-                route<span class="token punctuation">.</span>component <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                router<span class="token punctuation">.</span><span class="token function">addRoute</span><span class="token punctuation">(</span><span class="token string">"home"</span><span class="token punctuation">,</span> route<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+前台环境变量配置.env.dev
+config
+配置不同环境的 api (方便调节 和 测试)
 
-<span class="token keyword">await</span> <span class="token function">loadAsyncRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// utils 封装工具类 generateRoute</span>
-    <span class="token comment" spellcheck="true">// 动态路由拼接</span>
-    <span class="token function">generateRoute</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">const</span> deepList <span class="token operator">=</span> <span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>list<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token keyword">let</span> item <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>action<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                    routes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                        name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>component<span class="token punctuation">,</span>
-                        path<span class="token punctuation">:</span> item<span class="token punctuation">.</span>path<span class="token punctuation">,</span>
-                        meta<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                            title<span class="token punctuation">:</span> item<span class="token punctuation">.</span>menuName
-                        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                        component<span class="token punctuation">:</span> item<span class="token punctuation">.</span>component
-                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>children <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>item<span class="token punctuation">.</span>action<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                    <span class="token function">deepList</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>children<span class="token punctuation">)</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token function">deepList</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> routes<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
-</ul>
-</li>
-<li><p>路由守卫 (beforeEach)</p>
-<pre class=" language-js"><code class="language-js">router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// console.log(router.hasRoute(to.name));</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">hasRoute</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        document<span class="token punctuation">.</span>title <span class="token operator">=</span> to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
-        <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/404'</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-</code></pre>
-</li>
-</ul>
-<p>Vuex</p>
-<ul>
-<li>state<ul>
-<li>利用<code>storage</code>存储用户信息、菜单信息、菜单行为信息(创建、查看、编辑、删除等等)、右上角消息提示数量</li>
-</ul>
-</li>
-<li>mutations <ul>
-<li>对应 state 的 mutations 操作</li>
-</ul>
-</li>
-</ul>
-<h3 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
-* mainjs中
-*/</span>
-<span class="token comment" spellcheck="true">// 定义全局指令</span>
-app<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'has'</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    beforeMount<span class="token punctuation">:</span> <span class="token punctuation">(</span>el<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// console.log(el, binding);</span>
-        <span class="token comment" spellcheck="true">// 获取按钮权限</span>
-        <span class="token keyword">let</span> actionList <span class="token operator">=</span> storage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'actionList'</span><span class="token punctuation">)</span>
-        <span class="token keyword">let</span> value <span class="token operator">=</span> binding<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。</span>
-        <span class="token comment" spellcheck="true">// 盘点列表中是否有对应按钮权限标识</span>
-        <span class="token keyword">let</span> hasPermission <span class="token operator">=</span> actionList<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hasPermission<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 隐藏按钮</span>
-            el<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">"display:none"</span>
-            <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">// 删除按钮</span>
-                el<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// 全局挂载 请求组件</span>
-app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$request <span class="token operator">=</span> request<span class="token punctuation">;</span>
-app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$api <span class="token operator">=</span> api<span class="token punctuation">;</span>
-app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$storage <span class="token operator">=</span> storage<span class="token punctuation">;</span>
-</code></pre>
-<h3 id="根据接口-获取数据-渲染数据"><a href="#根据接口-获取数据-渲染数据" class="headerlink" title="根据接口 获取数据 渲染数据"></a>根据接口 获取数据 渲染数据</h3></div><div class="story post-story"><h2 id="后台"><a href="#后台" class="headerlink" title="后台"></a>后台</h2><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * 配置文件
- */</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    URL<span class="token punctuation">:</span> <span class="token string">'mongodb://127.0.0.1:27017/company-manager'</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
- * 数据库连接
- */</span>
-<span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> log4js <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./../utils/log4j'</span><span class="token punctuation">)</span>
+dev
+baseApi
+mockApi
 
 
-mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>URL<span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    useNewUrlParser<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-
-<span class="token keyword">const</span> db <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">;</span>
-
-db<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    log4js<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'***数据库连接失败***'</span><span class="token punctuation">)</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-
-db<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    log4js<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'***数据库连接成功***'</span><span class="token punctuation">)</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-</code></pre>
-<h3 id="日志输出封装"><a href="#日志输出封装" class="headerlink" title="日志输出封装"></a>日志输出封装</h3><p>log4js</p>
-<h3 id="工具类封装"><a href="#工具类封装" class="headerlink" title="工具类封装"></a>工具类封装</h3><ul>
-<li>CODE 状态码设置</li>
-<li>分页 pager</li>
-<li>成功 &#x2F; 失败 的debug</li>
-<li>jwt 解密 token</li>
-<li>递归拼接 菜单列表 树</li>
-<li>处理时间格式  yyyy-mm-dd hh:mm:ss</li>
-</ul>
-<h3 id="MongoDB数据库设计"><a href="#MongoDB数据库设计" class="headerlink" title="MongoDB数据库设计"></a>MongoDB数据库设计</h3><p><img src="http://shinoimg.yyshino.top/img/202207241729910.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207241729910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="公司管理系统"></p>
-<h3 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h3><ul>
-<li>logger</li>
-<li>校验token</li>
-<li>注册路由</li>
-<li>error</li>
-</ul>
-
-</div>
+t...
       
     
   </div>
@@ -3672,17 +2843,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-07-24T09:22:06+08:00">2022-07-24</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/1327.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3721,100 +2890,17 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/code.html#JSON-%E9%85%8D%E7%BD%AE">文档</a></p>
-<h3 id="小程序代码构成"><a href="#小程序代码构成" class="headerlink" title="小程序代码构成"></a>小程序代码构成</h3><ol>
-<li>.json 后缀的 JSON 配置文件</li>
-<li>.wxml 后缀的 WXML 模板文件   ————html</li>
-<li>.wxss 后缀的 WXSS 样式文件   ————css</li>
-<li>.js 后缀的 JS 脚本逻辑文件       ————js</li>
-</ol>
-<h3 id="小程序发布简介"><a href="#小程序发布简介" class="headerlink" title="小程序发布简介"></a>小程序发布简介</h3><h4 id="分包加载"><a href="#分包加载" class="headerlink" title="分包加载"></a>分包加载</h4><p>目前小程序分包大小有以下限制：</p>
-<ul>
-<li>整个小程序所有分包大小不超过 20M</li>
-<li>单个分包&#x2F;主包大小不能超过 2M</li>
-</ul>
-<h5 id="常规分包"><a href="#常规分包" class="headerlink" title="常规分包"></a>常规分包</h5><p>配置</p>
-<p>目录配置 </p>
-<pre><code>├── app.js
-├── app.json
-├── app.wxss
-├── packageA
-│   └── pages
-│       ├── cat
-│       └── dog
-├── packageB
-│   └── pages
-│       ├── apple
-│       └── banana
-├── pages
-│   ├── index
-│   └── logs
-└── utils
-</code></pre>
-<p><code>app.json</code>配置</p>
-<pre><code>&#123;
-  &quot;pages&quot;:[
-    &quot;pages/index&quot;,
-    &quot;pages/logs&quot;
-  ],
-  &quot;subpackages&quot;: [
-    &#123;
-      &quot;root&quot;: &quot;packageA&quot;,
-      &quot;pages&quot;: [
-        &quot;pages/cat&quot;,
-        &quot;pages/dog&quot;
-      ]
-    &#125;, &#123;
-      &quot;root&quot;: &quot;packageB&quot;,
-      &quot;name&quot;: &quot;pack2&quot;,
-      &quot;pages&quot;: [
-        &quot;pages/apple&quot;,
-        &quot;pages/banana&quot;
-      ]
-    &#125;
-  ]
-&#125;
-</code></pre>
-<p>详细见官网 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html</a></p>
-<h5 id="独立分包"><a href="#独立分包" class="headerlink" title="独立分包"></a>独立分包</h5><ul>
-<li>特点<ul>
-<li>独立分包可单独访问分包的内容,不需要下载主包</li>
-<li>独立分包不能依赖主包或者其他包的内容。</li>
-</ul>
-</li>
-<li>适用情况<ul>
-<li>不受主包影响 (或与主包关联不大的页面 ) —— 例如一些临时的广告页面 | 活动页面</li>
-</ul>
-</li>
-<li>使用<ul>
-<li>在常规分包基础上  app.json 中添加  <code>independent&quot;: true</code> 表示独立分包</li>
-<li>独立分包 无法引用主包中资源（例如图标字体） ， 因此独立分包中的 主包资源 需要在分包目录重新引入</li>
-</ul>
-</li>
-</ul>
-<h5 id="分包预加载"><a href="#分包预加载" class="headerlink" title="分包预加载"></a>分包预加载</h5><p><code>app.json</code> 增加 <code>preloadRule</code> 配置来控制。</p>
-<pre class=" language-json"><code class="language-json">  <span class="token property">"preloadRule"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token property">"pages/index"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-      <span class="token property">"network"</span><span class="token operator">:</span> <span class="token string">"all"</span><span class="token punctuation">,</span>
-      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"important"</span><span class="token punctuation">]</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token property">"sub1/index"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"sub3"</span><span class="token punctuation">]</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token property">"sub3/index"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path/to"</span><span class="token punctuation">]</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token property">"indep/index"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"__APP__"</span><span class="token punctuation">]</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<p>注意: preloadRule 与 pages 以及其他分包同级</p>
-<p>详细了解 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html</a></p>
-<h4 id="分包异步化"><a href="#分包异步化" class="headerlink" title="分包异步化"></a>分包异步化</h4><p>新加入功能</p>
-<p>详细了解 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html</a></p>
-</div><div class="story post-story"><h2 id="小程序框架-Uni-App"><a href="#小程序框架-Uni-App" class="headerlink" title="小程序框架 Uni-App"></a>小程序框架 Uni-App</h2>
-</div>
+        微信小程序文档
+小程序代码构成
+.json 后缀的 JSON 配置文件
+.wxml 后缀的 WXML 模板文件   ————html
+.wxss 后缀的 WXSS 样式文件   ————css
+.js 后缀的 JS 脚本逻辑文件       ————js
+
+小程序发布简介分包加载目前小程序分包大小有以下限制：
+
+整个小程序所有分包大小不超过 20M
+单个分包&#x2F;主包大小不能超过 2M...
       
     
   </div>
@@ -3822,17 +2908,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-06-26T10:07:32+08:00">2022-06-26</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/35506.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3871,8 +2955,8 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="原生小程序"><a href="#原生小程序" class="headerlink" title="原生小程序"></a>原生小程序</h2><h2 id="框架下的小程序"><a href="#框架下的小程序" class="headerlink" title="框架下的小程序"></a>框架下的小程序</h2><h2 id="Vue框架-uni-app"><a href="#Vue框架-uni-app" class="headerlink" title="Vue框架 uni-app"></a>Vue框架 uni-app</h2><h4 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h4><h2 id="React框架-Taro"><a href="#React框架-Taro" class="headerlink" title="React框架 Taro"></a>React框架 Taro</h2>
-</div>
+        原生小程序框架下的小程序Vue框架 uni-app项目目录React框架 Taro
+
       
     
   </div>
@@ -3880,17 +2964,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-06-15T21:29:51+08:00">2022-06-15</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/35477.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3938,17 +3020,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-06-15T21:24:51+08:00">2022-06-15</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/11752.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -3987,9 +3067,9 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>普通的前端能做的太少，仅仅对页面的布局与调用接口。做了一些简单的项目有所感悟，时常为了做项目而去找接口，没有接口就不想做项目，有种感觉失去接口后就寸步难行的感觉。因此我决定由JavaScript过渡到Node全栈，最后过渡到java全栈.一方面原因降低学习成本，有了JavaScript的基础入门node相对简单，上手快。另一方面，我想看看Node作为后端到底和Java相差多少。</p>
+        简介普通的前端能做的太少，仅仅对页面的布局与调用接口。做了一些简单的项目有所感悟，时常为了做项目而去找接口，没有接口就不想做项目，有种感觉失去接口后就寸步难行的感觉。因此我决定由JavaScript过渡到Node全栈，最后过渡到java全栈.一方面原因降低学习成本，有了JavaScript的基础入门node相对简单，上手快。另一方面，我想看看Node作为后端到底和Java相差多少。
 
-</div>
+
       
     
   </div>
@@ -3997,17 +3077,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-06-15T21:15:59+08:00">2022-06-15</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/11307.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -4046,10 +3124,10 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="使用技术栈"><a href="#使用技术栈" class="headerlink" title="使用技术栈"></a>使用技术栈</h2><p>vue全家桶+Element+Swiper</p>
-</div><div class="story post-story"><h2 id="开发第三天"><a href="#开发第三天" class="headerlink" title="开发第三天"></a>开发第三天</h2><h2 id="踩坑总结"><a href="#踩坑总结" class="headerlink" title="踩坑总结"></a>踩坑总结</h2><h3 id="获取图片主题色的两种方法"><a href="#获取图片主题色的两种方法" class="headerlink" title="获取图片主题色的两种方法"></a>获取图片主题色的两种方法</h3><h5 id="1-canvas绘制图片-获取rpga值"><a href="#1-canvas绘制图片-获取rpga值" class="headerlink" title="1.canvas绘制图片 获取rpga值"></a>1.canvas绘制图片 获取rpga值</h5><h5 id="2-使用Css-内置-filter-实现高斯模糊"><a href="#2-使用Css-内置-filter-实现高斯模糊" class="headerlink" title="2.使用Css 内置 filter 实现高斯模糊"></a>2.使用Css 内置 filter 实现高斯模糊</h5><p>filter:blur()</p>
+        使用技术栈vue全家桶+Element+Swiper
+开发第三天踩坑总结获取图片主题色的两种方法1.canvas绘制图片 获取rpga值2.使用Css 内置 filter 实现高斯模糊filter:blur()
 
-</div>
+
       
     
   </div>
@@ -4057,17 +3135,15 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
     <div class='meta-v3' line_style='solid'>
       <div>
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
-        
         <time itemprop="dateCreated datePublished" datetime="2022-06-07T15:42:42+08:00">2022-06-07</time>
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/26719.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -4106,339 +3182,18 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
   <div class='md article-desc' itemprop="articleBody">
     
       
-        <div class="story post-story"><h2 id="时间-问题"><a href="#时间-问题" class="headerlink" title="时间 + 问题"></a>时间 + 问题</h2><h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><h4 id="1-loader-版本过高问题"><a href="#1-loader-版本过高问题" class="headerlink" title="1. loader 版本过高问题"></a>1. loader 版本过高问题</h4><h4 id><a href="#" class="headerlink" title></a><img src="http://shinoimg.yyshino.top/img/hvproblem.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/hvproblem.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="loader版本过高"></h4><p>类似提示，可能存在 loader 版本过高问题，下载低版本loader 即可解决。</p>
-<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4></div><div class="story post-story"><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="1-git-push问题"><a href="#1-git-push问题" class="headerlink" title="1.git push问题"></a>1.git push问题</h4><p>2022年4月21日08:52:49</p>
-<p>错误</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">fatal</span><span class="token punctuation">:</span> remote error<span class="token punctuation">:</span> 
-  You can't push to git<span class="token punctuation">:</span>//github.com/你的git用户名/Demo.git
-  Use https<span class="token punctuation">:</span>//github.com/你的git用户名/Demo.git
-</code></pre>
-<h5 id="解决办法一："><a href="#解决办法一：" class="headerlink" title="解决办法一："></a>解决办法一：</h5><p>最后按照百度来的解决方法解决了该问题<br>控制台输入以下两条命令后再次尝试git push操作</p>
-<pre class=" language-yaml"><code class="language-yaml">git remote rm origin
-git remote add origin git@github.com<span class="token punctuation">:</span>git用户名/仓库名.git
-</code></pre>
-<p>如果出现以下问题</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">fatal</span><span class="token punctuation">:</span> The current branch main has no upstream branch.
-To push the current branch and set the remote as upstream<span class="token punctuation">,</span> use
-
-git push <span class="token punctuation">-</span><span class="token punctuation">-</span>set<span class="token punctuation">-</span>upstream origin main
-</code></pre>
-<p>则执行下方命令</p>
-<pre class=" language-yaml"><code class="language-yaml"> git push <span class="token punctuation">-</span><span class="token punctuation">-</span>set<span class="token punctuation">-</span>upstream origin main
-</code></pre>
-<p>出现下方提示证明上游分支设置成功</p>
-<pre class=" language-js"><code class="language-js">Branch <span class="token string">'main'</span> <span class="token keyword">set</span> up to track remote branch <span class="token string">'main'</span> <span class="token keyword">from</span> <span class="token string">'origin'</span><span class="token punctuation">.</span>
-</code></pre>
-<p>进行该操作后可以正常git push,git pull操作了</p>
-<h5 id="解决办法二："><a href="#解决办法二：" class="headerlink" title="解决办法二："></a>解决办法二：</h5><pre class=" language-md"><code class="language-md">    8-30新增解决方法
-    
-    进入项目文件夹目录下，找到.git文件夹（如果不显示请打开查看隐藏目录选项）
-    效果如图
-    找到config文件，打开后如下图：
-    
-    如果url为http开头，如：https://github.com/用户名/仓库名，例：https://github.com/kobeyk/SpringBoot-ShpTools.git
-    则修改为git@github.com:用户名/仓库名,注意，githup.com与用户名中间为英文符号:
-</code></pre>
-<p>————————————————<br>版权声明：本文为CSDN博主「七加一i」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43961619/article/details/116595085">https://blog.csdn.net/qq_43961619/article/details/116595085</a></p>
-<h3 id="2-Git快速搜索"><a href="#2-Git快速搜索" class="headerlink" title="2.Git快速搜索"></a>2.Git快速搜索</h3><p>作用</p>
-<ul>
-<li>快速搜索源码中文件的路径</li>
-</ul>
-<p>使用方法</p>
-<ol>
-<li>在github中找到你要查询的库</li>
-<li><img src="http://shinoimg.yyshino.top/img/image-20220518110209022.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/image-20220518110209022.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="gitflash"></li>
-<li>选择<code>In this respository</code></li>
-<li>回车</li>
-</ol>
-<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3></div><div class="story post-story"><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h4 id="1-React路由"><a href="#1-React路由" class="headerlink" title="1.React路由"></a>1.React路由</h4><p>2022年3月6日19:01:00</p>
-<p>今天做练习react路由出现错误，index.tsx:19 Uncaught Error: A is only ever to be used as the child of element, nev…<br>由于路由版本升级，Route需要在Routes组件内，并且component替换成element，括号中变为标签<br>&lt;Routes<br><Route path="/about" element="{}"><br><Route path="/home" element="{}"><br>&lt;&#x2F;Routes<br>记录一下<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50981596/article/details/122811781">https://blog.csdn.net/m0_50981596/article/details/122811781</a></Route></Route></p>
-<p>&#x3D;&#x3D;<strong>以上是路由6版本，由于改动过大，建议先使用5版本</strong>&#x3D;&#x3D;</p>
-<h4 id="2-解决多级路径刷新页面样式丢失的问题"><a href="#2-解决多级路径刷新页面样式丢失的问题" class="headerlink" title="2.解决多级路径刷新页面样式丢失的问题"></a>2.解决多级路径刷新页面样式丢失的问题</h4><pre class=" language-js"><code class="language-js">   <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">public</span><span class="token operator">/</span>index<span class="token punctuation">.</span>html 中 引入样式时不写 <span class="token punctuation">.</span><span class="token operator">/</span> 写 <span class="token operator">/</span> （常用）
-   <span class="token number">2</span><span class="token punctuation">.</span><span class="token keyword">public</span><span class="token operator">/</span>index<span class="token punctuation">.</span>html 中 引入样式时不写 <span class="token punctuation">.</span><span class="token operator">/</span> 写 <span class="token operator">%</span>PUBLIC_URL<span class="token operator">%</span> （常用）
-   <span class="token number">3</span><span class="token punctuation">.</span>使用HashRouter
-</code></pre>
-<h3 id="Antd-React-UI库"><a href="#Antd-React-UI库" class="headerlink" title="Antd-React UI库"></a>Antd-React UI库</h3><h4 id="1-antd自定义主题报错"><a href="#1-antd自定义主题报错" class="headerlink" title="1.antd自定义主题报错"></a>1.antd自定义主题报错</h4><p>2022年3月26日16:45:13</p>
-<pre class=" language-js"><code class="language-js">  ERROR <span class="token keyword">in</span> <span class="token punctuation">.</span><span class="token operator">/</span>src<span class="token operator">/</span>styles<span class="token operator">/</span>wieldy<span class="token punctuation">.</span>less <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>css<span class="token operator">-</span>loader<span class="token operator">/</span>dist<span class="token operator">/</span>cjs<span class="token punctuation">.</span>js<span class="token operator">?</span><span class="token operator">?</span>ruleSet<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>rules<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>oneOf<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span>use<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>postcss<span class="token operator">-</span>loader<span class="token operator">/</span>dist<span class="token operator">/</span>cjs<span class="token punctuation">.</span>js<span class="token operator">?</span><span class="token operator">?</span>ruleSet<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>rules<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>oneOf<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span>use<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>resolve<span class="token operator">-</span>url<span class="token operator">-</span>loader<span class="token operator">/</span>index<span class="token punctuation">.</span>js<span class="token operator">?</span><span class="token operator">?</span>ruleSet<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>rules<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>oneOf<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span>use<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>less<span class="token operator">-</span>loader<span class="token operator">/</span>dist<span class="token operator">/</span>cjs<span class="token punctuation">.</span>js<span class="token operator">?</span><span class="token operator">?</span>ruleSet<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>rules<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>oneOf<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span>use<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token operator">/</span>src<span class="token operator">/</span>styles<span class="token operator">/</span>wieldy<span class="token punctuation">.</span>less<span class="token punctuation">)</span>
-  
-  Module build failed <span class="token punctuation">(</span><span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>postcss<span class="token operator">-</span>loader<span class="token operator">/</span>dist<span class="token operator">/</span>cjs<span class="token punctuation">.</span>js<span class="token punctuation">)</span><span class="token punctuation">:</span>
-  ValidationError<span class="token punctuation">:</span> Invalid options object<span class="token punctuation">.</span> PostCSS Loader has been initialized using an options object that does not match the API schema<span class="token punctuation">.</span>
-   <span class="token operator">-</span> options has an unknown property <span class="token string">'plugins'</span><span class="token punctuation">.</span> These properties are valid<span class="token punctuation">:</span>
-     object <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> postcssOptions<span class="token operator">?</span><span class="token punctuation">,</span> execute<span class="token operator">?</span><span class="token punctuation">,</span> sourceMap<span class="token operator">?</span><span class="token punctuation">,</span> implementation<span class="token operator">?</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-      at validate <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\schema<span class="token operator">-</span>utils\dist\validate<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">105</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">)</span>
-      at Object<span class="token punctuation">.</span>getOptions <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\webpack\lib\NormalModule<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">580</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">)</span>
-      at Object<span class="token punctuation">.</span>loader <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\postcss<span class="token operator">-</span>loader\dist\index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">:</span><span class="token number">24</span><span class="token punctuation">)</span>
-</code></pre>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>  也有这个问题。</p>
-<p>  似乎因为 less-loader 6 customize-cra “addLessLoader” 被破坏了。</p>
-<p>  这个<a target="_blank" rel="noopener" href="https://github.com/arackaf/customize-cra/pull/255">PR</a>修复了它，但从未合并。同一个人创建了这个包： <a target="_blank" rel="noopener" href="https://github.com/xyy94813/customize-cra-less-loader">customize-cra-less-loader</a></p>
-<p>  解决这个问题：</p>
-<ul>
-<li>安装custom-cra-less-loader包</li>
-<li>“config-overrides.js”应该是这样的：</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> override <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"customize-cra"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> addLessLoader <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"customize-cra-less-loader"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">override</span><span class="token punctuation">(</span>
-  <span class="token function">addLessLoader</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    lessLoaderOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-      lessOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        javascriptEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        modifyVars<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-          <span class="token string">'@primary-color'</span><span class="token punctuation">:</span> <span class="token string">'#038fde'</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>转自<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/71035578/postcss-loader-has-been-initialized-using-an-options-object-that-does-not-match">https://stackoverflow.com/questions/71035578/postcss-loader-has-been-initialized-using-an-options-object-that-does-not-match</a></p>
-<h4 id="2-antd自定义主题修改失效"><a href="#2-antd自定义主题修改失效" class="headerlink" title="2.antd自定义主题修改失效"></a>2.antd自定义主题修改失效</h4><p>2022年3月26日16:45:13</p>
-<p>less-loader版本低，版本参考		</p>
-<pre class=" language-js"><code class="language-js"> <span class="token string">"less"</span><span class="token punctuation">:</span> <span class="token string">"3.12.2"</span><span class="token punctuation">,</span>
- <span class="token string">"less-loader"</span><span class="token punctuation">:</span> <span class="token string">"^10.2.0"</span><span class="token punctuation">,</span>
-</code></pre>
-<h4 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h4></div><div class="story post-story"><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h4 id="1-Vue-Router-4版本-不适应3版本"><a href="#1-Vue-Router-4版本-不适应3版本" class="headerlink" title="1.Vue Router 4版本 不适应3版本"></a>1.Vue Router 4版本 不适应3版本</h4><p>2022年4月19日11:13:48</p>
-<p>报错</p>
-<pre class=" language-js"><code class="language-js">    Uncaught TypeError<span class="token punctuation">:</span> <span class="token function">Object</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span> is not a <span class="token keyword">function</span>
-        at eval <span class="token punctuation">(</span>webpack<span class="token operator">-</span>internal<span class="token punctuation">:</span><span class="token operator">/</span><span class="token comment" spellcheck="true">//./node_modules/vue-router/dist/vue-router.esm-bundler.js:2145:97)</span>
-        at Module<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>vue<span class="token operator">-</span>router<span class="token operator">/</span>dist<span class="token operator">/</span>vue<span class="token operator">-</span>router<span class="token punctuation">.</span>esm<span class="token operator">-</span>bundler<span class="token punctuation">.</span>js <span class="token punctuation">(</span>chunk<span class="token operator">-</span>vendors<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">1609</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">)</span>
-        at __webpack_require__ <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">849</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">)</span>
-        at fn <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">151</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">)</span>
-        at eval <span class="token punctuation">(</span>webpack<span class="token operator">-</span>internal<span class="token punctuation">:</span><span class="token operator">/</span><span class="token comment" spellcheck="true">//./src/router/index.js:3:68)</span>
-        at Module<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>src<span class="token operator">/</span>router<span class="token operator">/</span>index<span class="token punctuation">.</span>js <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">1129</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">)</span>
-        at __webpack_require__ <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">849</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">)</span>
-        at fn <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">151</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">)</span>
-        at eval <span class="token punctuation">(</span>webpack<span class="token operator">-</span>internal<span class="token punctuation">:</span><span class="token operator">/</span><span class="token comment" spellcheck="true">//./src/main.js:12:65)</span>
-        at Module<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>src<span class="token operator">/</span>main<span class="token punctuation">.</span>js <span class="token punctuation">(</span>app<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">1117</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">)</span>
-</code></pre>
-<p>解决</p>
-<pre class=" language-yaml"><code class="language-yaml">    <span class="token comment" spellcheck="true"># 依次执行</span>
-    yarn remove vue<span class="token punctuation">-</span>router
-    yarn add vue<span class="token punctuation">-</span>router@3 <span class="token punctuation">-</span><span class="token punctuation">-</span>save
-    <span class="token comment" spellcheck="true"># 即可解决</span>
-</code></pre>
-<h4 id="2-Vuecli-3中适用的less-以及less-loader"><a href="#2-Vuecli-3中适用的less-以及less-loader" class="headerlink" title="2.Vuecli@3中适用的less 以及less-loader"></a>2.Vuecli@3中适用的less 以及less-loader</h4><pre class=" language-json"><code class="language-json">    <span class="token property">"less"</span><span class="token operator">:</span> <span class="token string">"^3.13.0"</span><span class="token punctuation">,</span>
-    <span class="token property">"less-loader"</span><span class="token operator">:</span> <span class="token string">"^7.1.0"</span><span class="token punctuation">,</span>
-</code></pre>
-<p>版本过高报错</p>
-<pre class=" language-yaml"><code class="language-yaml">cjs.js<span class="token punctuation">?</span><span class="token tag">!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Footer/index.vue?vue&amp;type=style&amp;index=0&amp;id=30c2788e&amp;lang=less&amp;scoped=true&amp;:1</span> Uncaught Error<span class="token punctuation">:</span> Module build failed (from ./node_modules/less<span class="token punctuation">-</span><span class="token key atrule">loader/dist/cjs.js)</span><span class="token punctuation">:</span>
-<span class="token key atrule">TypeError</span><span class="token punctuation">:</span> this.getOptions is not a function
-    at Object.lessLoader (D<span class="token punctuation">:</span>\vscode\vscode cache02\19<span class="token punctuation">-</span>project\Vue\shop<span class="token punctuation">-</span>client\node_modules\less<span class="token punctuation">-</span>loader\dist\index.js<span class="token punctuation">:</span>19<span class="token punctuation">:</span>24)
-    at eval (webpack<span class="token punctuation">-</span>internal<span class="token punctuation">:</span>///./node_modules/css<span class="token punctuation">-</span>loader/dist/cjs.js<span class="token punctuation">?</span><span class="token tag">!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Footer/index.vue?vue&amp;type=style&amp;index=0&amp;id=30c2788e&amp;lang=less&amp;scoped=true&amp;:1:7)</span>
-    at Object../node_modules/css<span class="token punctuation">-</span>loader/dist/cjs.js<span class="token punctuation">?</span><span class="token tag">!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Footer/index.vue?vue&amp;type=style&amp;index=0&amp;id=30c2788e&amp;lang=less&amp;scoped=true&amp;</span> (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>1116<span class="token punctuation">:</span>1)
-    at __webpack_require__ (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>849<span class="token punctuation">:</span>30)
-    at fn (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>151<span class="token punctuation">:</span>20)
-    at eval (webpack<span class="token punctuation">-</span>internal<span class="token punctuation">:</span>///./node_modules/vue<span class="token punctuation">-</span>style<span class="token punctuation">-</span>loader/index.js<span class="token punctuation">?</span><span class="token tag">!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Footer/index.vue?vue&amp;type=style&amp;index=0&amp;id=30c2788e&amp;lang=less&amp;scoped=true&amp;:4:15)</span>
-    at Object../node_modules/vue<span class="token punctuation">-</span>style<span class="token punctuation">-</span>loader/index.js<span class="token punctuation">?</span><span class="token tag">!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Footer/index.vue?vue&amp;type=style&amp;index=0&amp;id=30c2788e&amp;lang=less&amp;scoped=true&amp;</span> (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>1138<span class="token punctuation">:</span>1)
-    at __webpack_require__ (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>849<span class="token punctuation">:</span>30)
-    at fn (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>151<span class="token punctuation">:</span>20)
-    at eval (webpack<span class="token punctuation">-</span>internal<span class="token punctuation">:</span>///./src/components/Footer/index.vue<span class="token punctuation">?</span>vue<span class="token important">&amp;type</span>=style<span class="token important">&amp;index</span>=0<span class="token important">&amp;id</span>=30c2788e<span class="token important">&amp;lang</span>=less<span class="token important">&amp;scoped</span>=true&amp;<span class="token punctuation">:</span>2<span class="token punctuation">:</span>504)
-    at Module../src/components/Footer/index.vue<span class="token punctuation">?</span>vue<span class="token important">&amp;type</span>=style<span class="token important">&amp;index</span>=0<span class="token important">&amp;id</span>=30c2788e<span class="token important">&amp;lang</span>=less<span class="token important">&amp;scoped</span>=true&amp; (http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>8081/js/app.js<span class="token punctuation">:</span>1232<span class="token punctuation">:</span>1)
-</code></pre>
-<h4 id="3-解决路由重复跳转的错误"><a href="#3-解决路由重复跳转的错误" class="headerlink" title="3.解决路由重复跳转的错误"></a>3.解决路由重复跳转的错误</h4><p>2022年4月21日14:36:44</p>
-<p>报错信息</p>
-<pre class=" language-js"><code class="language-js">Uncaught <span class="token punctuation">(</span><span class="token keyword">in</span> promise<span class="token punctuation">)</span> NavigationDuplicated<span class="token punctuation">:</span> Avoided redundant navigation to current location<span class="token punctuation">:</span> <span class="token string">"/search"</span><span class="token punctuation">.</span>
-</code></pre>
-<p>解决方案</p>
-<p>在 route.js 文件下添加如下代码</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
-
-<span class="token comment" spellcheck="true">// 缓存原本的push方法</span>
-<span class="token keyword">const</span> originalPush <span class="token operator">=</span> Router<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>push
-<span class="token comment" spellcheck="true">// 指定新的push方法</span>
-Router<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>push <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">push</span><span class="token punctuation">(</span>location<span class="token punctuation">,</span> onResolve<span class="token punctuation">,</span> onReject<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 如果指定了成功或失败的回调</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>onResolve <span class="token operator">||</span> onReject<span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">// 直接调用原本的push方法</span>
-        <span class="token comment" spellcheck="true">// originalPush(this, location, onResolve, onReject)    //this不是router而是undefined</span>
-        <span class="token keyword">return</span> originalPush<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> location<span class="token punctuation">,</span> onResolve<span class="token punctuation">,</span> onReject<span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">// 没有指定成功或失败的回调，必须用catch处理</span>
-    <span class="token keyword">return</span> originalPush<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> location<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 如果是重复盗汗产生的错误，不再向外传递错误 </span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>Router<span class="token punctuation">.</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// resolve err</span>
-            <span class="token keyword">return</span> err      <span class="token comment" spellcheck="true">//  产生的成功的promise ， 成功promise的value是err</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 如果是其他原因盗汗的错误，将错误向下传递 </span>
-        <span class="token comment" spellcheck="true">// rethrow error</span>
-        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<p>Vue 3.1.0版本后</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-router/releases?after=v3.3.1&amp;page=3">https://github.com/vuejs/vue-router/releases?after=v3.3.1&amp;page=3</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-router/issues/2881">https://github.com/vuejs/vue-router/issues/2881</a></p>
-<h4 id="4-npm-install-–save-vue-x2F-types-x2F-umd"><a href="#4-npm-install-–save-vue-x2F-types-x2F-umd" class="headerlink" title="4.npm install –save vue&#x2F;types&#x2F;umd"></a>4.npm install –save vue&#x2F;types&#x2F;umd</h4><p>2022-5-9 18:12:46</p>
-<p>报错信息</p>
-<p><img src="http://shinoimg.yyshino.top/img/umd-error01.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/umd-error01.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="error01"></p>
-<p>运行后</p>
-<p><img src="http://shinoimg.yyshino.top/img/umd-error02.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/umd-error02.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="error02"></p>
-<p>解决某个文件中引入了</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> xxx <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'vue/types/umd'</span>
-</code></pre>
-<p>删除即可</p>
-<h4 id="5-vuex模块化-modules"><a href="#5-vuex模块化-modules" class="headerlink" title="5.vuex模块化 modules"></a>5.vuex模块化 modules</h4><p>报错</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">TypeError</span><span class="token punctuation">:</span> Cannot read property 'cartList' of undefined
-</code></pre>
-<p>解决在</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 在modules中注册</span>
-    modules<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        home<span class="token punctuation">,</span>
-        cart
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<h4 id="Vue-运行报错"><a href="#Vue-运行报错" class="headerlink" title="Vue 运行报错"></a>Vue 运行报错</h4><pre><code>vue项目运行报错：Module build failed (from ./node_modules/babel-loader/lib/index.js):
-</code></pre>
-<p>解决</p>
-<pre><code>npm install @babel/core @babel/preset-env
-</code></pre>
-<h4 id="Vue3-router"><a href="#Vue3-router" class="headerlink" title="Vue3 router"></a>Vue3 router</h4><p>报错</p>
-<pre class=" language-yaml"><code class="language-yaml">Cannot use 'in' operator to search for 'path' in undefined
-</code></pre>
-<p>解决</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 在路由文件里用错了createWebHashHistory()方法，将它用成了变量，只需要将它写成方法即可解决问题。</span>
-history<span class="token punctuation">:</span>createWebHashHistory  <span class="token operator">=</span><span class="token operator">></span>  history<span class="token punctuation">:</span><span class="token function">createWebHashHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h4 id="Vue3-setup-获取全局对象"><a href="#Vue3-setup-获取全局对象" class="headerlink" title="Vue3 setup 获取全局对象"></a>Vue3 setup 获取全局对象</h4><p>2022年7月11日00:20:49</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> getCurrentInstance<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    name<span class="token punctuation">:</span> <span class="token string">"approve"</span><span class="token punctuation">,</span>
-    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// Vue3中我们打印 getCurrentInstance 详细见下图</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 获取全局对象</span>
-        <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> $api<span class="token punctuation">,</span> $message<span class="token punctuation">,</span> $store <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span>
-      <span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>appContext<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<p><img src="http://shinoimg.yyshino.top/img/202207211228429.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207211228429.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220721122614665"></p>
-<p>总结</p>
-<pre><code>app.config.globalProperties.变量名
- 组件 setup 获取变量
-
-getCurrentInstance().appContext.config.globalProperties.变量名
-</code></pre>
-<h4 id="top-await"><a href="#top-await" class="headerlink" title="top await"></a>top await</h4><p>参考博客</p>
-<p><a target="_blank" rel="noopener" href="https://bobbyhadz.com/blog/javascript-unexpected-reserved-word-await#:~:text=The%20%22unexpected%20reserved%20word%20await,directly%20enclosing%20function%20as%20async%20">https://bobbyhadz.com/blog/javascript-unexpected-reserved-word-await#:~:text=The%20%22unexpected%20reserved%20word%20await,directly%20enclosing%20function%20as%20async%20</a>.</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xgangzai/article/details/114314178">https://blog.csdn.net/xgangzai/article/details/114314178</a></p>
-</div><div class="story post-story"><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h3 id="node服务器-启动-端口占用"><a href="#node服务器-启动-端口占用" class="headerlink" title="node服务器 启动 端口占用"></a>node服务器 启动 端口占用</h3><p>报错</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">Error</span><span class="token punctuation">:</span> listen EACCES<span class="token punctuation">:</span> permission denied 0.0.0.0<span class="token punctuation">:</span><span class="token number">80</span>
-    at Server.setupListenHandle <span class="token punctuation">[</span>as _listen2<span class="token punctuation">]</span> (net.js<span class="token punctuation">:</span>1314<span class="token punctuation">:</span>21)
-    at listenInCluster (net.js<span class="token punctuation">:</span>1379<span class="token punctuation">:</span>12)
-    at Server.listen (net.js<span class="token punctuation">:</span>1465<span class="token punctuation">:</span>7)
-    at Application.listen (F<span class="token punctuation">:</span>\Program\web\web<span class="token punctuation">-</span>app\elm\server\node_modules\koa\lib\application.js<span class="token punctuation">:</span>82<span class="token punctuation">:</span>19)     
-    at Object.&lt;anonymous<span class="token punctuation">></span> (F<span class="token punctuation">:</span>\Program\web\web<span class="token punctuation">-</span>app\elm\server\index.js<span class="token punctuation">:</span>32<span class="token punctuation">:</span>5)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js<span class="token punctuation">:</span>1114<span class="token punctuation">:</span>10)     
-    at Module.load (internal/modules/cjs/loader.js<span class="token punctuation">:</span>950<span class="token punctuation">:</span>32)
-    at Function.Module._load (internal/modules/cjs/loader.js<span class="token punctuation">:</span>790<span class="token punctuation">:</span>12)
-    at Function.executeUserEntryPoint <span class="token punctuation">[</span>as runMain<span class="token punctuation">]</span> (internal/modules/run_main.js<span class="token punctuation">:</span>76<span class="token punctuation">:</span>12)                                                                             6<span class="token punctuation">:</span>12)
-Emitted 'error' event on Server instance at<span class="token punctuation">:</span>
-    at emitErrorNT (net.js<span class="token punctuation">:</span>1358<span class="token punctuation">:</span>8)
-    at processTicksAndRejections (internal/process/task_queues.js<span class="token punctuation">:</span>82<span class="token punctuation">:</span>21) &amp;<span class="token comment" spellcheck="true">#123;        </span>
-  <span class="token key atrule">code</span><span class="token punctuation">:</span> <span class="token string">'EACCES'</span><span class="token punctuation">,</span>
-  <span class="token key atrule">errno</span><span class="token punctuation">:</span> <span class="token number">-4092</span><span class="token punctuation">,</span>
-  <span class="token key atrule">syscall</span><span class="token punctuation">:</span> <span class="token string">'listen'</span><span class="token punctuation">,</span>
-  <span class="token key atrule">address</span><span class="token punctuation">:</span> <span class="token string">'0.0.0.0'</span><span class="token punctuation">,</span>
-  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
-&amp;<span class="token comment" spellcheck="true">#125;</span>
-</code></pre>
-<p>解决   更改端口</p>
-<pre class=" language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 端口号</span>
-</code></pre>
-<h3 id="Koa1-Koa2"><a href="#Koa1-Koa2" class="headerlink" title="Koa1 Koa2"></a>Koa1 Koa2</h3><p>报错</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">AssertionError</span><span class="token punctuation">:</span> app.use() requires a generator function
-</code></pre>
-<p>解决</p>
-<pre class=" language-yaml"><code class="language-yaml">// 版本不兼容问题
-koa<span class="token punctuation">-</span>router7.x 不支持koa1
-koa<span class="token punctuation">-</span>router4.x 不能使用koa2
-
-下载低版本的koa<span class="token punctuation">-</span>router
-或者更新 koa1 =<span class="token punctuation">></span> koa2
-</code></pre>
-<h3 id="搭建接口时"><a href="#搭建接口时" class="headerlink" title="搭建接口时"></a>搭建接口时</h3><p>报错</p>
-<pre class=" language-yaml"><code class="language-yaml">"error"<span class="token punctuation">:</span><span class="token string">"Converting circular structure to JSON\n    --> starting at object with constructor 'NativeTopology'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'topology' closes the circle"</span>
-</code></pre>
-<p>解决</p>
-<pre><code>未添加 async 或者 await
-</code></pre>
-</div><div class="story post-story"><h2 id="DataBase"><a href="#DataBase" class="headerlink" title="DataBase"></a>DataBase</h2><h3 id="Mongodb-服务启动失败"><a href="#Mongodb-服务启动失败" class="headerlink" title="Mongodb 服务启动失败"></a>Mongodb 服务启动失败</h3><p>报错</p>
-<pre><code>服务异常退出 错误代码1067
-</code></pre>
-<p>解决</p>
-<pre><code>删除journal文件
-清除mongod.lock和storage.bson
-重新启动服务
-
-上面的无法实现 ,可以尝试下面的
-删除服务 
-sc delete mongodb
-删除journal文件
-清除mongod.lock和storage.bson
-MongoDB服务删除并重新安装，
-再尝试就发现已经可以正常启动了。
-</code></pre>
-<p>最佳解决方案</p>
-<p>利用安装包进行修复</p>
-<p>打开对应版本的安装包</p>
-<p><img src="http://shinoimg.yyshino.top/img/202207191553716.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207191553716.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220719155339365"></p>
-<p>选中<code>Repair</code>进行修复</p>
-<p><img src="http://shinoimg.yyshino.top/img/202207152240327.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207152240327.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220715223953968"></p>
-<p>解决问题</p>
-<p>目前未发现它有什么弊端，数据保留完整。</p>
-</div><div class="story post-story"><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><h3 id="uniapp"><a href="#uniapp" class="headerlink" title="uniapp"></a>uniapp</h3><h4 id="未配置-appid"><a href="#未配置-appid" class="headerlink" title="未配置 appid"></a>未配置 appid</h4><pre class=" language-yaml"><code class="language-yaml">VM22 WAService.js<span class="token punctuation">:</span>9 TypeError<span class="token punctuation">:</span> Cannot read property 'forceUpdate' of undefined
-</code></pre>
-<p>解决</p>
-<pre class=" language-yaml"><code class="language-yaml">解决 Cannot read property 'forceUpdate' of undefined 的错误
-这个错误的原因非常简单，是因为我们没有为项目配置 appID 的原因，所以只需要完成 APPID 配置即可。
-</code></pre>
-<h4 id="语法错误-Unexpected-token-expected-“-”-1-543"><a href="#语法错误-Unexpected-token-expected-“-”-1-543" class="headerlink" title="语法错误: Unexpected token, expected “,” (1:543)"></a>语法错误: Unexpected token, expected “,” (1:543)</h4><pre class=" language-yaml"><code class="language-yaml">10<span class="token punctuation">:</span>47<span class="token punctuation">:</span>43.127 Module build failed (from ./node_modules/@dcloudio/vue<span class="token punctuation">-</span><span class="token key atrule">cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js)</span><span class="token punctuation">:</span>
-10<span class="token punctuation">:</span>47<span class="token punctuation">:</span>43.129 语法错误<span class="token punctuation">:</span> Unexpected token<span class="token punctuation">,</span> expected "<span class="token punctuation">,</span>" (1<span class="token punctuation">:</span>543)
-10<span class="token punctuation">:</span>47<span class="token punctuation">:</span>43.130       at pages\index\index.vue<span class="token punctuation">:</span><span class="token number">1</span>
-</code></pre>
-<p>错误原因</p>
-<pre><code>:class=&quot;active:navIndex === 0&quot;
-</code></pre>
-<p>解决</p>
-<pre><code>:class=&quot;&#123;active:navIndex === 0&#125;&quot;
-</code></pre>
-</div><div class="story post-story"><h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h2><h3 id="admin-后台管理项目-本地运行"><a href="#admin-后台管理项目-本地运行" class="headerlink" title="admin 后台管理项目  |   本地运行"></a>admin 后台管理项目  |   本地运行</h3><ol>
-<li><p><code>git clone githubaddress</code></p>
-</li>
-<li><p>数据库运行 .sql 文件</p>
-</li>
-<li><p>idea 以maven 导入项目</p>
-</li>
-<li><p>前端项目 <code>yarn</code> | <code>npm install</code></p>
-</li>
-<li><p>运行</p>
-<ol>
-<li>前端 <code>yarn serve</code> | <code>npm run start</code></li>
-<li>后端</li>
-</ol>
-</li>
-</ol>
-
-</div>
+        时间 + 问题Webpack1. loader 版本过高问题类似提示，可能存在 loader 版本过高问题，下载低版本loader 即可解决。
+2.Git1.git push问题2022年4月21日08:52:49
+错误
+fatal: remote error: 
+  You can't push to git://github.com/你的git用户名/Demo.git
+  Use htt...
       
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/volantis-x/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="Volantis Team">
-            <meta itemprop="url" content="https://github.com/volantis-x/">
-          </span>
         
         <time itemprop="dateCreated datePublished" datetime="2022-05-28T11:24:45+08:00">2022-05-28</time>
         
@@ -4451,6 +3206,12 @@ MongoDB服务删除并重新安装，
           
         
       </div>
+      
+        <div>
+          <a class='readmore' href='/posts/18408.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
@@ -4490,30 +3251,69 @@ MongoDB服务删除并重新安装，
     
     
       
-<section class="widget text desktop moblie pjax">
-  
-  <header>
-    
-      <i class="fa-brands fa-qq fa-fw" aria-hidden="true"></i><span class='name'>加入 QQ 群</span>
-    
-  </header>
-
-
+<section class="widget blogger desktop mobile pjax">
   <div class='content'>
     
-      <p>如果你在使用中遇到问题，请到 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues">Github Issues</a> 或者 <a href="/faqs/#comments">留言板</a> 进行反馈，你也可以加入 <strong>QQ 群</strong>，验证码：vlts-2021<br><a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=FpexWW5GCLWOM3jF3LG-YWfllXuv7cMs&jump_from=webapi"><img src="https://bu.dusays.com/2021/09/24/ae832f0aadee8.png" class="lazyload" data-srcset="https://bu.dusays.com/2021/09/24/ae832f0aadee8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></p>
-
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">yyshino []~(￣▽￣)~*</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fa-solid fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
     
   </div>
 </section>
 
-    
-  
-
-  
-    
-    
-      
     
   
 
@@ -4561,161 +3361,34 @@ MongoDB服务删除并重新安装，
     
     
       
-<section class="widget grid desktop mobile pjax">
   
+  <section class="widget tagcloud desktop mobile pjax">
+    
   <header>
     
-      <i class="fa-solid fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
     
   </header>
 
 
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" href="/faqs/"
-          
-          
-          active-action="action-faqs">
-          
-            <i class="fa-solid fa-question-circle fa-fw" aria-hidden="true"></i>
-          
-          常见问题
-        </a>
-      
-        <a class="flat-box" href="/examples/"
-          
-          
-          active-action="action-examples">
-          
-            <i class="fa-solid fa-play-circle fa-fw" aria-hidden="true"></i>
-          
-          示例博客
-        </a>
-      
-        <a class="flat-box" href="/contributors/"
-          
-          
-          active-action="action-contributors">
-          
-            <i class="fa-solid fa-handshake fa-fw" aria-hidden="true"></i>
-          
-          特别感谢
-        </a>
-      
-        <a class="flat-box" href="/archives/"
-          
-          
-          active-action="action-archives">
-          
-            <i class="fa-solid fa-file-alt fa-fw" aria-hidden="true"></i>
-          
-          测试博文
-        </a>
-      
-        <a class="flat-box" href="https://github.com/volantis-x/hexo-theme-volantis/"
-          
-            rel="external nofollow noopener noreferrer"
-          
-          
-            target="_blank"
-          
-          active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-          
-            <i class="fa-solid fa-file-code fa-fw" aria-hidden="true"></i>
-          
-          主题源码
-        </a>
-      
-        <a class="flat-box" href="https://github.com/volantis-x/hexo-theme-volantis/releases/"
-          
-            rel="external nofollow noopener noreferrer"
-          
-          
-            target="_blank"
-          
-          active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases">
-          
-            <i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>
-          
-          更新日志
-        </a>
-      
+    <div class='content'>
+      <a href="/tags/java/" style="font-size: 14px; color: #999">java</a> <a href="/tags/js/" style="font-size: 20.67px; color: #6c6c6c">js</a> <a href="/tags/jsx/" style="font-size: 17.33px; color: #828282">jsx</a> <a href="/tags/miniapp/" style="font-size: 14px; color: #999">miniapp</a> <a href="/tags/nodejs/" style="font-size: 14px; color: #999">nodejs</a> <a href="/tags/ts/" style="font-size: 14px; color: #999">ts</a> <a href="/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/tags/webpack-vue-react/" style="font-size: 14px; color: #999">webpack   vue   react</a> <a href="/tags/%E5%85%B4%E8%B6%A3/" style="font-size: 14px; color: #999">兴趣</a> <a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 14px; color: #999">实战</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 14px; color: #999">小程序</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 14px; color: #999">踩坑</a>
     </div>
-  </div>
-</section>
+  </section>
+
 
     
+  
+
   
 
 
 <div class="widget-sticky pjax">
 
-  
-  
-<section class="widget text desktop mobile ">
-  
-  <header>
-    
-      <a href='/contributors/'><i class="fa-solid fa-plus fa-fw" aria-hidden="true"></i><span class='name'>社区活动</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p><strong>如何让自己的文章收录到这里？</strong><br>官方网站是开源的，只要您的文章与 Hexo 博客搭建相关，就可以自助进行收录，详细的操作步骤请见：「<a href="/contributors/#%E5%8F%91%E5%B8%83%E4%B8%8E%E5%88%86%E4%BA%AB%E6%96%87%E7%AB%A0"><strong>发布与分享文章</strong></a>」。</p>
-
-    
-  </div>
-</section>
-
-  
-
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4782,22 +3455,6 @@ MongoDB服务删除并重新安装，
         <div class="aplayer-container">
           
 
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.4'
-      loop='all'
-      order='random'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='5062959861'
-      list-folded='true'>
-    </meting-js>
-  
-
 
         </div>
       
@@ -4807,77 +3464,17 @@ MongoDB服务删除并重新安装，
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
-            
           
             
-              <a href="https://github.com/volantis-x/"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
-            
           
-            
-              <a href="/"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/010-facebook.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
-            
-          
-            
-              <a href="/"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/018-twitter.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
-            
-          
-            
-              <a href="/"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/045-telegram.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
-            
-          
-            
-              <a href="/"
-                class="social  flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
-                
-                  <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/icon/1322024-social-media/006-youtube.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                
-              </a>
             
           
         </div>
       
     
       
-        <p>本站使用 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.7.2">Volantis</a> 作为主题，您可以在 GitHub 找到<a target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs">本站源码</a>。</p>
-
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
       
     
       
@@ -4888,8 +3485,14 @@ MongoDB服务删除并重新安装，
       
     
       
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.7.2" target="_blank" class="codename">Volantis</a>
+        作为主题
+      
+    
+      
         <div class='copyright'>
-        <p><a target="_blank" rel="noopener" href="https://github.com/volantis-x/">Copyright © since 2017 Volantis Team</a></p>
+        <p><a href="/">Copyright © since 2017 XXX</a></p>
 
         </div>
       
@@ -4919,7 +3522,7 @@ MongoDB服务删除并重新安装，
 
 <script>
   
-  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
   
   
   
@@ -4936,536 +3539,8 @@ MongoDB服务删除并重新安装，
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="rightmenu-wrapper">
-  <ul class="list-v rightmenu" id="rightmenu-content">
-    
-  <li class='navigation menuNavigation-Content'>
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-duotone fa-arrow-left PETERRIVE fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-duotone fa-arrow-right PETERRIVE fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-duotone fa-redo PETERRIVE fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" href="/"><i class="fa-duotone fa-home PETERRIVE fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-duotone fa-arrow-up PETERRIVE fa-fw"></i></a>
-
-
-  </li>
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
-      <i class="fa-duotone PETERRIVE fa-paste fa-fw"></i>
-      粘贴文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
-      <i class="fa-duotone PETERRIVE fa-object-ungroup fa-fw"></i>
-      全选文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
-      <i class="fa-duotone PETERRIVE fa-cut fa-fw"></i>
-      剪切文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
-      <i class="fa-duotone PETERRIVE fa-copy fa-fw"></i>
-      复制文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
-      <i class="fa-duotone PETERRIVE fa-search fa-fw"></i>
-      站内搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-duotone PETERRIVE fa-search fa-fw"></i>
-      必应搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
-      <i class="fa-duotone PETERRIVE fa-external-link-square-alt fa-fw"></i>
-      新标签页打开
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
-      <i class="fa-duotone PETERRIVE fa-link fa-fw"></i>
-      复制链接地址
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
-      <i class="fa-duotone PETERRIVE fa-image fa-fw"></i>
-      复制图片
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
-      <i class="fa-duotone PETERRIVE fa-images fa-fw"></i>
-      谷歌识图
-    </span>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="prev" data-event="volantis.rightmenu.jump('prev')" data-group="prevNext">
-      <i class="fa-duotone fa-angles-left PETERRIVE fa-fw"></i>
-      查看上一篇
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="next" data-event="volantis.rightmenu.jump('next')" data-group="prevNext">
-      <i class="fa-duotone fa-angles-right PETERRIVE fa-fw"></i>
-      查看下一篇
-    </span>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="help" href="/faqs/" data-group="link">
-      <i class="fa-duotone fa-question EMERALD fa-fw"></i>
-      常见问题
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="examples" href="/examples/" data-group="link">
-      <i class="fa-duotone fa-rss PETERRIVE fa-fw"></i>
-      示例博客
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="contributors" href="/contributors/" data-group="link">
-      <i class="fa-duotone fa-fan fa-spin AMETHYST fa-fw"></i>
-      加入社区
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
-      <i class="fa-duotone fa-code-branch WETASPHALT fa-fw"></i>
-      本站源码
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
-      <i class="fa-duotone fa-code-branch CONCRETE fa-fw"></i>
-      主题源码
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
-      <i class="fa-duotone fa-eclipse-alt WISTERIA fa-fw"></i>
-      暗黑模式
-    </span>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
-      <i class="fa-duotone fa-print TURQUOISE fa-fw"></i>
-      打印页面
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
-      <i class="fa-duotone fa-book-open EMERALD fa-fw"></i>
-      阅读模式
-    </span>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-<div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
-  </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-duotone PETERRIVE fa-step-backward fa-fw'></i>
-    </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-duotone PETERRIVE fa-play fa-fw'></i>
-    </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-duotone PETERRIVE fa-step-forward fa-fw'></i>
-    </a>
-  </li>
-  <li class='music volume'>
-    <div class='nav volume'>
-      <div class="aplayer-volume-bar-wrap">
-        <div class="aplayer-volume-bar fix-cursor-pointer">
-          <div class="aplayer-volume"></div>
-          <i class='left fa-duotone PETERRIVE fa-volume-off fa-fw'></i>
-          <i class='right fa-duotone PETERRIVE fa-volume-up fa-fw'></i>
-        </div>
-      </div>
-    </div>
-  </li>
-</div>
-
-  </ul>
-</div>
-<script src="/js/plugins/rightMenus.1aa99ff1.js"></script>
-<script>
-  const RightMenusFunction = {};
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['copyAll'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['copyCut'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['copyText'] = (fun) => {fun()}
-
-
-
-
-
-  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
-
-
-
-
-
-  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
-
-
-
-
-
-  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
-
-
-
-
-
-  //RightMenusFunction['copyLink'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['copyImg'] = (fun) => {fun()}
-
-
-
-
-
-  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-  RightMenusFunction['prev'] = () => {volantis.rightmenu.jump('prev')}
-
-
-
-
-
-  RightMenusFunction['next'] = () => {volantis.rightmenu.jump('next')}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
-
-
-
-
-
-
-
-  //RightMenusFunction['printMode'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['readMode'] = (fun) => {fun()}
-
-
-
-
-
-
-
-</script>
-
-
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "color-scheme";
-const rootElementDarkModeAttributeName = "color-scheme";
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-  getCustomDarkMode();
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-/**
- * get target mode
- */
- const getCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  if(currentSetting=="dark"){
-    volantis.dark.mode="light";
-  }else{
-    volantis.dark.mode="dark";
-  }
-  // console.log(volantis.dark.mode)
-};
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-/**
- * 暗黑模式触发器
- */
-volantis.dark.toggle=()=>{
-  const mode = toggleCustomDarkMode();
-  applyCustomDarkModeSettings(mode);
-  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
-  volantis.dark.method.toggle.start();
-}
-/**
- * bind event for toggle button
- */
-
-function bindToggleButton() {
-  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
-  btn.forEach(function (e) {
-    volantis.dom.$(e).on('click',volantis.dark.toggle);
-  })
-}
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", ()=>{
-  volantis.requestAnimationFrame(bindToggleButton)
-});
-volantis.pjax.push(bindToggleButton);
-
-const darkModelListeners={
-  dark:(mediaQueryList )=>{
-    if(mediaQueryList.matches){
-      volantis.dark.mode = "dark";
-    }
-    volantis.dark.method.toggle.start();
-  },
-  light:(mediaQueryList)=>{
-    if(mediaQueryList.matches){
-      volantis.dark.mode = "light";
-    }
-    volantis.dark.method.toggle.start();
-  }
-}
-window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
-window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
-</script>
-
 
 
 
@@ -5574,82 +3649,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.css");
-  (async () => {
-    // APlayer 需要在  MetingJS 之前加载
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.js")
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/meting/dist/Meting.min.js")
-  
-    // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.dbe5eea9.js')
-  
-  })();
-
-  function SetAPlayerPlugin(){
-    let Metings = document.querySelectorAll('meting-js');
-    if (Metings.length === 0) {return;};
-    if (Metings[0].aplayer && Metings[0].aplayer.on) {
-      // improve the accessibility https://web.dev/button-name/
-      document.querySelectorAll(".aplayer-icon-menu").forEach(e=>{
-        e.setAttribute("aria-label","Aplayer Menu")
-      })
-      // message see: /layout/_plugins/message/script.ejs
-      
-        try {
-          setTimeout(() => {
-            Metings.forEach((item, index) => {
-              const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = 'true' === 'true'
-                && item.meta.id === '5062959861';
-              if(rightAplayerCheck) RightMenuAplayer.checkAPlayer();
-              if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
-                aplayerItem.on('play', function messagePlay() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                      icon: 'fa-light fa-play light-blue',
-                      transitionIn: 'flipInX',
-                      transitionOut: 'flipOutX'
-                    });
-                  }, 100)
-                });
-              }
-              if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
-                aplayerItem.on('pause', function messagePause() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
-                    if(aplayerItem.paused) {
-                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                        icon: 'fa-light fa-pause light-blue',
-                        transitionIn: 'flipInX',
-                        transitionOut: 'flipOutX'
-                      });
-                    }
-                  }, 100)
-                });
-              }
-            });
-          }, 500)
-        } catch (error) { console.error(error); }
-      
-    }else{
-      volantis.requestAnimationFrame(SetAPlayerPlugin)
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    SetAPlayerPlugin();
-  });
-  volantis.pjax.push(SetAPlayerPlugin);
-</script>
-
-
 
 
       <script>
@@ -5670,7 +3669,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"volantis-x/community","repo-id":"MDEwOlJlcG9zaXRvcnkyNDIzNjY1ODM=","mapping":"number","term":"145","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN","input-position":"top"},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -5784,274 +3783,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script defer>
-
-  const LCCounter = {
-    app_id: 'GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI',
-    app_key: '4xKBXGBj6BgecU62vff5rJHs',
-    custom_api_server: '',
-
-    // 查询存储的记录
-    getRecord(Counter, url, title) {
-      return new Promise(function (resolve, reject) {
-        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
-          .then(resp => resp.json())
-          .then(({results, code, error}) => {
-            if (code === 401) {
-              throw error;
-            }
-            if (results && results.length > 0) {
-              var record = results[0];
-              resolve(record);
-            } else {
-              Counter('post', '/classes/Counter', {url, title: title, times: 0})
-                .then(resp => resp.json())
-                .then((record, error) => {
-                  if (error) {
-                    throw error;
-                  }
-                  resolve(record);
-                }).catch(error => {
-                console.error('Failed to create', error);
-                reject(error);
-              });
-            }
-          }).catch((error) => {
-          console.error('LeanCloud Counter Error:', error);
-          reject(error);
-        });
-      })
-    },
-
-    // 发起自增请求
-    increment(Counter, incrArr) {
-      return new Promise(function (resolve, reject) {
-        Counter('post', '/batch', {
-          "requests": incrArr
-        }).then((res) => {
-          res = res.json();
-          if (res.error) {
-            throw res.error;
-          }
-          resolve(res);
-        }).catch((error) => {
-          console.error('Failed to save visitor count', error);
-          reject(error);
-        });
-      });
-    },
-
-    // 构建自增请求体
-    buildIncrement(objectId) {
-      return {
-        "method": "PUT",
-        "path": `/1.1/classes/Counter/${ objectId }`,
-        "body": {
-          "times": {
-            '__op': 'Increment',
-            'amount': 1
-          }
-        }
-      }
-    },
-
-    // 校验是否为有效的 UV
-    validUV() {
-      var key = 'LeanCloudUVTimestamp';
-      var flag = localStorage.getItem(key);
-      if (flag) {
-        // 距离标记小于 24 小时则不计为 UV
-        if (new Date().getTime() - parseInt(flag) <= 86400000) {
-          return false;
-        }
-      }
-      localStorage.setItem(key, new Date().getTime().toString());
-      return true;
-    },
-
-    addCount(Counter) {
-      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
-      enableIncr = true;
-      var getterArr = [];
-      var incrArr = [];
-      // 请求 PV 并自增
-      var pvCtn = document.querySelector('#lc-sv');
-      if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://blog.yyshino.top' + '/#lc-sv', 'Visits').then((record) => {
-          incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-sv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + 1;
-              if (pvCtn) {
-                pvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(pvGetter);
-      }
-
-      // 请求 UV 并自增
-      var uvCtn = document.querySelector('#lc-uv');
-      if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://blog.yyshino.top' + '/#lc-uv', 'Visitors').then((record) => {
-          var vuv = this.validUV();
-          vuv && incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-uv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + (vuv ? 1 : 0);
-              if (uvCtn) {
-                uvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(uvGetter);
-      }
-
-      // 请求文章的浏览数，如果是当前页面就自增
-      var allPV = document.querySelectorAll('#lc-pv');
-      if (allPV.length > 0 || enableIncr) {
-        for (i = 0; i < allPV.length; i++) {
-          let pv = allPV[i];
-          let title = pv.getAttribute('data-title');
-          var url = 'https://blog.yyshino.top' + pv.getAttribute('data-path');
-          if (url) {
-            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
-              // 是当前页面就自增
-              let curPath = window.location.pathname;
-              if (curPath.includes('index.html')) {
-                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
-              }
-              if (pv.getAttribute('data-path') == curPath) {
-                incrArr.push(this.buildIncrement(record.objectId));
-              }
-              if (pv) {
-                var ele = pv.querySelector('#lc-pv #number');
-                if (ele) {
-                  if (pv.getAttribute('data-path') == curPath) {
-                    ele.innerText = (record.times || 0) + 1;
-                  } else {
-                    ele.innerText = record.times || 0;
-                  }
-                  pv.style.display = 'inline';
-                }
-              }
-            });
-            getterArr.push(viewGetter);
-          }
-        }
-      }
-
-      // 如果启动计数自增，批量发起自增请求
-      if (enableIncr) {
-        Promise.all(getterArr).then(() => {
-          incrArr.length > 0 && this.increment(Counter, incrArr);
-        })
-      }
-
-    },
-
-
-    fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${ api_server }/1.1${ url }`, {
-          method,
-          headers: {
-            'X-LC-Id': this.app_id,
-            'X-LC-Key': this.app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      this.addCount(Counter);
-    },
-
-    refreshCounter() {
-      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
-      if (api_server) {
-        this.fetchData(api_server);
-      } else {
-        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
-          .then(resp => resp.json())
-          .then(({api_server}) => {
-            this.fetchData('https://' + api_server);
-          });
-      }
-    }
-
-  };
-
-  LCCounter.refreshCounter();
-
-  document.addEventListener('pjax:complete', function () {
-    LCCounter.refreshCounter();
-  });
-</script>
 
 
 
 
-
-
-
-
-  <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp"];
-  let index = 0;
-  let IntervalParallax = null;
-
-  function parallax(){
-    let ParallaxWindow = document.querySelector("#parallax-window");
-    
-    Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
-    Parallax.cache = 1;
-    next_parallax();
-    Parallax.init();
-    if (imgs.length>1) {
-      IntervalParallax = setInterval(function () {
-        next_parallax();
-      }, '10000');
-    }
-  }
-
-  function next_parallax() {
-    if (typeof Parallax == "undefined") {
-      return
-    }
-    
-      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
-        return
-      }
-    
-    if (imgs.length>=1) {
-      Parallax.options.src = imgs[index % imgs.length];
-      Parallax.start();
-      index++;
-      if (Parallax.cache) {
-        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
-        if (index == imgs.length) {
-          Parallax.cache = 0;
-        }
-      }
-    }
-  }
-  var runningOnBrowser = typeof window !== "undefined";
-  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
-  if (!isBot) {
-    volantis.js('/js/plugins/parallax.8bf0ab10.js').then(()=>{
-      parallax()
-    })
-    volantis.pjax.send(()=>{
-      clearInterval(IntervalParallax)
-    },"clearIntervalParallax");
-    volantis.pjax.push(parallax);
-  }
-</script>
 
 
 
