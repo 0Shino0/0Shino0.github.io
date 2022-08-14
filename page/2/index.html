@@ -1749,7 +1749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2546,8 +2546,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         vue插值语法  //vue差值语法
-        //&amp;#123;&amp;#123;&amp;#125;&amp;#125;中使用的数据必须在data中存在;
-        //&amp;#123;&amp;#123;&amp;#125;&amp;#125; 虽然能够使用表达式， 不能出现js的语句，不能在&amp;#123;&amp;#123;&amp;#125;&amp;...
+        //{{}}中使用的数据必须在data中存在;
+        //{{}} 虽然能够使用表达式， 不能出现js的语句，不能在{{}}中写if for;
+        //{{}} 不能在属性中使用
+
+Vue指令    v-text		// 1.向其所在的节点中渲染文本内容。(更新元素的 textContent)
+           ...
       
     
   </div>
@@ -3047,7 +3051,7 @@ Vue.js是一款MVVM框架，上手快速简单易用，通过响应式在修改�
     2.导航区的a标签改为Link标签
                 &lt;Link to="/xxxxx">Demo&lt;/Link>
     3.展示区写Route标签进行路径的匹配
-                &lt;Route path='/xxxx' component=&amp;#1...
+                &lt;Route path='/xxxx' component={Demo}/...
       
     
   </div>

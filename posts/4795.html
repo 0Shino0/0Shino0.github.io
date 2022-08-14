@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2609,19 +2609,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </code></pre>
 <p>2、全局禁用</p>
 <pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">//package.json当中找到eslintConfig项，全局配置禁用某些错误提示</span>
-    <span class="token string">"rules"</span><span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token string">"rules"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token string">"no-unused-vars"</span><span class="token punctuation">:</span><span class="token string">"off"</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 </code></pre>
 <p>3、关闭</p>
 <pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">//开发阶段直接关闭eslint的提示功能</span>
 
     手动创建vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js
-    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">//  写自己想要配置的东西去覆盖系统自带的</span>
         <span class="token comment" spellcheck="true">// 关闭ESLint的规则</span>
         lintOnSave<span class="token punctuation">:</span> <span class="token boolean">false</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 <p>vue模板解析</p>
 <pre class=" language-js"><code class="language-js">Vue渲染两种方式：
@@ -2700,12 +2700,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
       <span class="token comment" spellcheck="true">// 2)JS模块对象</span>
     <span class="token operator">&lt;</span>script<span class="token operator">></span>
-      <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        methods<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        computed<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        components<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        methods<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        computed<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        components<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
       <span class="token comment" spellcheck="true">// 3)样式</span>
     <span class="token operator">&lt;</span>style<span class="token operator">></span>  
@@ -2777,14 +2777,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
-<pre class=" language-js"><code class="language-js">    <span class="token keyword">new</span> <span class="token class-name">Vue</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js">    <span class="token keyword">new</span> <span class="token class-name">Vue</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$bus <span class="token operator">=</span> <span class="token keyword">this</span>   <span class="token comment" spellcheck="true">//配置总线  就是把vm挂到Vue的原型上，让所有的组件对象都能找到他，进而调用$on和$emit  </span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
         el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
         render<span class="token punctuation">:</span>h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <ul>
 <li>适用场合： 任何场合</li>
@@ -2824,7 +2824,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <span class="token operator">&lt;</span>ul<span class="token operator">></span>
             <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(todo,index) in todos"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"todos.id"</span><span class="token operator">></span>
                 <span class="token operator">&lt;</span>slot <span class="token punctuation">:</span>todo<span class="token operator">=</span><span class="token string">"todo"</span><span class="token operator">></span>
-                    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>todo<span class="token punctuation">.</span>content<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span>todo<span class="token punctuation">.</span>content<span class="token punctuation">}</span><span class="token punctuation">}</span>
                 <span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">></span>
             <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
@@ -2852,13 +2852,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>4、代理转发的时候会把路径交给真正的请求服务器，作为请求路径，需要把固定的开头去除</p>
 <pre class=" language-json"><code class="language-json">    changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> // 支持跨域<span class="token punctuation">,</span> 如果协议/主机也不相同<span class="token punctuation">,</span> 必须加上
     
-    proxy<span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token property">"/api"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    proxy<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"/api"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                 target<span class="token operator">:</span> <span class="token string">"http://localhost:4000"</span><span class="token punctuation">,</span>
-                pathRewrite<span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span><span class="token property">"^/api"</span> <span class="token operator">:</span> <span class="token string">""</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>  //要看真正的后台接口路径当中有没有包含/api，有就不用去掉，没有就得去掉
+                pathRewrite<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"^/api"</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  //要看真正的后台接口路径当中有没有包含/api，有就不用去掉，没有就得去掉
                 changeOrigin<span class="token operator">:</span><span class="token boolean">true</span>
-        &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 <h4 id="vue-ajax"><a href="#vue-ajax" class="headerlink" title="vue-ajax"></a>vue-ajax</h4><p>vue-axios与axios官方库大同小异<br>不过多赘述,想了解的可以<br>    参考<a target="_blank" rel="noopener" href="https://axios-http.com/zh/">axios文档</a><br>    我的博客<a target="_blank" rel="noopener" href="https://yyshino.top/posts/20614.html">ajax-axios</a></p>
 <h4 id="vueui组件库"><a href="#vueui组件库" class="headerlink" title="vueui组件库"></a>vueui组件库</h4><p><strong>1. 移动端UI组件库</strong><br>1)<code>Vant</code>  <a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/">https://youzan.github.io/vant/#/zh-CN/</a><br>2)<code>Cube UI</code>  <a target="_blank" rel="noopener" href="https://didi.github.io/cube-ui/#/zh-CN">https://didi.github.io/cube-ui/#/zh-CN</a><br>3)<code>Mint UI</code>  <a target="_blank" rel="noopener" href="http://mint-ui.github.io/">http://mint-ui.github.io/</a> (经常不能访问)</p>
@@ -2882,27 +2882,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 <ol start="3">
-<li><strong>VueRouter(): 用于创建路由器的构建函数</strong><pre class=" language-js"><code class="language-js"> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<li><strong>VueRouter(): 用于创建路由器的构建函数</strong><pre class=" language-js"><code class="language-js"> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
    <span class="token comment" spellcheck="true">// 多个配置项</span>
- <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
 <li><strong>路由配置</strong><pre class=" language-js"><code class="language-js"> routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-   <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 一般路由</span>
+   <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 一般路由</span>
      path<span class="token punctuation">:</span> <span class="token string">'/about'</span><span class="token punctuation">,</span>
      component<span class="token punctuation">:</span> About
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-   <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 自动跳转路由</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 自动跳转路由</span>
      path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> 
      redirect<span class="token punctuation">:</span> <span class="token string">'/about'</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
  <span class="token punctuation">]</span>
 </code></pre>
 </li>
 <li><strong>注册路由器</strong><pre class=" language-js"><code class="language-js"> <span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span>
- <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+ <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
      router
- <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
 <li><strong>使用路由组件标签</strong></li>
@@ -2921,14 +2921,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
  component<span class="token punctuation">:</span> home<span class="token punctuation">,</span>
  <span class="token comment" spellcheck="true">// 嵌套路由</span>
  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-   <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token punctuation">{</span>
      path<span class="token punctuation">:</span> <span class="token string">'news'</span><span class="token punctuation">,</span>
      component<span class="token punctuation">:</span> News
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-   <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">{</span>
      path<span class="token punctuation">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
      component<span class="token punctuation">:</span> Message
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
  <span class="token punctuation">]</span>
 </code></pre>
 </li>
@@ -2939,14 +2939,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 <pre class=" language-js"><code class="language-js">      children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span>
           path<span class="token punctuation">:</span> <span class="token string">'mdetail/:id'</span><span class="token punctuation">,</span>
           component<span class="token punctuation">:</span> MessageDetail
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
       <span class="token punctuation">]</span>
 </code></pre>
 <ol start="2">
-<li>路由路径<pre class=" language-js"><code class="language-js">    <span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token punctuation">:</span>to<span class="token operator">=</span><span class="token string">"'/home/message/mdetail/'+m.id"</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>m<span class="token punctuation">.</span>title<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+<li>路由路径<pre class=" language-js"><code class="language-js">    <span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token punctuation">:</span>to<span class="token operator">=</span><span class="token string">"'/home/message/mdetail/'+m.id"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>m<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>router<span class="token operator">-</span>link<span class="token operator">></span>
 </code></pre>
 </li>
 <li>路由组件中读取请求参数<br><code>this.$route.params.id</code></li>
@@ -2966,56 +2966,56 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>适用场合<br><strong>校验token</strong></p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 全局前置导航守卫</span>
-router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span>next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span>next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 全局前置导航守卫</span>
     <span class="token comment" spellcheck="true">// to 代表准备驱动地方的路由对象</span>
     <span class="token comment" spellcheck="true">// from 从哪个地方来的路由对象</span>
     <span class="token comment" spellcheck="true">// next 是一个函数</span>
     <span class="token comment" spellcheck="true">// next() 代表无条件放行</span>
     <span class="token comment" spellcheck="true">// next(false) 代表不放行，停在原地</span>
-    <span class="token comment" spellcheck="true">// next('/')    next(&amp;#123;path:'/'&amp;#125;)    代表最终让它去哪</span>
+    <span class="token comment" spellcheck="true">// next('/')    next({path:'/'})    代表最终让它去哪</span>
 
     <span class="token comment" spellcheck="true">// token校验</span>
     
     <span class="token keyword">let</span> token <span class="token operator">=</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>token
 
-    <span class="token keyword">if</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 代表登录了或者之前登录过</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>path <span class="token operator">===</span> <span class="token string">'/login'</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>path <span class="token operator">===</span> <span class="token string">'/login'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 登录鼓励，又想去登录页，直接跳转到首页</span>
             <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">else</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// !! 转化为bool值</span>
             <span class="token keyword">let</span> hasuserInfo <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>userInfo
 
-            <span class="token keyword">if</span><span class="token punctuation">(</span>hasuserInfo<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>hasuserInfo<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 此时 代表登录了 ， 去的不是登录页，用户信息存在，直接无条件放行</span>
                 <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">else</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
                                 
                 <span class="token comment" spellcheck="true">// 此时代表登录了，去的不是登录页，用户信息不存在   那我们要根据token发请求获取用户真实信息</span>
-                <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
                     <span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'getUserInfo'</span><span class="token punctuation">)</span>
                     <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                     <span class="token comment" spellcheck="true">// 出现错误 跳转到login页面，并清楚用户信息</span>
                     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'用户的token过期'</span><span class="token punctuation">)</span>
                     <span class="token comment" spellcheck="true">// 清空用户信息</span>
                     store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'resetUserInfo'</span><span class="token punctuation">)</span>
     
                     <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">else</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 代表用户没登录或者之前也没有登录过</span>
         
         <span class="token comment" spellcheck="true">// 后期我们需要判断用户是不是订单相关的页面，如果是娜美就先登录</span>
 
 
         <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p>与redux大同小异</p>
 <ol>
@@ -3044,37 +3044,37 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token comment" spellcheck="true">// 3、向外暴露一个store的实例化对象</span>
 
 <span class="token comment" spellcheck="true">// state是一个包含多个属性（不是方法）的对象，其实就是用来存储数据用的</span>
-<span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 代表初始状态数据    是一个包含n个属性（不是方法）的对象</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token comment" spellcheck="true">// mutations也是一个对象，是一个包含了多个方法的对象，其实就是用这个里面的方法去直接操作数据的</span>
 <span class="token comment" spellcheck="true">// 这个里面的方法不能包含  if  for  异步，是直接操作的</span>
-<span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 代表直接修改数据的数据  是一个包含n个直接修改状态数据方法的对象 （用来让action的行为调用）	</span>
     <span class="token comment" spellcheck="true">// 注意：只能通过mutations的方法去直接修改，也就是说要想写state数据必须通过mutations</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token comment" spellcheck="true">// actions也是一个对象，是一个包含了多个方法的对象。这个对象内部的方法是用来和vue当中用户的操作去关联的</span>
 <span class="token comment" spellcheck="true">// 这个里面的方法可以包含 if for 异步。</span>
-<span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 代表用户行为数据    是一个包含n个用户行为回调方法的对象，（用来映射组件用户的行为回调函数）</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token comment" spellcheck="true">// getters也是一个对象，是一个包含了多个方法的对象。这个对象内部的每个方法对应了一个计算属性的get，就是</span>
 <span class="token comment" spellcheck="true">// 通过state当中的数据  计算出来的一个新的想要的属性数据 </span>
-<span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 代表计算属性数据    是一个包含n个计算属性的方法的对象</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 包含了6个核心概念，</span>
     <span class="token comment" spellcheck="true">// 现在讲4个</span>
     state<span class="token punctuation">,</span>
     mutations<span class="token punctuation">,</span>
     actions<span class="token punctuation">,</span>
     getters
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 <span class="token comment" spellcheck="true">// 4、将暴露出去的store实例化对象引入到实例化Vue的配置对象(main.js)当中使用</span>
 </code></pre>

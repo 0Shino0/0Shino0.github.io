@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2613,19 +2613,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 模板是由两部分组成 html <span class="token operator">+</span> js <span class="token operator">--</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 模块语法   指令和差值 <span class="token operator">--</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 指令是用来修改模板当中标签（属性   内容    样式） <span class="token operator">--</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 差值是专门用来修改模板当中标签的内容值 <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 差值是专门用来修改模板当中标签的内容值 <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">--</span><span class="token operator">></span>
 
 <span class="token operator">&lt;</span>script<span class="token operator">></span>
     <span class="token comment" spellcheck="true">// 1.引入vue.js</span>
     <span class="token comment" spellcheck="true">// 2.在body当中必须写一个挂载点</span>
     <span class="token comment" spellcheck="true">// 3.实例化一个Vue的实例化对象，和挂载点进行挂载</span>
     vm对象
-    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>      <span class="token comment" spellcheck="true">//被称作挂载点  本质上是一个css的选择器字符串，标识着vm要和谁去绑定挂载</span>
-        data<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">:</span><span class="token punctuation">{</span>
             
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token comment" spellcheck="true">//	vm对象和传递的配置对象是不是同一个</span>
  <span class="token comment" spellcheck="true">//	不是同一个对象</span>
  <span class="token comment" spellcheck="true">//	数据代理：使用vm代理了配置对象当中data的数据，vm身上也有和data当中同名的属性模  板当中		访问的都是vm身上的属性</span>
@@ -2636,9 +2636,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 #### 01-差值
 `</span></span><span class="token template-string"><span class="token string">``</span></span>js
-    <span class="token comment" spellcheck="true">// 差值  &amp;#123;&amp;#123;&amp;#125;&amp;#125;</span>
-    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>msg<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>msg<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 差值  {{}}</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>msg<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>msg<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
 </code></pre>
 <h4 id="02-数据的绑定"><a href="#02-数据的绑定" class="headerlink" title="02-数据的绑定"></a>02-数据的绑定</h4><p>指令<br><strong>单向数据绑定</strong></p>
 <ul>
@@ -2694,7 +2694,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> select 这个标签他的value值是选中的option的value值 <span class="token operator">--</span><span class="token operator">></span>
     城市：
     <span class="token operator">&lt;</span>select v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"userInfo.cityId"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>option <span class="token punctuation">:</span>value<span class="token operator">=</span><span class="token string">"city.id"</span> v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(city,index) in citys"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"city.id"</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>city<span class="token punctuation">.</span>name<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">></span>
+        <span class="token operator">&lt;</span>option <span class="token punctuation">:</span>value<span class="token operator">=</span><span class="token string">"city.id"</span> v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(city,index) in citys"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"city.id"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>city<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">></span>
 
     <span class="token operator">&lt;</span>br<span class="token operator">></span>
@@ -2709,36 +2709,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"./js/vue.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> <span class="token operator">></span>
-    <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
-        data<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">:</span><span class="token punctuation">{</span>
 
             citys<span class="token punctuation">:</span><span class="token punctuation">[</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'北京'</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'上海'</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'深圳'</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'北京'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'上海'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'深圳'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 代表收集的数据</span>
-            userInfo<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            userInfo<span class="token punctuation">:</span><span class="token punctuation">{</span>
                 username<span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">,</span>
                 password<span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">,</span>
                 gender<span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">,</span>
                 favas<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">//favas 必须是一个数组 因为它需要收集多个数据</span>
                 cityId<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
                 desc<span class="token punctuation">:</span><span class="token string">''</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token function">axios</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            <span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
                     url<span class="token punctuation">:</span><span class="token string">'后台给你的接口地址'</span><span class="token punctuation">,</span>
                     method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
                     data<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>userInfo
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
 <h4 id="03-计算属性和watch监视"><a href="#03-计算属性和watch监视" class="headerlink" title="03-计算属性和watch监视"></a>03-计算属性和watch监视</h4><ul>
@@ -2758,26 +2758,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       姓：<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"firstName"</span><span class="token operator">></span>
       名：<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"lastName"</span><span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第一种方法不用 使用js的拼接 数据在模板当中 <span class="token keyword">this</span>全部指向的是vm 只不过模板当中的<span class="token keyword">this</span>可以省略 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> lastName<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> lastName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第二种方法不用 封装函数去写 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
 
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第三种方法重要：计算属性 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
 
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第四种方法：watch监视 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName2<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName2<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
       
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 使用computed异步放回数据，不行 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName3<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName3<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
 
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 使用watch异步更新数据，可行 <span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>fullName4<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>fullName4<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
 
       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 计算属性的<span class="token keyword">set</span>方法 <span class="token operator">--</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"fullName"</span><span class="token operator">></span>
@@ -2786,56 +2786,56 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"./js/vue.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
   <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> <span class="token operator">></span>
   
-      <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
           el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
-          <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-              <span class="token keyword">return</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token punctuation">{</span>
                   firstName<span class="token punctuation">:</span><span class="token string">'li'</span><span class="token punctuation">,</span>
                   lastName<span class="token punctuation">:</span><span class="token string">'huazhou'</span><span class="token punctuation">,</span>
                   fullName2<span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">//监视的时候必须有这个属性,属性值是什么不确定,后面根据监视去给他赋值</span>
                   fullName4<span class="token punctuation">:</span><span class="token string">''</span>
-              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-          methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-              <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+              <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'方法被调用了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                   <span class="token comment" spellcheck="true">//在vue中所有的函数内部的this都指向vm，因为这些方法或者函数都会被vm代理</span>
                   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName
-              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
           <span class="token comment" spellcheck="true">// 当我需要一个数据,但是这个数据我又没有，并且这个数据又目前计算而来的，那就要用计算属性</span>
-          computed<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
               <span class="token comment" spellcheck="true">// 计算属性的完整写法</span>
-              fullName<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                  <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+              fullName<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                  <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                       <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName
-                  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
                   <span class="token comment" spellcheck="true">// 当计算属性的数据能被修改时候使用（表单类元素在双向绑定计算属性值）</span>
-                  <span class="token keyword">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                  <span class="token keyword">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
                       <span class="token comment" spellcheck="true">// 目前没用</span>
                       <span class="token keyword">let</span> arr <span class="token operator">=</span> val<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span>
                       <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
                       <span class="token keyword">this</span><span class="token punctuation">.</span>lastName <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-                  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
               <span class="token comment" spellcheck="true">// 如果计算属性当中只有get方法，那么可以简写为如下方法</span>
               <span class="token comment" spellcheck="true">// 计算属性的j简写写法</span>
-                  <span class="token comment" spellcheck="true">// fullName()&amp;#123;</span>
+                  <span class="token comment" spellcheck="true">// fullName(){</span>
                   <span class="token comment" spellcheck="true">//     console.log('computed被调用了');</span>
                   <span class="token comment" spellcheck="true">//     return this.firstName + '-' + this.lastName</span>
-                  <span class="token comment" spellcheck="true">// &amp;#125;,</span>
+                  <span class="token comment" spellcheck="true">// },</span>
 
                   <span class="token comment" spellcheck="true">// computed内部只能是同步放回数据，不能异步放回数据 </span>
-                  <span class="token function">fullName3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                  <span class="token function">fullName3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                       <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token keyword">null</span>
-                      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
                         <span class="token comment" spellcheck="true">//函数体\</span>
                         a <span class="token operator">=</span> <span class="token string">'嘿嘿'</span>
-                      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
                       <span class="token keyword">return</span> a
-                  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
           <span class="token comment" spellcheck="true">//使用方法去获取姓名和使用计算属性去计算姓名的区别(贼重要)</span>
           <span class="token comment" spellcheck="true">// 对于方法调用：</span>
@@ -2845,34 +2845,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <span class="token comment" spellcheck="true">// 计算属性一定存在缓存，这些缓存使用多次的时候效率比使用方法高的多</span>
 
           <span class="token comment" spellcheck="true">// 推荐重要</span>
-          watch<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-              firstName<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          watch<span class="token punctuation">:</span><span class="token punctuation">{</span>
+              firstName<span class="token punctuation">:</span><span class="token punctuation">{</span>
                   <span class="token comment" spellcheck="true">// 这个对象是一个配置对象</span>
                   <span class="token comment" spellcheck="true">// 当数据发生改变的时候会自动调用hander回调</span>
-                  <span class="token function">handler</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>odlVal<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                  <span class="token function">handler</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>odlVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
                       <span class="token keyword">this</span><span class="token punctuation">.</span>fullName2 <span class="token operator">=</span> newVal <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName
 
                       <span class="token comment" spellcheck="true">// </span>
-                      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
                         <span class="token comment" spellcheck="true">//函数体</span>
                           <span class="token keyword">this</span><span class="token punctuation">.</span>fullName4 <span class="token operator">=</span> <span class="token string">'嘿嘿'</span>
-                      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
-                  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
                   immediate<span class="token punctuation">:</span><span class="token boolean">true</span>   <span class="token comment" spellcheck="true">//配置这个配置项的作用是无论监视到属性发生不发生变化，都要强制执行一次回调</span>
-              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-              <span class="token comment" spellcheck="true">// lastName:&amp;#123;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token comment" spellcheck="true">// lastName:{</span>
 
-              <span class="token comment" spellcheck="true">// &amp;#125;</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+              <span class="token comment" spellcheck="true">// }</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
       <span class="token comment" spellcheck="true">// 第二种方式使用watch，不推荐</span>
-      vm<span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span><span class="token string">'lastName'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      vm<span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span><span class="token string">'lastName'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">//this决定是否可以使用箭头函数</span>
             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">this</span><span class="token punctuation">.</span>fullName2 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> newVal
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
       <span class="token comment" spellcheck="true">// computed是   计算属性,一般是没有这个值但是想要用这个值，那么根据已有的去做计算</span>
       <span class="token comment" spellcheck="true">// watch   是   监视属性,监视的属性已经后期要更改的属性都没有必须有</span>
@@ -2888,11 +2888,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="04-实现动态样式效果"><a href="#04-实现动态样式效果" class="headerlink" title="04-实现动态样式效果"></a>04-实现动态样式效果</h4><ul>
 <li><strong>class绑定</strong><pre class=" language-js"><code class="language-js">  <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'xxx'</span>
   <span class="token number">2</span><span class="token punctuation">)</span>表达式是字符串<span class="token punctuation">:</span> <span class="token string">'classA'</span>
-  <span class="token number">3</span><span class="token punctuation">)</span>表达式是对象<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>classA<span class="token punctuation">:</span>isA<span class="token punctuation">,</span> classB<span class="token punctuation">:</span> isB<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token number">3</span><span class="token punctuation">)</span>表达式是对象<span class="token punctuation">:</span> <span class="token punctuation">{</span>classA<span class="token punctuation">:</span>isA<span class="token punctuation">,</span> classB<span class="token punctuation">:</span> isB<span class="token punctuation">}</span>
   <span class="token number">4</span><span class="token punctuation">)</span>表达式是数组<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'classA'</span><span class="token punctuation">,</span> <span class="token string">'classB'</span><span class="token punctuation">]</span>
 </code></pre>
 </li>
-<li><strong>style绑定</strong><pre class=" language-js"><code class="language-js">  <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>style<span class="token operator">=</span><span class="token string">"&amp;#123; color: activeColor, fontSize: fontSize + 'px' &amp;#125;"</span>
+<li><strong>style绑定</strong><pre class=" language-js"><code class="language-js">  <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>style<span class="token operator">=</span><span class="token string">"{ color: activeColor, fontSize: fontSize + 'px' }"</span>
   <span class="token number">2</span><span class="token punctuation">)</span>其中activeColor<span class="token operator">/</span>fontSize是data属性
 </code></pre>
 </li>
@@ -2950,7 +2950,7 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
     <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"请输入过滤的条件"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"keyword"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>ul<span class="token operator">></span>
         <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(persons,index) in newPersons"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"persons.id"</span><span class="token operator">></span>
-            <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>persons<span class="token punctuation">.</span>id<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">--</span><span class="token operator">--</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>persons<span class="token punctuation">.</span>name<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">--</span><span class="token operator">--</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>persons<span class="token punctuation">.</span>age<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>persons<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">--</span><span class="token operator">--</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>persons<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">--</span><span class="token operator">--</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>persons<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"test(1)"</span><span class="token operator">></span>按年龄升序<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
@@ -2965,32 +2965,32 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
 <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> <span class="token operator">></span>
     
     Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//消除启动浏览器的生产提示信息</span>
-    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
-        data<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">:</span><span class="token punctuation">{</span>
             keyword<span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">,</span>
             persons<span class="token punctuation">:</span><span class="token punctuation">[</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'zhaoliying'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">33</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'yanmi'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">34</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'qiwei'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">40</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-                <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'dilireba'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">20</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'zhaoliying'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">33</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'yanmi'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">34</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'qiwei'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>id<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token punctuation">:</span><span class="token string">'dilireba'</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span>
             <span class="token punctuation">]</span><span class="token punctuation">,</span>
             <span class="token comment" spellcheck="true">// 排序首先要设计这个数据，标致用户点击到底是什么排序类型</span>
             <span class="token comment" spellcheck="true">// </span>
             sortType<span class="token punctuation">:</span><span class="token number">0</span>      <span class="token comment" spellcheck="true">//0 -1 2  0代表原样  1代表升序  2代表降序</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-        methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token function">test</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            <span class="token function">test</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 当函数当中如果只有一行代码，可以省略函数，直接把代码写在上面 </span>
                 <span class="token keyword">this</span><span class="token punctuation">.</span>sortType <span class="token operator">=</span> num
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
 
-        computed<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token function">newPersons</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//判断是否简写（数据是否可改）（是否需要set）</span>
-                <span class="token keyword">let</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>keyword<span class="token punctuation">,</span>persons<span class="token punctuation">,</span>sortType<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+        computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            <span class="token function">newPersons</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">//判断是否简写（数据是否可改）（是否需要set）</span>
+                <span class="token keyword">let</span> <span class="token punctuation">{</span>keyword<span class="token punctuation">,</span>persons<span class="token punctuation">,</span>sortType<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
 
                 <span class="token comment" spellcheck="true">// 根据获取的两个计算新的数据</span>
                 <span class="token comment" spellcheck="true">//函数和方法最重要的是三要素</span>
@@ -3008,28 +3008,28 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
                 <span class="token comment" spellcheck="true">// 由变量或者常量和运算符组成的是在就是表达式   表达式都是有值的</span>
 
                 <span class="token comment" spellcheck="true">// 非箭头函数</span>
-                <span class="token comment" spellcheck="true">// let arr = persons.filter(function(item,index)&amp;#123;</span>
+                <span class="token comment" spellcheck="true">// let arr = persons.filter(function(item,index){</span>
                 <span class="token comment" spellcheck="true">//     return item.name.indexOf(keyword) !== -1</span>
-                <span class="token comment" spellcheck="true">// &amp;#125;)</span>
+                <span class="token comment" spellcheck="true">// })</span>
 
                 <span class="token comment" spellcheck="true">// 箭头函数</span>
                 <span class="token keyword">let</span> arr <span class="token operator">=</span> persons<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>keyword<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
                 
                 <span class="token comment" spellcheck="true">// 在过滤的基础上排序完成再返回</span>
-                 <span class="token comment" spellcheck="true">//   if(sortType === 1)&amp;#123;</span>
+                 <span class="token comment" spellcheck="true">//   if(sortType === 1){</span>
                  <span class="token comment" spellcheck="true">//     return a.age - b.age</span>
-                 <span class="token comment" spellcheck="true">//   &amp;#125;else&amp;#123;</span>
+                 <span class="token comment" spellcheck="true">//   }else{</span>
                  <span class="token comment" spellcheck="true">//       return b.age - a.age</span>
-                 <span class="token comment" spellcheck="true">//   &amp;#125;</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>sortType <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                 <span class="token comment" spellcheck="true">//   }</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>sortType <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                     arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> sortType <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> a<span class="token punctuation">.</span>age <span class="token operator">-</span> b<span class="token punctuation">.</span>age <span class="token punctuation">:</span> b<span class="token punctuation">.</span>age <span class="token operator">-</span> a<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
 
 
                 <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
 <h4 id="06-深入了解Vue的响应式数据"><a href="#06-深入了解Vue的响应式数据" class="headerlink" title="06-深入了解Vue的响应式数据"></a>06-深入了解Vue的响应式数据</h4><ul>
@@ -3093,43 +3093,43 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
 
     Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>       <span class="token comment" spellcheck="true">//配置不用提示开发帮本的信息</span>
 
-    <span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
-        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">{</span>
 
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token function">test1</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            <span class="token function">test1</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">test3</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">test3</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">test4</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">test4</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'outer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">inner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">inner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'inner'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token comment" spellcheck="true">// event.stopPropagation();</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">cancelDefault</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">cancelDefault</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
                 <span class="token comment" spellcheck="true">// event.preventDefault();</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">keyEnter</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">keyEnter</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">//</span>
-                <span class="token comment" spellcheck="true">// if(event.keyCode === 13 )&amp;#123;</span>
+                <span class="token comment" spellcheck="true">// if(event.keyCode === 13 ){</span>
                 <span class="token comment" spellcheck="true">//     console.log('回车了');</span>
-                <span class="token comment" spellcheck="true">// &amp;#125;</span>
+                <span class="token comment" spellcheck="true">// }</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'回车了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
 <h4 id="08-Vue生命周期"><a href="#08-Vue生命周期" class="headerlink" title="08-Vue生命周期"></a>08-Vue生命周期</h4><img src="http://shinoimg.yyshino.top/img/lifecycle.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/lifecycle.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Vue生命周期" style="zoom:50%;">
@@ -3151,87 +3151,87 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
 <p>常用钩子<br>1)<code>mounted()</code>: 发送<strong>ajax请求</strong>, <strong>启动定时器</strong>等<strong>异步</strong>任务<br>2)<code>beforeDestory()</code>: 做收尾工作, 如: <strong>清除定时器</strong></p>
 <p>示例</p>
 <pre class=" language-js"><code class="language-js">    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p ref<span class="token operator">=</span><span class="token string">"pp"</span> v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">></span>我爱你<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>isShow<span class="token operator">?</span><span class="token string">'刘亦菲'</span><span class="token punctuation">:</span><span class="token string">'杨幂'</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p ref<span class="token operator">=</span><span class="token string">"pp"</span> v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">></span>我爱你<span class="token punctuation">{</span><span class="token punctuation">{</span>isShow<span class="token operator">?</span><span class="token string">'刘亦菲'</span><span class="token punctuation">:</span><span class="token string">'杨幂'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
         <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"destory"</span><span class="token operator">></span>点我卸载组件<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
     <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"./js/vue.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
     <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
 
-        <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
             el<span class="token punctuation">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
-            <span class="token comment" spellcheck="true">// template:'&lt;p>&amp;#123;&amp;#123;isShow&amp;#125;&amp;#125;&lt;/p>',</span>
+            <span class="token comment" spellcheck="true">// template:'&lt;p>{{isShow}}&lt;/p>',</span>
 
-            <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token keyword">return</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
                     isShow<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
 
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-            methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-                <span class="token function">destory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                <span class="token function">destory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//必须在某个特定的场合下 自己手动调用vm.$destroy()方法  才能进入销毁的阶段</span>
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 初始化阶段有两个钩子 beforeCreate    created</span>
-            <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 初始化之前最大的特点是数据还没有代理好，打印不到</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 初始化之后数据就可以被访问了</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 挂载阶段,挂在前和挂载后</span>
 
-            <span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>pp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-            <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 这个钩子用的是最多的</span>
                 <span class="token comment" spellcheck="true">// 一般用于发送ajax请求获取数据</span>
                 <span class="token comment" spellcheck="true">// 还用于开启定时器</span>
                 <span class="token comment" spellcheck="true">// 添加一些事件</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>pp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
                   <span class="token comment" spellcheck="true">//函数体</span>
                   <span class="token keyword">this</span><span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow
 
-                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 前两个阶段完成 代表初始化展示页面就完成了</span>
 
             <span class="token comment" spellcheck="true">// 页面数据更新前和页面数据更新后 不是vm的数据</span>
-            <span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 页面更新前 vm 的数据已经做了更新了，但此时数据还没有更新过来</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>pp<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-            <span class="token function">updated</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">updated</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 页面更新前 vm 的数据已经做了更新了，页面的数据也更新过来了</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>pp<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 销毁阶段</span>
-            <span class="token function">beforeDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">beforeDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 销毁之前</span>
                 <span class="token comment" spellcheck="true">// 一般这个钩子用的也是比较频繁,通常是在销毁前解绑事件监听  取消定时器等操作</span>
                 <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//定时器管理模块会把这个定时器给停止，但是并没有把这个编号从timer当中销毁</span>
                 <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token keyword">null</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 销毁之后</span>
-            <span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 没什么用</span>
                 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'vm销毁了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
         
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
@@ -3239,63 +3239,63 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
 <h5 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h5><p>可以用全局方法 <code>Vue.filter()</code> 注册一个自定义过滤器，它接收两个参数：<strong>过滤器 ID</strong> 和<strong>过滤器函数</strong>。过滤器函数以值为参数，返回转换后的值</p>
 <h5 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h5><p>全局注册</p>
 <pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">// 注册一个全局自定义指令 `v-focus`</span>
-    Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 当被绑定的元素插入到 DOM 中时……</span>
-    inserted<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    inserted<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 聚焦元素</span>
         el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <p>局部注册</p>
-<pre class=" language-js"><code class="language-js">    directives<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    focus<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js">    directives<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    focus<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 指令的定义</span>
-        inserted<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        inserted<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 <h4 id="10-Vue-Cli引言"><a href="#10-Vue-Cli引言" class="headerlink" title="10-Vue Cli引言"></a>10-Vue Cli引言</h4><p>定义非单文件组件</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 全局注册</span>
     <span class="token comment" spellcheck="true">// 1、定义组件  (定义的组件之后都是全局组件)   本质上是根据一个配置对象定义返回一个函数，后期是当构造函数使用</span>
     <span class="token comment" spellcheck="true">// 麻烦写法</span>
-    <span class="token keyword">const</span> VueComponent <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> VueComponent <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 组件配置对象和Vue配置对象很相似，除了el</span>
-        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 组件的配置对象当中data只能写函数</span>
-            <span class="token keyword">return</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">{</span>
                 count<span class="token punctuation">:</span><span class="token number">0</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-        data<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">:</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 组件当中不能写对象</span>
             count<span class="token punctuation">:</span><span class="token number">0</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        template<span class="token punctuation">:</span><span class="token string">'&lt;div>&lt;h2>I love you &lt;/h2>&lt;button @click="count++">你爱了&amp;#123;&amp;#123;count&amp;#125;&amp;#125;次&lt;/button>&lt;/div>'</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        template<span class="token punctuation">:</span><span class="token string">'&lt;div>&lt;h2>I love you &lt;/h2>&lt;button @click="count++">你爱了{{count}}次&lt;/button>&lt;/div>'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token comment" spellcheck="true">// 3.使用</span>
 
 
     <span class="token comment" spellcheck="true">// 定义组件的简单写法（定义带注册）</span>
     <span class="token comment" spellcheck="true">// 1、定义带注册</span>
     <span class="token comment" spellcheck="true">// 本质上 内部还是使用extend生成一个函数，然后再去和mybutton绑定</span>
-    Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'mybutton'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'mybutton'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 组件配置对象和Vue配置对象很相似，除了el</span>
-        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 组件的配置对象当中data只能写函数</span>
-            <span class="token keyword">return</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">{</span>
                 count<span class="token punctuation">:</span><span class="token number">0</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        <span class="token comment" spellcheck="true">// data:&amp;#123;                                       </span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// data:{                                       </span>
         <span class="token comment" spellcheck="true">//     // 组件当中不能写对象</span>
         <span class="token comment" spellcheck="true">//     count:0</span>
-        <span class="token comment" spellcheck="true">// &amp;#125;,</span>
-        template<span class="token punctuation">:</span><span class="token string">'&lt;div>&lt;h2>I love you &lt;/h2>&lt;button @click="count++">你爱了&amp;#123;&amp;#123;count&amp;#125;&amp;#125;次&lt;/button>&lt;/div>'</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">// },</span>
+        template<span class="token punctuation">:</span><span class="token string">'&lt;div>&lt;h2>I love you &lt;/h2>&lt;button @click="count++">你爱了{{count}}次&lt;/button>&lt;/div>'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
     <span class="token comment" spellcheck="true">// 2、使用</span>
 

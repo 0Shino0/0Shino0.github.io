@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2683,62 +2683,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
    <span class="token comment" spellcheck="true">/*1. 配置通用的基础路径和超时 */</span>
    <span class="token comment" spellcheck="true">// service是一个能任意ajax请求的函数，当然可以作为对象使用</span>
-   <span class="token keyword">const</span> service <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">const</span> service <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       <span class="token comment" spellcheck="true">// http://gmall-h5-api.atguigu.cn/api/product/getBaseCategoryList</span>
       baseURL<span class="token punctuation">:</span><span class="token string">'http://gmall-h5-api.atguigu.cn/api'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// 基础路径</span>
       timeout<span class="token punctuation">:</span><span class="token number">20000</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//超时事件</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
    <span class="token comment" spellcheck="true">// 添加请求拦截器</span>
-   service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
       <span class="token comment" spellcheck="true">/* 2.显示请求进度条 */</span>
       <span class="token comment" spellcheck="true">// 显示请求进度条: 在请求拦截器中</span>
       NProgress<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
       <span class="token keyword">let</span> userTempId <span class="token operator">=</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>userTempId
-      <span class="token keyword">if</span><span class="token punctuation">(</span>userTempId<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>userTempId<span class="token punctuation">)</span><span class="token punctuation">{</span>
          config<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>userTempId <span class="token operator">=</span> userTempId
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
 
       <span class="token comment" spellcheck="true">// 携带登录后标识token  </span>
       <span class="token keyword">let</span> token <span class="token operator">=</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>token
-      <span class="token keyword">if</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">{</span>
          config<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>token <span class="token operator">=</span> token
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
 
       <span class="token comment" spellcheck="true">// 必须返回config</span>
       <span class="token keyword">return</span> config   <span class="token comment" spellcheck="true">//后面会根据返回的config,使用xhr对象发ajax请求</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
    <span class="token comment" spellcheck="true">// 添加响应拦截器</span>
    service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
-      response <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//请求成功的返回的回调</span>
+      response <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">//请求成功的返回的回调</span>
          <span class="token comment" spellcheck="true">// 隐藏请求进度条: 在响应拦截器的成功的回调中</span>
          NProgress<span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
          
          <span class="token comment" spellcheck="true">/* 成功返回的数据不再是response，而直接是响应体数据response.data */</span>
          <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-      error <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//请求失败的返回的回调</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//请求失败的返回的回调</span>
          <span class="token comment" spellcheck="true">// 隐藏请求进度条: 在响应拦截器失败的回调中</span>
          NProgress<span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
          <span class="token comment" spellcheck="true">/* 4.统一处理请求错误,具体请求也可以选中处理或不处理 */</span>
          <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">'未知的请求错误'</span><span class="token punctuation">)</span>
-         <span class="token comment" spellcheck="true">// return new Promise(() => &amp;#123;&amp;#125;)</span>
+         <span class="token comment" spellcheck="true">// return new Promise(() => {})</span>
 
          <span class="token comment" spellcheck="true">// return error //  不能这么写</span>
          <span class="token comment" spellcheck="true">// throw error      //抛出错误</span>
          <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//返回一个失败的Promise, 并将错误传递下去</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
    <span class="token punctuation">)</span>
 
-   <span class="token comment" spellcheck="true">// service.get('./xxx').then((result) => &amp;#123; </span>
+   <span class="token comment" spellcheck="true">// service.get('./xxx').then((result) => { </span>
    <span class="token comment" spellcheck="true">//     // const result = response.data</span>
 
-   <span class="token comment" spellcheck="true">//  &amp;#125;).catch(( error ) => &amp;#123; </span>
+   <span class="token comment" spellcheck="true">//  }).catch(( error ) => { </span>
    <span class="token comment" spellcheck="true">//     // 做一些提示之外的特定工作</span>
-   <span class="token comment" spellcheck="true">//   &amp;#125;)</span>
+   <span class="token comment" spellcheck="true">//   })</span>
 
    <span class="token comment" spellcheck="true">// 向外暴露 service</span>
    <span class="token keyword">export</span> <span class="token keyword">default</span> service
@@ -2769,14 +2769,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p><strong>发送请求</strong> &#x3D;&#x3D;&gt; 产生跨域</p>
 <ol>
 <li>解决跨域<br>vue.config.js<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//配置代理服务器</span>
-devServer<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  proxy<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token string">'/api'</span><span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 只对请求路由以/api开头的请求进行代理转发</span>
+devServer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  proxy<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'/api'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 只对请求路由以/api开头的请求进行代理转发</span>
       target<span class="token punctuation">:</span> <span class="token string">'http://182.92.128.115'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 转发的目标url</span>
       changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">// 支持跨域</span>
-<span class="token comment" spellcheck="true">// pathRewrite: &amp;#123;‘^/api’: ‘’&amp;#125;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// pathRewrite: {‘^/api’: ‘’}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ol>
@@ -2792,43 +2792,43 @@ devServer<span class="token punctuation">:</span> <span class="token operator">&
 <pre class=" language-js"><code class="language-js">   <span class="token comment" spellcheck="true">/* 
    vuex管理的home模块
    */</span>
-   <span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>reqBaseCategoryList<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'@/api'</span>
+   <span class="token keyword">import</span> <span class="token punctuation">{</span>reqBaseCategoryList<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api'</span>
 
-   <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
      baseCategoryList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 所有分类的数组</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
 
-   <span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
      <span class="token comment" spellcheck="true">/* 
      接收保存分类列表
      */</span>
-   <span class="token function">  RECEIVE_BASE_CATEGORY_LIST</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> list<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token function">  RECEIVE_BASE_CATEGORY_LIST</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
        state<span class="token punctuation">.</span>baseCategoryList <span class="token operator">=</span> list
-     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
 
-   <span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token punctuation">{</span>
      <span class="token comment" spellcheck="true">/* 
      异步获取商品三级分类列表
      */</span>
-     <span class="token keyword">async</span><span class="token function"> getBaseCategoryList</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> commit <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+     <span class="token keyword">async</span><span class="token function"> getBaseCategoryList</span><span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span><span class="token function"> reqBaseCategoryList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token keyword">if</span><span class="token function"> </span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+       <span class="token keyword">if</span><span class="token function"> </span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    <span class="token function">      commit</span><span class="token punctuation">(</span><span class="token string">'RECEIVE_BASE_CATEGORY_LIST'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
-       <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
 
-   <span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token punctuation">{</span>
 
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
 
-   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
      state<span class="token punctuation">,</span>
      actions<span class="token punctuation">,</span>
      mutations<span class="token punctuation">,</span>
      getters
-   <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
 </code></pre>
 <ul>
 <li><p>在组件中</p>
@@ -2843,15 +2843,15 @@ mapState,mapGetters是 vuex提供给我们的辅助函数
 */</span>
 
 <span class="token comment" spellcheck="true">// 必须先引入</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>mapState<span class="token punctuation">,</span>mapGetters<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>mapState<span class="token punctuation">,</span>mapGetters<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
  
     <span class="token comment" spellcheck="true">//计算属性中</span>
       <span class="token operator">...</span><span class="token function">mapGetters</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'detailArrayList'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        tradeInfo<span class="token punctuation">:</span>state <span class="token operator">=</span><span class="token operator">></span> state<span class="token punctuation">.</span>trade<span class="token punctuation">.</span>tradeInfo <span class="token operator">||</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+      <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        tradeInfo<span class="token punctuation">:</span>state <span class="token operator">=</span><span class="token operator">></span> state<span class="token punctuation">.</span>trade<span class="token punctuation">.</span>tradeInfo <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// mock 模拟userAddressList接口</span>
         userAddressList<span class="token punctuation">:</span>state <span class="token operator">=</span><span class="token operator">></span> state<span class="token punctuation">.</span>trade<span class="token punctuation">.</span>userAddressList <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
 </ul>
@@ -2906,18 +2906,18 @@ mapState,mapGetters是 vuex提供给我们的辅助函数
 <span class="token keyword">import</span> address <span class="token keyword">from</span> <span class="token string">'./address.json'</span>
 
 <span class="token comment" spellcheck="true">// 提供今日接口</span>
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/recommends'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>recommends<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/recommends'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>recommends<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 <span class="token comment" spellcheck="true">// 提供楼层接口</span>
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/floors'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>floors<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/floors'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>floors<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/ranks'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>ranks<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/ranks'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>ranks<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/likes'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>likes<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/likes'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>likes<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/banners'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>banners<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/banners'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>banners<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/address'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>address<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/mock/address'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>code<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">,</span>data<span class="token punctuation">:</span>address<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'MockServer()'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -2933,20 +2933,20 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token comment" spellcheck="true">//父组件中</span>
     <span class="token operator">&lt;</span>Xxx <span class="token punctuation">:</span>data<span class="token operator">=</span> <span class="token string">"data"</span><span class="token operator">/</span><span class="token operator">></span>
     <span class="token comment" spellcheck="true">//子组件接收数据</span>
-    props<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    props<span class="token punctuation">:</span><span class="token punctuation">{</span>
         data<span class="token punctuation">:</span>数据类型
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>	
+    <span class="token punctuation">}</span>	
 
 
 <span class="token comment" spellcheck="true">//2. vue自定义事件</span>
     <span class="token comment" spellcheck="true">// 子 => 父</span>
     <span class="token comment" spellcheck="true">// 在当前组件绑定自定义事件</span>
-    <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
        <span class="token comment" spellcheck="true">// xxxXxx为分发的事件</span>
        <span class="token keyword">this</span><span class="token punctuation">.</span>$xxx<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'xxxXxx'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>xxxXxx<span class="token punctuation">)</span>
        <span class="token comment" spellcheck="true">// 使用 $once只能触发一次</span>
        <span class="token comment" spellcheck="true">// this.$xxx.$once('xxxXxx',this.xxxXxx)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">// 在子组件当中适当的位置去触发事件并传递参数</span>
     <span class="token comment" spellcheck="true">// $emit(),在子组件当中去触发，子组件对象触发</span>
     <span class="token comment" spellcheck="true">// xxx 为传递的数据</span>
@@ -2959,10 +2959,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <span class="token comment" spellcheck="true">// - 1、所有的组件对象都能找到它</span>
         <span class="token comment" spellcheck="true">// - 2、可以调用$on和$emit</span>
     <span class="token comment" spellcheck="true">// 在主函数 vue 的对象中</span>
-       <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+       <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 1) 创建或指定事件总线对象，保存到Vue的原型上</span>
         Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$bus <span class="token operator">=</span> <span class="token keyword">this</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">//剩余操作 同 2</span>
 
     
@@ -3003,79 +3003,79 @@ isShowFirst<span class="token punctuation">:</span>path <span class="token opera
      <span class="token comment" spellcheck="true">/* 
     隐藏一级列表
     */</span>
-    <span class="token function">hideFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">hideFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
       <span class="token comment" spellcheck="true">// 标识当前已经离开包含分类div了</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>currentIndex<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2</span>
       <span class="token comment" spellcheck="true">// 如果当前不是首页，隐藏一级列表</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>path <span class="token operator">!==</span> <span class="token string">'/'</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>path <span class="token operator">!==</span> <span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>isShowFirst <span class="token operator">=</span> <span class="token boolean">false</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
     <span class="token comment" spellcheck="true">/* 显示一级列表 */</span>
-    <span class="token function">showFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">showFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
       <span class="token comment" spellcheck="true">// 标识当前已经进入包含分类div了</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>currentIndex <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
       <span class="token comment" spellcheck="true">//保证显示一级列表</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>isShowFirst <span class="token operator">=</span> <span class="token boolean">true</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment" spellcheck="true">/* 
     显示指定下标的子分类列表
     */</span>
-    <span class="token comment" spellcheck="true">// showSubList:_.throttle((index) => &amp;#123;  //不可以，原因在于箭头函数没有自己的this，且不能通过bind来指定特定的this</span>
-    showSubList<span class="token punctuation">:</span><span class="token function">throttle</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//这个事件监听回调函数调用的频率太高</span>
+    <span class="token comment" spellcheck="true">// showSubList:_.throttle((index) => {  //不可以，原因在于箭头函数没有自己的this，且不能通过bind来指定特定的this</span>
+    showSubList<span class="token punctuation">:</span><span class="token function">throttle</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//这个事件监听回调函数调用的频率太高</span>
       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'throttle'</span><span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// 只有当还没有离开整个分类的div是才更新下标</span>
       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentIndex <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>currentIndex <span class="token operator">=</span> index<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">/* &amp;#123;
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">/* {
       trailing:'false'  //最后一次事件不延迟处理
-    &amp;#125; */</span><span class="token punctuation">)</span>
+    } */</span><span class="token punctuation">)</span>
 
 <span class="token comment" spellcheck="true">// 定义搜索方法</span>
-<span class="token function">toSearch</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token function">toSearch</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
       console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> categoryname<span class="token punctuation">,</span> category1id<span class="token punctuation">,</span> category2id<span class="token punctuation">,</span> category3id <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> 
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> categoryname<span class="token punctuation">,</span> category1id<span class="token punctuation">,</span> category2id<span class="token punctuation">,</span> category3id <span class="token punctuation">}</span> <span class="token operator">=</span> 
         target<span class="token punctuation">.</span>dataset<span class="token punctuation">;</span>
 
-      <span class="token comment" spellcheck="true">// if(target.tagName.toUpperCase() === 'A')&amp;#123;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>categoryname<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// if(target.tagName.toUpperCase() === 'A'){</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>categoryname<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">//准备query参数</span>
         <span class="token comment" spellcheck="true">// categoryName=图书、影像、电子书刊&amp;category1Id=1</span>
-        <span class="token keyword">const</span> query <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> query <span class="token operator">=</span> <span class="token punctuation">{</span>
           categoryName<span class="token punctuation">:</span> categoryname<span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>category1id<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>category1id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
           query<span class="token punctuation">.</span>category1Id <span class="token operator">=</span> category1id<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>category2id<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>category2id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
           query<span class="token punctuation">.</span>category2Id <span class="token operator">=</span> category2id<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>category3id<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>category3id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
           query<span class="token punctuation">.</span>category3Id <span class="token operator">=</span> category3id<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
         <span class="token comment" spellcheck="true">// 准备一个用跳转的对象</span>
-        <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token punctuation">{</span>
           name<span class="token punctuation">:</span><span class="token string">'search'</span><span class="token punctuation">,</span>
           query<span class="token punctuation">,</span>
           params<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params  <span class="token comment" spellcheck="true">//需要携带上当前已有params参数</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
         <span class="token comment" spellcheck="true">// 跳转到search</span>
         <span class="token comment" spellcheck="true">/* 
         从其他到搜索页：push()
         从搜索到搜索页：replace()
         */</span>
-       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">"search"</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当前是搜索</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">"search"</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//当前是搜索</span>
           <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span>
-       <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">else</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
          <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">// 隐藏一级列表</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hideFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 </li>
 <li><p><code>ListContainer</code></p>
@@ -3094,25 +3094,25 @@ isShowFirst<span class="token punctuation">:</span>path <span class="token opera
 
 <span class="token comment" spellcheck="true">// 利用 swiper 展示轮播图</span>
 <span class="token comment" spellcheck="true">// data中定义</span>
-      swiperOptions<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      swiperOptions<span class="token punctuation">:</span><span class="token punctuation">{</span>
           <span class="token comment" spellcheck="true">// direction: 'horizontal', // 垂直切换选项</span>
           loop<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 循环模式选项</span>
-          autoplay<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//自动轮播</span>
+          autoplay<span class="token punctuation">:</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//自动轮播</span>
             delay<span class="token punctuation">:</span><span class="token number">4000</span><span class="token punctuation">,</span>
             disableOnInteraction<span class="token punctuation">:</span><span class="token boolean">false</span>    <span class="token comment" spellcheck="true">//用户操作后是佛停止自动播放</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
           <span class="token comment" spellcheck="true">// 如果需要分页器</span>
-          pagination<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          pagination<span class="token punctuation">:</span> <span class="token punctuation">{</span>
             el<span class="token punctuation">:</span> <span class="token string">'.swiper-pagination'</span><span class="token punctuation">,</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
           <span class="token comment" spellcheck="true">// 如果需要前进后退按钮</span>
-          navigation<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          navigation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
             nextEl<span class="token punctuation">:</span> <span class="token string">'.swiper-button-next'</span><span class="token punctuation">,</span>
             prevEl<span class="token punctuation">:</span> <span class="token string">'.swiper-button-prev'</span><span class="token punctuation">,</span>
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
         
 </code></pre>
 <p>具体可查看<a target="_blank" rel="noopener" href="https://www.swiper.com.cn/">swiper官网</a></p>

@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2617,38 +2617,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   watch:监视bannerList，就可以知到有数据了
   nextTick:界面更新后执行回调
   */</span>
-  watch<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token function">bannerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//此时只是数据有了, 但界面还没用更新</span>
+  watch<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token function">bannerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">//此时只是数据有了, 但界面还没用更新</span>
       <span class="token comment" spellcheck="true">// swiper对象必须在列表显示之后穿件才有效果</span>
 
       <span class="token comment" spellcheck="true">/* 
       Vue.$nextTick(callback)
       在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
       */</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//在此次数据变化导致界面更新完成后执行回调</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//在此次数据变化导致界面更新完成后执行回调</span>
          <span class="token comment" spellcheck="true">// DOM 更新了</span>
-        <span class="token keyword">new</span> <span class="token class-name">Swiper</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>swiper<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">Swiper</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>swiper<span class="token punctuation">,</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// direction: 'horizontal', // 垂直切换选项</span>
             loop<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 循环模式选项</span>
-            autoplay<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//自动轮播</span>
+            autoplay<span class="token punctuation">:</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//自动轮播</span>
               delay<span class="token punctuation">:</span><span class="token number">4000</span><span class="token punctuation">,</span>
               disableOnInteraction<span class="token punctuation">:</span><span class="token boolean">false</span>    <span class="token comment" spellcheck="true">//用户操作后是佛停止自动播放</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 如果需要分页器</span>
-            pagination<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            pagination<span class="token punctuation">:</span> <span class="token punctuation">{</span>
               el<span class="token punctuation">:</span> <span class="token string">'.swiper-pagination'</span><span class="token punctuation">,</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
             <span class="token comment" spellcheck="true">// 如果需要前进后退按钮</span>
-            navigation<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            navigation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
               nextEl<span class="token punctuation">:</span> <span class="token string">'.swiper-button-next'</span><span class="token punctuation">,</span>
               prevEl<span class="token punctuation">:</span> <span class="token string">'.swiper-button-prev'</span><span class="token punctuation">,</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ul>
@@ -2677,12 +2677,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>​	我们需要手动去push跳转到去除对应参数的新路由</li>
 </ul>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 在 Search组件 中的 removeCategory()和 removeKeyword()方法中添加</span>
-          <span class="token comment" spellcheck="true">// this.$router.push(&amp;#123;  //有历史记录</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">// 无历史记录</span>
+          <span class="token comment" spellcheck="true">// this.$router.push({  //有历史记录</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">{</span>	<span class="token comment" spellcheck="true">// 无历史记录</span>
             name<span class="token punctuation">:</span><span class="token string">'search'</span><span class="token punctuation">,</span>
             <span class="token comment" spellcheck="true">// params:this.$route.params,</span>
             query<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query
-          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <h5 id="响应式对象数据属性的添加和删除"><a href="#响应式对象数据属性的添加和删除" class="headerlink" title="响应式对象数据属性的添加和删除"></a>响应式对象数据属性的添加和删除</h5><pre class=" language-js"><code class="language-js">对象当中的属性数据更改会导致页面更改，响应式数据
 
@@ -2809,8 +2809,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='prev' href='/posts/51479.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Vue总结</p>
           <p class='content'>vue插值语法  //vue差值语法
-        //&amp;#123;&amp;#123;&amp;#125;&amp;#125;中使用的数据必须在data中存在;
-        //...</p>
+        //{{}}中使用的数据必须在data中存在;
+        //{{}} 虽然能够使用表达式， 不能出现js的语句，不能在{{}}中写i...</p>
         </a>
       
       

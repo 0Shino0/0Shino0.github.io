@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.8593fb4d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1660478499139),
+    lastupdate: new Date(1660479581250),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2651,7 +2651,7 @@ git push <span class="token punctuation">-</span><span class="token punctuation"
   Module build failed <span class="token punctuation">(</span><span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span>postcss<span class="token operator">-</span>loader<span class="token operator">/</span>dist<span class="token operator">/</span>cjs<span class="token punctuation">.</span>js<span class="token punctuation">)</span><span class="token punctuation">:</span>
   ValidationError<span class="token punctuation">:</span> Invalid options object<span class="token punctuation">.</span> PostCSS Loader has been initialized using an options object that does not match the API schema<span class="token punctuation">.</span>
    <span class="token operator">-</span> options has an unknown property <span class="token string">'plugins'</span><span class="token punctuation">.</span> These properties are valid<span class="token punctuation">:</span>
-     object <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> postcssOptions<span class="token operator">?</span><span class="token punctuation">,</span> execute<span class="token operator">?</span><span class="token punctuation">,</span> sourceMap<span class="token operator">?</span><span class="token punctuation">,</span> implementation<span class="token operator">?</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+     object <span class="token punctuation">{</span> postcssOptions<span class="token operator">?</span><span class="token punctuation">,</span> execute<span class="token operator">?</span><span class="token punctuation">,</span> sourceMap<span class="token operator">?</span><span class="token punctuation">,</span> implementation<span class="token operator">?</span> <span class="token punctuation">}</span>
       at validate <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\schema<span class="token operator">-</span>utils\dist\validate<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">105</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">)</span>
       at Object<span class="token punctuation">.</span>getOptions <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\webpack\lib\NormalModule<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">580</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">)</span>
       at Object<span class="token punctuation">.</span>loader <span class="token punctuation">(</span>C<span class="token punctuation">:</span>\Workspace\harv<span class="token operator">-</span>Harvest<span class="token operator">-</span>frontend\node_modules\postcss<span class="token operator">-</span>loader\dist\index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">:</span><span class="token number">24</span><span class="token punctuation">)</span>
@@ -2664,20 +2664,20 @@ git push <span class="token punctuation">-</span><span class="token punctuation"
 <li>安装custom-cra-less-loader包</li>
 <li>“config-overrides.js”应该是这样的：</li>
 </ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> override <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"customize-cra"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> override <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"customize-cra"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> addLessLoader <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"customize-cra-less-loader"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">override</span><span class="token punctuation">(</span>
-  <span class="token function">addLessLoader</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    lessLoaderOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-      lessOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">addLessLoader</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    lessLoaderOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lessOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         javascriptEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        modifyVars<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        modifyVars<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           <span class="token string">'@primary-color'</span><span class="token punctuation">:</span> <span class="token string">'#038fde'</span><span class="token punctuation">,</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>转自<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/71035578/postcss-loader-has-been-initialized-using-an-options-object-that-does-not-match">https://stackoverflow.com/questions/71035578/postcss-loader-has-been-initialized-using-an-options-object-that-does-not-match</a></p>
@@ -2735,7 +2735,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment" spellcheck="true">// 缓存原本的push方法</span>
 <span class="token keyword">const</span> originalPush <span class="token operator">=</span> Router<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>push
 <span class="token comment" spellcheck="true">// 指定新的push方法</span>
-Router<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>push <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">push</span><span class="token punctuation">(</span>location<span class="token punctuation">,</span> onResolve<span class="token punctuation">,</span> onReject<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+Router<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>push <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">push</span><span class="token punctuation">(</span>location<span class="token punctuation">,</span> onResolve<span class="token punctuation">,</span> onReject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 如果指定了成功或失败的回调</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>onResolve <span class="token operator">||</span> onReject<span class="token punctuation">)</span>
         <span class="token comment" spellcheck="true">// 直接调用原本的push方法</span>
@@ -2743,17 +2743,17 @@ Router<span class="token punctuation">.</span>prototype<span class="token punctu
         <span class="token keyword">return</span> originalPush<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> location<span class="token punctuation">,</span> onResolve<span class="token punctuation">,</span> onReject<span class="token punctuation">)</span>
 
     <span class="token comment" spellcheck="true">// 没有指定成功或失败的回调，必须用catch处理</span>
-    <span class="token keyword">return</span> originalPush<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> location<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> originalPush<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> location<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 如果是重复盗汗产生的错误，不再向外传递错误 </span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>Router<span class="token punctuation">.</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Router<span class="token punctuation">.</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// resolve err</span>
             <span class="token keyword">return</span> err      <span class="token comment" spellcheck="true">//  产生的成功的promise ， 成功promise的value是err</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">// 如果是其他原因盗汗的错误，将错误向下传递 </span>
         <span class="token comment" spellcheck="true">// rethrow error</span>
         <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Vue 3.1.0版本后</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-router/releases?after=v3.3.1&amp;page=3">https://github.com/vuejs/vue-router/releases?after=v3.3.1&amp;page=3</a></p>
@@ -2764,7 +2764,7 @@ Router<span class="token punctuation">.</span>prototype<span class="token punctu
 <p>运行后</p>
 <p><img src="http://shinoimg.yyshino.top/img/umd-error02.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/umd-error02.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="error02"></p>
 <p>解决某个文件中引入了</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> xxx <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'vue/types/umd'</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> xxx <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue/types/umd'</span>
 </code></pre>
 <p>删除即可</p>
 <h4 id="5-vuex模块化-modules"><a href="#5-vuex模块化-modules" class="headerlink" title="5.vuex模块化 modules"></a>5.vuex模块化 modules</h4><p>报错</p>
@@ -2772,10 +2772,10 @@ Router<span class="token punctuation">.</span>prototype<span class="token punctu
 </code></pre>
 <p>解决在</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 在modules中注册</span>
-    modules<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    modules<span class="token punctuation">:</span><span class="token punctuation">{</span>
         home<span class="token punctuation">,</span>
         cart
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 <h4 id="Vue-运行报错"><a href="#Vue-运行报错" class="headerlink" title="Vue 运行报错"></a>Vue 运行报错</h4><pre><code>vue项目运行报错：Module build failed (from ./node_modules/babel-loader/lib/index.js):
 </code></pre>
@@ -2790,18 +2790,18 @@ Router<span class="token punctuation">.</span>prototype<span class="token punctu
 history<span class="token punctuation">:</span>createWebHashHistory  <span class="token operator">=</span><span class="token operator">></span>  history<span class="token punctuation">:</span><span class="token function">createWebHashHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <h4 id="Vue3-setup-获取全局对象"><a href="#Vue3-setup-获取全局对象" class="headerlink" title="Vue3 setup 获取全局对象"></a>Vue3 setup 获取全局对象</h4><p>2022年7月11日00:20:49</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> getCurrentInstance<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> getCurrentInstance<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
     name<span class="token punctuation">:</span> <span class="token string">"approve"</span><span class="token punctuation">,</span>
-    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// Vue3中我们打印 getCurrentInstance 详细见下图</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment" spellcheck="true">// 获取全局对象</span>
-        <span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> $api<span class="token punctuation">,</span> $message<span class="token punctuation">,</span> $store <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> $api<span class="token punctuation">,</span> $message<span class="token punctuation">,</span> $store <span class="token punctuation">}</span> <span class="token operator">=</span>
       <span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>appContext<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><img src="http://shinoimg.yyshino.top/img/202207211228429.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207211228429.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220721122614665"></p>
 <p>总结</p>
@@ -2826,13 +2826,13 @@ getCurrentInstance().appContext.config.globalProperties.变量名
     at Function.executeUserEntryPoint <span class="token punctuation">[</span>as runMain<span class="token punctuation">]</span> (internal/modules/run_main.js<span class="token punctuation">:</span>76<span class="token punctuation">:</span>12)                                                                             6<span class="token punctuation">:</span>12)
 Emitted 'error' event on Server instance at<span class="token punctuation">:</span>
     at emitErrorNT (net.js<span class="token punctuation">:</span>1358<span class="token punctuation">:</span>8)
-    at processTicksAndRejections (internal/process/task_queues.js<span class="token punctuation">:</span>82<span class="token punctuation">:</span>21) &amp;<span class="token comment" spellcheck="true">#123;        </span>
+    at processTicksAndRejections (internal/process/task_queues.js<span class="token punctuation">:</span>82<span class="token punctuation">:</span>21) <span class="token punctuation">{</span>        
   <span class="token key atrule">code</span><span class="token punctuation">:</span> <span class="token string">'EACCES'</span><span class="token punctuation">,</span>
   <span class="token key atrule">errno</span><span class="token punctuation">:</span> <span class="token number">-4092</span><span class="token punctuation">,</span>
   <span class="token key atrule">syscall</span><span class="token punctuation">:</span> <span class="token string">'listen'</span><span class="token punctuation">,</span>
   <span class="token key atrule">address</span><span class="token punctuation">:</span> <span class="token string">'0.0.0.0'</span><span class="token punctuation">,</span>
   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
-&amp;<span class="token comment" spellcheck="true">#125;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>解决   更改端口</p>
 <pre class=" language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 端口号</span>
@@ -3028,8 +3028,8 @@ MongoDB服务删除并重新安装，
         <a class='next' href='/posts/51479.html'>
           <p class='title'>Vue总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>vue插值语法  //vue差值语法
-        //&amp;#123;&amp;#123;&amp;#125;&amp;#125;中使用的数据必须在data中存在;
-        //...</p>
+        //{{}}中使用的数据必须在data中存在;
+        //{{}} 虽然能够使用表达式， 不能出现js的语句，不能在{{}}中写i...</p>
         </a>
       
     </div>
