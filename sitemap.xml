@@ -315,7 +315,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/jsx/</loc>
+    <loc>https://blog.yyshino.top/tags/java/</loc>
     <lastmod>2022-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -329,14 +329,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/java/</loc>
-    <lastmod>2022-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.yyshino.top/tags/ts/</loc>
+    <loc>https://blog.yyshino.top/tags/jsx/</loc>
     <lastmod>2022-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -350,7 +343,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/webpack-vue-react/</loc>
+    <loc>https://blog.yyshino.top/tags/ts/</loc>
     <lastmod>2022-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -364,7 +357,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+    <loc>https://blog.yyshino.top/tags/webpack-vue-react/</loc>
     <lastmod>2022-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -379,6 +372,13 @@
   
   <url>
     <loc>https://blog.yyshino.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2022-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yyshino.top/tags/%E8%B8%A9%E5%9D%91/</loc>
     <lastmod>2022-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
