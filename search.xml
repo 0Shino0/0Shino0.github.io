@@ -4,6 +4,156 @@
   
     
     <entry>
+      <title>git复习</title>
+      <link href="/posts/10243.html"/>
+      <url>/posts/10243.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="Git-常用命令小结"><a href="#Git-常用命令小结" class="headerlink" title="Git 常用命令小结"></a>Git 常用命令小结</h2><ul><li>git init 仓库初始化</li><li>git add -A 将工作区修改添加至『暂存区』</li><li>git commit 提交 存档</li><li>git branch 查看分支<ul><li>git branch name 创建</li><li>git branch -d name 删除分支</li><li>git merge name 分支合并</li><li>git checkout name 切换分支</li><li>git checkout -b name 创建并切换</li></ul></li><li>git remote 远程仓库别名管理<ul><li>add 新增别名</li><li>remove 移除别名</li><li>rename 重命名别名</li></ul></li><li>git push 将本地仓库的『分支』推送到远端仓库<ul><li>git push -u origin master</li><li>git push dev master</li><li>git push dev master:main</li></ul></li><li>git pull 拉取指定仓库的指定分支<ul><li>git pull origin master</li></ul></li><li>git clone 克隆仓库</li><li>git status 查看仓库状态</li><li>忽略文件</li><li>冲突解决</li></ul></div><div class="story post-story"><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul><li>移动或删除本地仓库不会影响远程存储库.</li><li>含有node_module的文件夹移动时—过慢—压缩后移动</li><li>.git不能够嵌套</li></ul></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git命令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机科学</title>
+      <link href="/posts/288.html"/>
+      <url>/posts/288.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="高级语言程序设计"><a href="#高级语言程序设计" class="headerlink" title="高级语言程序设计"></a>高级语言程序设计</h2><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h3 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h3><h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><h4 id="主存储器简介"><a href="#主存储器简介" class="headerlink" title="主存储器简介"></a>主存储器简介</h4><h4 id="存储器校验"><a href="#存储器校验" class="headerlink" title="存储器校验"></a>存储器校验</h4><h5 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h5><h5 id="汉明码校验"><a href="#汉明码校验" class="headerlink" title="汉明码校验"></a>汉明码校验</h5><p>汉明码的组成<br><img src="http://shinoimg.yyshino.top/img/202208271058182.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271058182.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="组成三要素"></p><p><img src="http://shinoimg.yyshino.top/img/202208271100618.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271100618.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="组成三要素"></p><p>汉明码的检错<br><img src="http://shinoimg.yyshino.top/img/202208271107184.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271107184.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="汉明码的检错"></p><p>汉明码的奇配原则：按照偶配原则计算的Ci后，取反的奇配原则下的检测位取值。</p><h4 id="Cache缓存"><a href="#Cache缓存" class="headerlink" title="Cache缓存"></a>Cache缓存</h4><h4 id="辅助存储器"><a href="#辅助存储器" class="headerlink" title="辅助存储器"></a>辅助存储器</h4><h3 id="IO系统"><a href="#IO系统" class="headerlink" title="IO系统"></a>IO系统</h3><h3 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h3><h3 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h3></div><div class="story post-story"><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机科学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机科学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Koa</title>
+      <link href="/posts/3740.html"/>
+      <url>/posts/3740.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="Koa2"><a href="#Koa2" class="headerlink" title="Koa2"></a>Koa2</h2><h3 id="Koa脚手架-koa-generator"><a href="#Koa脚手架-koa-generator" class="headerlink" title="Koa脚手架 koa-generator"></a>Koa脚手架 koa-generator</h3><p>快速生成koa服务的脚手架工具</p><ol><li>安装 <code>yarn global add koa-generator</code> or <code>npm install -g koa-generator</code></li><li>生成文件 <code>koa2 + 项目名</code></li><li>安装依赖 <code>npm install</code> or <code>yarn</code></li><li>启动服务 <code>npm start</code> or <code>node .bin/www</code></li></ol><h4 id="koa-generator创建的koa2框架目录"><a href="#koa-generator创建的koa2框架目录" class="headerlink" title="koa-generator创建的koa2框架目录"></a>koa-generator创建的koa2框架目录</h4><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><h3 id="pm2-部署Koa项目"><a href="#pm2-部署Koa项目" class="headerlink" title="pm2 部署Koa项目"></a>pm2 部署Koa项目</h3></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> node后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Koa/Koa2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ECharts数据可视化</title>
+      <link href="/posts/56051.html"/>
+      <url>/posts/56051.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="echarts"><a href="#echarts" class="headerlink" title="echarts"></a>echarts</h2><p>官方文档<a href="https://echarts.apache.org/zh/index.html">https://echarts.apache.org/zh/index.html</a></p></div><div class="story post-story"><h2 id="基础入门"><a href="#基础入门" class="headerlink" title="基础入门"></a>基础入门</h2><ol><li>创建dom容器</li><li>引入echarts文件</li><li>初始化echarts实例</li><li>配置echarts</li></ol></div><div class="story post-story"><h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><ol><li>在主题编辑器中编辑主题<br>主题编辑器的地址为: <a href="https://www.echartsjs.com/theme-builder/">https://www.echartsjs.com/theme-builder/</a></li><li>下载主题, 是一个 js 文件<br>在线编辑完主题之后, 可以点击下载主题按钮, 下载主题的js文件</li><li>引入主题 js 文件</li><li>在 init 方法中使用主题</li></ol></div><div class="story post-story"><h2 id="调色盘"><a href="#调色盘" class="headerlink" title="调色盘"></a>调色盘</h2><ul><li>主题调色盘</li><li>全局调色盘</li><li>局部调色盘</li><li>渐变颜色的实现<ul><li>线性渐变</li><li>径向渐变</li></ul></li></ul></div><div class="story post-story"><h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><ul><li>直接样式</li><li>高亮样式</li></ul></div><div class="story post-story"><h2 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h2><ol><li>监听窗口大小变化事件</li><li>在事件处理函数中调用 ECharts 实例对象的 resize</li></ol></div><div class="story post-story"><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>ECharts 已经内置好了加载数据的动画, 我们只需要在合适的时机显示或者隐藏即可</p><ul><li>显示加载动画<pre class=" language-js"><code class="language-js">  mCharts<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 一般, 我们会在获取图表数据之前 显示加载动画</span></code></pre></li><li>隐藏加载动画<pre class=" language-js"><code class="language-js">  mCharts<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 一般, 我们会在获取图表数据之后 隐藏加载动画, 显示图表</span></code></pre></li></ul><h3 id="增量动画"><a href="#增量动画" class="headerlink" title="增量动画"></a>增量动画</h3><p>所有数据的更新都通过 setOption 实现, 我们不用考虑数据到底产生了那些变化, ECharts 会找到两组数据之间的差异然后通过合适的动画去表现数据的变化。</p><h3 id="动画的配置"><a href="#动画的配置" class="headerlink" title="动画的配置"></a>动画的配置</h3><ul><li>开启动画<br><code>animation: true</code></li><li>动画时长<br><code>animationDuration: 5000</code></li><li>缓动动画<br><code>animationEasing : &#39;bounceOut&#39;</code></li></ul><p><a href="https://echarts.apache.org/handbook/zh/how-to/animation/transition#%E5%8A%A8%E7%94%BB%E7%BC%93%E5%8A%A8">其他动画曲线</a></p></div><div class="story post-story"><h2 id="交互API"><a href="#交互API" class="headerlink" title="交互API"></a>交互API</h2><h3 id="全局echarts-对象"><a href="#全局echarts-对象" class="headerlink" title="全局echarts 对象"></a>全局echarts 对象</h3><p>全局 echarts 对象是引入 echarts.js 文件之后就可以直接使用的</p><ul><li><code>echarts.init</code> 初始化ECharts实例对象</li><li><code>echarts.registerTheme</code> 注册主题</li><li><code>echarts.registerMap</code> 注册地图数据</li><li><code>echarts.connect</code><ul><li>一个页面中可以有多个独立的图表</li><li>每一个图表对应一个 ECharts 实例对象</li><li>connect 可以实现多图关联，传入联动目标为 EChart 实例，支持数组</li></ul></li></ul><h3 id="echartsInstance-对象"><a href="#echartsInstance-对象" class="headerlink" title="echartsInstance 对象"></a><code>echartsInstance</code> 对象</h3><p>eChartsInstance 对象是通过 echarts.init 方法调用之后得到的</p><ul><li><p><code>echartsInstance.setOption</code> 设置或修改图表实例的配置项以及数据</p></li><li><p><code>echartsInstance.resize</code> 重新计算和绘制图表</p></li><li><p><code>echartsInstance.on</code> <code>echartsInstance.off</code> 绑定或者解绑事件处理函数</p><ul><li>鼠标事件<ul><li>常见事件: ‘click’、’dblclick’、’mousedown’、’mousemove’、’mouseup’ 等</li><li>事件参数 arg: 和事件相关的数据信息</li></ul></li><li><code>ECharts</code> 事件<ul><li>常见事件:legendselectchanged、’datazoom’、’pieselectchanged’、’mapselectchanged’等</li><li>事件参数 arg: 和事件相关的数据信息</li></ul></li></ul></li><li><p><code>echartsInstance.dispatchAction</code><br>主动触发某些行为, 使用代码模拟用户的行为</p></li><li><p><code>echartsInstance.clear</code><br>清空当前实例，会移除实例中所有的组件和图表<br>清空之后可以再次 setOption</p></li><li><p><code>echartsInstance.dispose</code><br>销毁实例<br>销毁后实例无法再被使用</p></li></ul></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> echarts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML</title>
+      <link href="/posts/54626.html"/>
+      <url>/posts/54626.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS</title>
+      <link href="/posts/6541.html"/>
+      <url>/posts/6541.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="CSS进阶"><a href="#CSS进阶" class="headerlink" title="CSS进阶"></a>CSS进阶</h2><h2 id="flex弹性布局"><a href="#flex弹性布局" class="headerlink" title="flex弹性布局"></a>flex弹性布局</h2><h2 id="grid网格布局"><a href="#grid网格布局" class="headerlink" title="grid网格布局"></a>grid网格布局</h2><h2 id="移动端适配布局"><a href="#移动端适配布局" class="headerlink" title="移动端适配布局"></a>移动端适配布局</h2><h3 id="逻辑像素与物理像素"><a href="#逻辑像素与物理像素" class="headerlink" title="逻辑像素与物理像素"></a>逻辑像素与物理像素</h3><p>&amp;emsp;&amp;emsp;逻辑像素，也叫“设备独立像素”，对于前端来说就是css中的像素，举例：iphone6下的逻辑像素为375px。</p><p>&amp;emsp;&amp;emsp;物理像素，即设备屏幕实际拥有的像素点，一个设备生产出来，他们的像素就已经确定了，举例：iphone6下的物理像素为750px。</p><ul><li><strong>逻辑像素：CSS中的像素，绝对单位，保证不同设备下元素的尺寸是相同的</strong>。</li><li><strong>物理像素：设备屏幕实际拥有的像素点，相对单位，不同设备下物理像素大小不同</strong>。</li></ul></div><div class="story post-story"><h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><p><img src="http://shinoimg.yyshino.top/img/202208251426415.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208251426415.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="媒体查询"></p><h3 id="媒体查询的编写位置以及顺序"><a href="#媒体查询的编写位置以及顺序" class="headerlink" title="媒体查询的编写位置以及顺序"></a>媒体查询的编写位置以及顺序</h3><ul><li>添加到样式表的底部，对CSS进行优先级的覆盖</li><li>移动端 -&gt; PC端适配的原则: min-width从小到大</li><li>PC端适配的原则 -&gt; 移动端  : min-width从大到小</li></ul><p><strong>总结</strong>:<code>min-width</code>方式: 移动优先的原则，先编写移动端设备，然后响应式过渡到PC端</p><h3 id="响应断点-阈值-设定"><a href="#响应断点-阈值-设定" class="headerlink" title="响应断点(阈值)设定"></a>响应断点(阈值)设定</h3><ul><li>一种解决方案<br><img src="http://shinoimg.yyshino.top/img/202208251443203.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208251443203.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一种解决方案"></li></ul></div><div class="story post-story"><h2 id="工具插件"><a href="#工具插件" class="headerlink" title="工具插件"></a>工具插件</h2><p>设计稿</p><ul><li>Photoshop</li><li>PxCood</li></ul></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaWeb</title>
       <link href="/posts/60206.html"/>
       <url>/posts/60206.html</url>
@@ -49,10 +199,16 @@
         <content type="html"><![CDATA[<div class="story post-story"><h2 id="回顾js"><a href="#回顾js" class="headerlink" title="回顾js"></a>回顾js</h2><h3 id="原型protorype和原型链-proto"><a href="#原型protorype和原型链-proto" class="headerlink" title="原型protorype和原型链_proto_"></a>原型<code>protorype</code>和原型链<code>_proto_</code></h3><h2 id="TS安装"><a href="#TS安装" class="headerlink" title="TS安装"></a>TS安装</h2><h2 id="TS-class类"><a href="#TS-class类" class="headerlink" title="TS class类"></a>TS class类</h2><h3 id="方法重载-methodoverload"><a href="#方法重载-methodoverload" class="headerlink" title="方法重载 (methodoverload)"></a>方法重载 (methodoverload)</h3><h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><h3 id="构造器重载"><a href="#构造器重载" class="headerlink" title="构造器重载"></a>构造器重载</h3><h2 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><h4 id="静态属性-1"><a href="#静态属性-1" class="headerlink" title="静态属性"></a>静态属性</h4><p>static</p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="静态引用属性"><a href="#静态引用属性" class="headerlink" title="静态引用属性"></a>静态引用属性</h4><h4 id="静态基本类型属性"><a href="#静态基本类型属性" class="headerlink" title="静态基本类型属性"></a>静态基本类型属性</h4></div><div class="story post-story"><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><h3 id="super的使用"><a href="#super的使用" class="headerlink" title="super的使用"></a>super的使用</h3><ul><li>super代表 <strong>父类的构造函数名</strong> 或 <strong>父类的类名</strong></li><li>通过”super”关键字只能访问基类的公共方法和受保护方法。</li><li>获取 &#x2F; 重写 父类方法</li></ul><h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><ul><li>public: 公开</li><li>protected: 可以在本类和子类中访问，不能再类的外部使用</li><li>private: 只允许在本类中访问</li><li>注意<ul><li>默认: public</li><li>父类方法的访问范围【访问修饰符】必须小于子类中方法重写的访问范围【访问修饰符】</li><li>父类方法不能是private</li></ul></li></ul><h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//TS类 双重性质  即是类型【new实例时TS类是类型】 当用TS类直接获取属性时就是对象</span><span class="token comment" spellcheck="true">//JS函数 双重性质  即是类型【new实例时JS函数也是类型】 当用JS类直接获取属性时就是对象</span></code></pre></div><div class="story post-story"><h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p>as</p><h4 id="类型断言中的不能相互重叠问题"><a href="#类型断言中的不能相互重叠问题" class="headerlink" title="类型断言中的不能相互重叠问题:"></a>类型断言中的不能相互重叠问题:</h4><ul><li>两个类之间断言的规则:<ul><li>两个类中任意一个的属性和方法是另一个类的属性和方法完全相同或子集，则这两个类可以相互断言</li><li>否则这两个类就不能相互断言</li></ul></li><li>任何数据类型都可以转换成any 或unknown类型</li></ul><h4 id="适用性"><a href="#适用性" class="headerlink" title="适用性"></a>适用性</h4><ul><li>对象中的Symbol数据类型取值问题</li><li>加法计算,巧用as any。</li></ul></div><div class="story post-story"><h2 id="TS类型守卫"><a href="#TS类型守卫" class="headerlink" title="TS类型守卫"></a>TS类型守卫</h2><ul><li>类型判断: <code>typeof</code><ul><li><code>typeof</code> 检测变量的类型范围包括：  “string” | “number” | “bigint” | “boolean” | “symbol” | “undefined” | “object” | “function” 等数据类型。</li><li><code>typeof</code>的局限性<ul><li>检测<code>null</code>: <code>typeof null</code> 的结果是 <code>object</code></li><li>检测数组变量: <code>typeof []</code> 的结果是 <code>object</code></li><li>检测<code>Set</code> <code>Map</code>变量:  结果也是 <code>object</code></li></ul></li><li>替代方案 <code>Object.protorype.toString.call()</code><ul><li>依然无法解决的问题:无法获取一个自定义的类的实例变量或构造函数的对象变量的真正创建类型，答案是使用 instanceof 来解决。</li></ul></li></ul></li><li>属性或者方法或者函数判断: <code>in</code></li><li>实例判断: <code>instanceof</code></li><li>字面量相等判断: <code>==</code> <code>===</code> <code>!=</code> <code>!==</code></li></ul></div>]]></content>
       
       
+      <categories>
+          
+          <category> web进阶 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> ts </tag>
+            <tag> TypeScript </tag>
             
         </tags>
       
@@ -68,10 +224,16 @@
         <content type="html"><![CDATA[<div class="story post-story"><h2 id="company-admin"><a href="#company-admin" class="headerlink" title="company-admin"></a>company-admin</h2><p>项目地址 <a href="https://github.com/0Shino0/company-admin">https://github.com/0Shino0/company-admin</a></p></div><div class="story post-story"><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li>Vue3 + Element Plus + Sass 实现前台</li><li>Koa2 + MongoDB 实现后台</li><li>Vite项目构建</li></ul></div><div class="story post-story"><h2 id="前台"><a href="#前台" class="headerlink" title="前台"></a>前台</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p><code>.env.dev</code></p><p><code>config</code></p><p>配置不同环境的 api (方便调节 和 测试)</p><ul><li>dev<ul><li>baseApi</li><li>mockApi</li></ul></li><li>test<ul><li>baseApi</li><li>mockApi</li></ul></li><li>prod<ul><li>baseApi</li><li>mockApi</li></ul></li></ul><p>对外暴露 <code>config</code> &#x3D;&gt; 二次封装axios</p><h3 id="二次封装axios"><a href="#二次封装axios" class="headerlink" title="二次封装axios"></a>二次封装axios</h3><ol><li>创建axios实例对象</li><li>请求拦截器<ul><li>获取请求头headers</li><li>获取token (如果请求头中存在token)</li></ul></li><li>响应拦截器<ul><li>比对状态码 code</li><li>判断token是否超时</li><li>返回 成功&#x2F; 错误提示</li></ul></li><li>核心函数<ul><li>一般默认发送 <code>get</code>请求 (将请求方法 转化为大写)</li><li>判断 使用 mockApi 还是 baseApi</li><li>对不同的 请求方法进行遍历</li></ul></li></ol><h3 id="二次封装-storage"><a href="#二次封装-storage" class="headerlink" title="二次封装 storage"></a>二次封装 storage</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/** * Storage二次封装 * @author YyShino */</span><span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">'./../config'</span><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// 存储</span>    <span class="token function">setItem</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">let</span> storage <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        storage<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>storage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// 获取</span>    <span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// JSON.parse() 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换 (操作)。</span>        <span class="token keyword">return</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">"{}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// 删除 一个</span>    <span class="token function">clearItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// 读取</span>        <span class="token keyword">let</span> storage <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 删除</span>        <span class="token keyword">delete</span> storage<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 写入并 覆盖</span>        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>namespace<span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>storage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// 删除 全部</span>    <span class="token function">clearAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><h3 id="公共组件封装"><a href="#公共组件封装" class="headerlink" title="公共组件封装"></a>公共组件封装</h3><ul><li><p>BreadCrumb.vue (头部区域)</p></li><li><p>Home.vue (主要内容)</p></li><li><p>TreeMenu.vue (左侧菜单栏)</p></li></ul><h3 id="Vue-Router-和-Vuex"><a href="#Vue-Router-和-Vuex" class="headerlink" title="Vue-Router 和 Vuex"></a>Vue-Router 和 Vuex</h3><p>Vue-Router</p><ul><li><p>注册路由 (routes)</p><ul><li>&#x2F;<ul><li>Welcome</li><li>动态添加路由</li></ul></li><li>Login</li><li>404</li></ul></li><li><p>动态添加路由 (addRoute)</p><ul><li><p>系统管理</p><ul><li>User</li><li>Menu</li><li>Role</li><li>Dept</li></ul></li><li><p>审批管理</p><ul><li>Leave</li><li>Approve</li></ul></li><li><p>动态路由实现</p><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// router 主文件</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">loadAsyncRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// console.log(loadAsyncRoutes());</span>    <span class="token keyword">let</span> userInfo <span class="token operator">=</span> storage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"userInfo"</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>userInfo<span class="token punctuation">.</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">try</span> <span class="token punctuation">{</span>            <span class="token keyword">const</span> <span class="token punctuation">{</span> menuList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> API<span class="token punctuation">.</span><span class="token function">getPermissionList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// utils 为封装工具类</span>            <span class="token keyword">let</span> routes <span class="token operator">=</span> utils<span class="token punctuation">.</span><span class="token function">generateRoute</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span><span class="token punctuation">;</span>            routes<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>route<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>                <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token string">`./../views/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>route<span class="token punctuation">.</span>component<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.vue`</span></span><span class="token punctuation">;</span>                route<span class="token punctuation">.</span>component <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>                router<span class="token punctuation">.</span><span class="token function">addRoute</span><span class="token punctuation">(</span><span class="token string">"home"</span><span class="token punctuation">,</span> route<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span><span class="token punctuation">)</span>        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">await</span> <span class="token function">loadAsyncRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// utils 封装工具类 generateRoute</span>    <span class="token comment" spellcheck="true">// 动态路由拼接</span>    <span class="token function">generateRoute</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">let</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>        <span class="token keyword">const</span> deepList <span class="token operator">=</span> <span class="token punctuation">(</span>list<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>            <span class="token keyword">while</span> <span class="token punctuation">(</span>list<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token keyword">let</span> item <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>action<span class="token punctuation">)</span> <span class="token punctuation">{</span>                    routes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>                        name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>component<span class="token punctuation">,</span>                        path<span class="token punctuation">:</span> item<span class="token punctuation">.</span>path<span class="token punctuation">,</span>                        meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>                            title<span class="token punctuation">:</span> item<span class="token punctuation">.</span>menuName                        <span class="token punctuation">}</span><span class="token punctuation">,</span>                        component<span class="token punctuation">:</span> item<span class="token punctuation">.</span>component                    <span class="token punctuation">}</span><span class="token punctuation">)</span>                <span class="token punctuation">}</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>children <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>item<span class="token punctuation">.</span>action<span class="token punctuation">)</span> <span class="token punctuation">{</span>                    <span class="token function">deepList</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>children<span class="token punctuation">)</span>                <span class="token punctuation">}</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token function">deepList</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span>        <span class="token keyword">return</span> routes<span class="token punctuation">;</span>    <span class="token punctuation">}</span></code></pre></li></ul></li><li><p>路由守卫 (beforeEach)</p><pre class=" language-js"><code class="language-js">router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// console.log(router.hasRoute(to.name));</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">hasRoute</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        document<span class="token punctuation">.</span>title <span class="token operator">=</span> to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>title<span class="token punctuation">;</span>        <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/404'</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></li></ul><p>Vuex</p><ul><li>state<ul><li>利用<code>storage</code>存储用户信息、菜单信息、菜单行为信息(创建、查看、编辑、删除等等)、右上角消息提示数量</li></ul></li><li>mutations <ul><li>对应 state 的 mutations 操作</li></ul></li></ul><h3 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*** mainjs中*/</span><span class="token comment" spellcheck="true">// 定义全局指令</span>app<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'has'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>    beforeMount<span class="token punctuation">:</span> <span class="token punctuation">(</span>el<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// console.log(el, binding);</span>        <span class="token comment" spellcheck="true">// 获取按钮权限</span>        <span class="token keyword">let</span> actionList <span class="token operator">=</span> storage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'actionList'</span><span class="token punctuation">)</span>        <span class="token keyword">let</span> value <span class="token operator">=</span> binding<span class="token punctuation">.</span>value<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。</span>        <span class="token comment" spellcheck="true">// 盘点列表中是否有对应按钮权限标识</span>        <span class="token keyword">let</span> hasPermission <span class="token operator">=</span> actionList<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hasPermission<span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token comment" spellcheck="true">// 隐藏按钮</span>            el<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">"display:none"</span>            <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>                <span class="token comment" spellcheck="true">// 删除按钮</span>                el<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span>            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 全局挂载 请求组件</span>app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$request <span class="token operator">=</span> request<span class="token punctuation">;</span>app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$api <span class="token operator">=</span> api<span class="token punctuation">;</span>app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$storage <span class="token operator">=</span> storage<span class="token punctuation">;</span></code></pre><h3 id="根据接口-获取数据-渲染数据"><a href="#根据接口-获取数据-渲染数据" class="headerlink" title="根据接口 获取数据 渲染数据"></a>根据接口 获取数据 渲染数据</h3></div><div class="story post-story"><h2 id="后台"><a href="#后台" class="headerlink" title="后台"></a>后台</h2><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/** * 配置文件 */</span>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>    URL<span class="token punctuation">:</span> <span class="token string">'mongodb://127.0.0.1:27017/company-manager'</span><span class="token punctuation">}</span></code></pre><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/** * 数据库连接 */</span><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> log4js <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./../utils/log4j'</span><span class="token punctuation">)</span>mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>URL<span class="token punctuation">,</span><span class="token punctuation">{</span>    useNewUrlParser<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>    useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">const</span> db <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">;</span>db<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    log4js<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'***数据库连接失败***'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>db<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>    log4js<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'***数据库连接成功***'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><h3 id="日志输出封装"><a href="#日志输出封装" class="headerlink" title="日志输出封装"></a>日志输出封装</h3><p>log4js</p><h3 id="工具类封装"><a href="#工具类封装" class="headerlink" title="工具类封装"></a>工具类封装</h3><ul><li>CODE 状态码设置</li><li>分页 pager</li><li>成功 &#x2F; 失败 的debug</li><li>jwt 解密 token</li><li>递归拼接 菜单列表 树</li><li>处理时间格式  yyyy-mm-dd hh:mm:ss</li></ul><h3 id="MongoDB数据库设计"><a href="#MongoDB数据库设计" class="headerlink" title="MongoDB数据库设计"></a>MongoDB数据库设计</h3><p><img src="http://shinoimg.yyshino.top/img/202207241729910.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202207241729910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="公司管理系统"></p><h3 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h3><ul><li>logger</li><li>校验token</li><li>注册路由</li><li>error</li></ul></div>]]></content>
       
       
+      <categories>
+          
+          <category> 实战 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -86,6 +248,12 @@
       
         <content type="html"><![CDATA[<div class="story post-story"><h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/code.html#JSON-%E9%85%8D%E7%BD%AE">文档</a></p><h3 id="小程序代码构成"><a href="#小程序代码构成" class="headerlink" title="小程序代码构成"></a>小程序代码构成</h3><ol><li>.json 后缀的 JSON 配置文件</li><li>.wxml 后缀的 WXML 模板文件   ————html</li><li>.wxss 后缀的 WXSS 样式文件   ————css</li><li>.js 后缀的 JS 脚本逻辑文件       ————js</li></ol><h3 id="小程序发布简介"><a href="#小程序发布简介" class="headerlink" title="小程序发布简介"></a>小程序发布简介</h3><h4 id="分包加载"><a href="#分包加载" class="headerlink" title="分包加载"></a>分包加载</h4><p>目前小程序分包大小有以下限制：</p><ul><li>整个小程序所有分包大小不超过 20M</li><li>单个分包&#x2F;主包大小不能超过 2M</li></ul><h5 id="常规分包"><a href="#常规分包" class="headerlink" title="常规分包"></a>常规分包</h5><p>配置</p><p>目录配置 </p><pre><code>├── app.js├── app.json├── app.wxss├── packageA│   └── pages│       ├── cat│       └── dog├── packageB│   └── pages│       ├── apple│       └── banana├── pages│   ├── index│   └── logs└── utils</code></pre><p><code>app.json</code>配置</p><pre><code>&#123;  &quot;pages&quot;:[    &quot;pages/index&quot;,    &quot;pages/logs&quot;  ],  &quot;subpackages&quot;: [    &#123;      &quot;root&quot;: &quot;packageA&quot;,      &quot;pages&quot;: [        &quot;pages/cat&quot;,        &quot;pages/dog&quot;      ]    &#125;, &#123;      &quot;root&quot;: &quot;packageB&quot;,      &quot;name&quot;: &quot;pack2&quot;,      &quot;pages&quot;: [        &quot;pages/apple&quot;,        &quot;pages/banana&quot;      ]    &#125;  ]&#125;</code></pre><p>详细见官网 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html</a></p><h5 id="独立分包"><a href="#独立分包" class="headerlink" title="独立分包"></a>独立分包</h5><ul><li>特点<ul><li>独立分包可单独访问分包的内容,不需要下载主包</li><li>独立分包不能依赖主包或者其他包的内容。</li></ul></li><li>适用情况<ul><li>不受主包影响 (或与主包关联不大的页面 ) —— 例如一些临时的广告页面 | 活动页面</li></ul></li><li>使用<ul><li>在常规分包基础上  app.json 中添加  <code>independent&quot;: true</code> 表示独立分包</li><li>独立分包 无法引用主包中资源（例如图标字体） ， 因此独立分包中的 主包资源 需要在分包目录重新引入</li></ul></li></ul><h5 id="分包预加载"><a href="#分包预加载" class="headerlink" title="分包预加载"></a>分包预加载</h5><p><code>app.json</code> 增加 <code>preloadRule</code> 配置来控制。</p><pre class=" language-json"><code class="language-json">  <span class="token property">"preloadRule"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"pages/index"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"network"</span><span class="token operator">:</span> <span class="token string">"all"</span><span class="token punctuation">,</span>      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"important"</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token property">"sub1/index"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"sub3"</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token property">"sub3/index"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path/to"</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token property">"indep/index"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"packages"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"__APP__"</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span></code></pre><p>注意: preloadRule 与 pages 以及其他分包同级</p><p>详细了解 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html</a></p><h4 id="分包异步化"><a href="#分包异步化" class="headerlink" title="分包异步化"></a>分包异步化</h4><p>新加入功能</p><p>详细了解 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html">https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html</a></p></div><div class="story post-story"><h2 id="小程序框架-Uni-App"><a href="#小程序框架-Uni-App" class="headerlink" title="小程序框架 Uni-App"></a>小程序框架 Uni-App</h2></div>]]></content>
       
+      
+      <categories>
+          
+          <category> web进阶 </category>
+          
+      </categories>
       
       
         <tags>
@@ -106,10 +274,16 @@
         <content type="html"><![CDATA[<div class="story post-story"><h2 id="原生小程序"><a href="#原生小程序" class="headerlink" title="原生小程序"></a>原生小程序</h2><h2 id="框架下的小程序"><a href="#框架下的小程序" class="headerlink" title="框架下的小程序"></a>框架下的小程序</h2><h2 id="Vue框架-uni-app"><a href="#Vue框架-uni-app" class="headerlink" title="Vue框架 uni-app"></a>Vue框架 uni-app</h2><h4 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h4><h2 id="React框架-Taro"><a href="#React框架-Taro" class="headerlink" title="React框架 Taro"></a>React框架 Taro</h2></div>]]></content>
       
       
+      <categories>
+          
+          <category> web进阶 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> miniapp </tag>
+            <tag> 小程序 </tag>
             
         </tags>
       
@@ -122,7 +296,7 @@
       <link href="/posts/11752.html"/>
       <url>/posts/11752.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>大学学习的是知识，工作看的是能力。能力的基础是知识。</p>]]></content>
       
       
       
@@ -141,8 +315,14 @@
       <link href="/posts/11307.html"/>
       <url>/posts/11307.html</url>
       
-        <content type="html"><![CDATA[<div class="story post-story"><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>普通的前端能做的太少，仅仅对页面的布局与调用接口。做了一些简单的项目有所感悟，时常为了做项目而去找接口，没有接口就不想做项目，有种感觉失去接口后就寸步难行的感觉。因此我决定由JavaScript过渡到Node全栈，最后过渡到java全栈.一方面原因降低学习成本，有了JavaScript的基础入门node相对简单，上手快。另一方面，我想看看Node作为后端到底和Java相差多少。</p></div>]]></content>
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>普通的前端能做的太少，仅仅对页面的布局与调用接口。做了一些简单的项目有所感悟，时常为了做项目而去找接口，没有接口就不想做项目，有种感觉失去接口后就寸步难行的感觉。因此我决定由JavaScript过渡到Node全栈，最后过渡到java全栈.一方面原因降低学习成本，有了JavaScript的基础入门node相对简单，上手快。另一方面，我想看看Node作为后端到底和Java相差多少。</p></div><div class="story post-story"><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><h3 id="koa-x2F-koa2"><a href="#koa-x2F-koa2" class="headerlink" title="koa&#x2F;koa2"></a>koa&#x2F;koa2</h3></div>]]></content>
       
+      
+      <categories>
+          
+          <category> node后端 </category>
+          
+      </categories>
       
       
         <tags>
@@ -191,7 +371,7 @@
       
         <tags>
             
-            <tag> webpack   vue   react </tag>
+            <tag> webpack vue react </tag>
             
         </tags>
       
@@ -216,7 +396,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -241,7 +421,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -266,7 +446,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -291,7 +471,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -316,7 +496,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -341,7 +521,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -366,7 +546,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -391,7 +571,7 @@
       
         <tags>
             
-            <tag> jsx </tag>
+            <tag> React </tag>
             
         </tags>
       
@@ -416,7 +596,7 @@
       
         <tags>
             
-            <tag> jsx </tag>
+            <tag> Diffing </tag>
             
         </tags>
       
@@ -441,7 +621,7 @@
       
         <tags>
             
-            <tag> jsx </tag>
+            <tag> React </tag>
             
         </tags>
       
@@ -466,7 +646,7 @@
       
         <tags>
             
-            <tag> js </tag>
+            <tag> webpack </tag>
             
         </tags>
       
@@ -491,7 +671,7 @@
       
         <tags>
             
-            <tag> js </tag>
+            <tag> ES6 </tag>
             
         </tags>
       
@@ -516,7 +696,7 @@
       
         <tags>
             
-            <tag> js </tag>
+            <tag> ajax/axios </tag>
             
         </tags>
       
@@ -541,7 +721,7 @@
       
         <tags>
             
-            <tag> js </tag>
+            <tag> HTTP </tag>
             
         </tags>
       
@@ -566,7 +746,7 @@
       
         <tags>
             
-            <tag> js </tag>
+            <tag> 正则表达式 </tag>
             
         </tags>
       
