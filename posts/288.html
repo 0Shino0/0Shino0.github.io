@@ -43,7 +43,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-08-27T02:41:33.000Z">
-<meta property="article:modified_time" content="2022-09-09T08:17:27.228Z">
+<meta property="article:modified_time" content="2022-09-10T01:17:01.861Z">
 <meta property="article:author" content="YyShino">
 <meta property="article:tag" content="计算机科学">
 <meta name="twitter:card" content="summary">
@@ -1883,7 +1883,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.1860c93d.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1662711469980),
+    lastupdate: new Date(1662772624092),
     sidebar: {
       for_page: ["blogger","category","tagcloud","feedback","donate"],
       for_post: ["toc"],
@@ -3158,7 +3158,144 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="高级语言程序设计"><a href="#高级语言程序设计" class="headerlink" title="高级语言程序设计"></a>高级语言程序设计</h2><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h3 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h3><h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><h4 id="主存储器简介"><a href="#主存储器简介" class="headerlink" title="主存储器简介"></a>主存储器简介</h4><h4 id="存储器校验"><a href="#存储器校验" class="headerlink" title="存储器校验"></a>存储器校验</h4><h5 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h5><h5 id="汉明码校验"><a href="#汉明码校验" class="headerlink" title="汉明码校验"></a>汉明码校验</h5><p>汉明码的组成<br><img src="http://shinoimg.yyshino.top/img/202208271058182.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271058182.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="组成三要素"></p>
+    <div class="story post-story"><h2 id="高级语言程序设计"><a href="#高级语言程序设计" class="headerlink" title="高级语言程序设计"></a>高级语言程序设计</h2><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h4 id="解释概念"><a href="#解释概念" class="headerlink" title="解释概念"></a>解释概念</h4><ul>
+<li><p>计算机系统是由计算机硬件与计算机软件构成的。</p>
+</li>
+<li><p>计算机硬件是计算机的实体部分。</p>
+</li>
+<li><p>计算机软件是由看不见摸不着的，由人们事先编制的具有各类特殊功能的程序构成，通常分为系统软件、应用软件。</p>
+</li>
+<li></li>
+<li><p>高级语言：不必了解、掌握实际机器的机型，内部具体组成及其指令系统，只要掌握这类语言的语法就可以直接用来编程。</p>
+</li>
+<li><p>汇编语言：用符号ADD、SUB、MVL、DIV、等分别表示加减乘除不必使用二进制代码来编写程序。</p>
+</li>
+<li><p>机器语言：用0、1代码来表示的语言，可以直接在机器上执行。</p>
+</li>
+<li><p>差别与联系：机器语言可以直接在机器上执行，汇编语言必须用汇编语言程序翻译成机器语言程序才可以运行。高级语言则需要先转变为汇编语言再转变为机器语言才能执行。</p>
+</li>
+<li></li>
+<li><p>冯诺依曼计算机 特点</p>
+</li>
+<li><p>由运算器、存储器、控制器、输入设备、输出设备五大部分构成。</p>
+</li>
+<li><p>指令和地址以同等地位存放于存储器内，并可按地址寻访。</p>
+</li>
+<li><p>指令和地址均用二进制表示。</p>
+</li>
+<li><p>指令由操作码和地址码组成，操作码表示操作的性质，地址码用来表示操作数在存储器中的位置。</p>
+</li>
+<li></li>
+<li><p>主机：CPU与主存构成。</p>
+</li>
+<li><p>CPU：由运算器和控制器构成。</p>
+</li>
+<li><p>主存：包括存储体M，各种逻辑部件及控制电路等。</p>
+</li>
+<li><p>存储单元：由若干个存储原件构成，可存储一串二进制代码。</p>
+</li>
+<li><p>存储元件：可存储以为二进制代码。</p>
+</li>
+<li><p>机器字长：CPU一次能处理数据的位数。</p>
+</li>
+<li><p>指令字长：机器指令中二进制代码的总位数。</p>
+</li>
+<li></li>
+<li><p>CPU：中央处理器。</p>
+</li>
+<li><p>PC：程序计数器。</p>
+</li>
+<li><p>IR：指令寄存器。</p>
+</li>
+<li><p>CU:控制单元。</p>
+</li>
+<li><p>ALU：算术逻辑单</p>
+</li>
+<li><p>ACC：累加器。</p>
+</li>
+<li><p>MAR：存储器地址寄存器。</p>
+</li>
+<li><p>MDR：存储器数据寄存器。</p>
+</li>
+<li><p>I&#x2F;O:分为I&#x2F;O设备和I&#x2F;O接口两个部分。</p>
+</li>
+<li><p>MIPS：百万条指令每秒。</p>
+</li>
+<li><p>CPI：执行一条指令所需的时钟周期。</p>
+</li>
+<li><p>FLOPS：浮点运算次数每秒。</p>
+</li>
+<li></li>
+<li><p>总线带宽：总线的数据传输速率及单位时间内，总线上传输数据的位数通常用每秒传输信息的字节数来衡量。</p>
+</li>
+<li><p>总线复用：一条信号线上分时传送两种信号。</p>
+</li>
+<li><p>总线的主设备（或主模块）：对总线有控制权。</p>
+</li>
+<li><p>总线的从设备（或从模块）：只能响应主设备，对总线没有控制权。</p>
+</li>
+<li><p>总线的传输周期：将完成一次总线操作的时间称为总线的传输周期。</p>
+</li>
+<li></li>
+<li><p>主存：可以和CPU直接交换信息的存储器（DRAM+ROM）。</p>
+</li>
+<li><p>辅存：主存的后援存储器用来存放当前暂时不用的程序和数据，不能与CPU直接交换信息。</p>
+</li>
+<li><p>Cache：高速缓存，CPU可以将要取的信息送至此处。</p>
+</li>
+<li><p>RAM：随机存储器是一种可读&#x2F;写存储器，掉电后数据丢失。</p>
+</li>
+<li><p>SRAM：静态RAM，触发器来存储信息，既读又写，位价高。</p>
+</li>
+<li><p>DRAM：动态RAM，利用电容的原理来存储信息，但由于电容的原理需要再生电路。</p>
+</li>
+<li><p>ROM：只读存储器，只能对其存储的内容读出，而不能对其重新写入的存储器。</p>
+</li>
+<li><p>PROM：可编程只读存储器，可对存储器进行一次编程。</p>
+</li>
+<li><p>EPROM：可擦除可编程只读存储器可用紫外线照射擦除内容，再进行编程。</p>
+</li>
+<li><p>EEPROM：电可擦除可编程只读存储器。</p>
+</li>
+<li><p>CDROM:光盘。</p>
+</li>
+<li><p>Flash Memory:闪速存储器，功能与EEPROM相似，但速度快的多。</p>
+</li>
+<li></li>
+<li><p>机器指令：每一条机器语言的语句。</p>
+</li>
+<li><p>指令系统：全部机器指令的集合。</p>
+</li>
+<li></li>
+<li><p>RISC: 精简指令系统计算机。</p>
+</li>
+<li><p>CISC:复杂指令系统计算机。</p>
+</li>
+<li></li>
+<li></li>
+<li><p>现代计算机硬件框图</p>
+</li>
+<li><p>ALU(运算器)和CU(控制器)构成CPU</p>
+</li>
+<li><p>主存和辅存 构成 存储器</p>
+</li>
+<li><p>CPU 与 存储器 组成 主机</p>
+</li>
+<li><p>输入输出设备组成 IO设备</p>
+</li>
+<li><p>以上所有为计算机 硬件</p>
+</li>
+<li></li>
+<li><p>系统复杂性的管理方法</p>
+</li>
+<li><p>层次化：将被设计的系统划分为多个模块或子模块</p>
+</li>
+<li><p>模块化:   有明确的定义的功能和接口</p>
+</li>
+<li><p>规则性:   模块更容易被重用</p>
+</li>
+</ul>
+<h3 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h3><h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><h4 id="主存储器简介"><a href="#主存储器简介" class="headerlink" title="主存储器简介"></a>主存储器简介</h4><h4 id="存储器校验"><a href="#存储器校验" class="headerlink" title="存储器校验"></a>存储器校验</h4><h5 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h5><h5 id="汉明码校验"><a href="#汉明码校验" class="headerlink" title="汉明码校验"></a>汉明码校验</h5><p>汉明码的组成<br><img src="http://shinoimg.yyshino.top/img/202208271058182.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271058182.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="组成三要素"></p>
 <p><img src="http://shinoimg.yyshino.top/img/202208271100618.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271100618.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="组成三要素"></p>
 <p>汉明码的检错<br><img src="http://shinoimg.yyshino.top/img/202208271107184.png" class="lazyload" data-srcset="http://shinoimg.yyshino.top/img/202208271107184.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="汉明码的检错"></p>
 <p>汉明码的奇配原则：按照偶配原则计算的Ci后，取反的奇配原则下的检测位取值。</p>
@@ -3206,10 +3343,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-09T16:17:27+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-10T09:17:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年9月9日</p>
+    <p>更新于：2022年9月10日</p>
   </a>
 </div>
 
@@ -3362,7 +3499,7 @@ git branch n...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-text">高级语言程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86"><span class="toc-text">计算机组成原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF"><span class="toc-text">总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">主存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E7%AE%80%E4%BB%8B"><span class="toc-text">主存储器简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%A0%A1%E9%AA%8C"><span class="toc-text">存储器校验</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C"><span class="toc-text">奇偶校验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%89%E6%98%8E%E7%A0%81%E6%A0%A1%E9%AA%8C"><span class="toc-text">汉明码校验</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cache%E7%BC%93%E5%AD%98"><span class="toc-text">Cache缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">辅助存储器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IO%E7%B3%BB%E7%BB%9F"><span class="toc-text">IO系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-text">计算方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F"><span class="toc-text">指令系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A5%E9%97%A8"><span class="toc-text">入门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-text">算法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-text">高级语言程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86"><span class="toc-text">计算机组成原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E6%A6%82%E5%BF%B5"><span class="toc-text">解释概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF"><span class="toc-text">总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">主存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E7%AE%80%E4%BB%8B"><span class="toc-text">主存储器简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%A0%A1%E9%AA%8C"><span class="toc-text">存储器校验</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C"><span class="toc-text">奇偶校验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%89%E6%98%8E%E7%A0%81%E6%A0%A1%E9%AA%8C"><span class="toc-text">汉明码校验</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cache%E7%BC%93%E5%AD%98"><span class="toc-text">Cache缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">辅助存储器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IO%E7%B3%BB%E7%BB%9F"><span class="toc-text">IO系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-text">计算方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F"><span class="toc-text">指令系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A5%E9%97%A8"><span class="toc-text">入门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-text">算法</span></a></li></ol>
     </div>
   </section>
 
@@ -4563,7 +4700,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4880,7 +5017,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/","sameAs":["https://github.com/volantis-x"],"description":"向着远方不断前进"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.yyshino.top/","name":"yyshino []~(￣▽￣)~*"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.yyshino.top/categories/计算机基础知识/","name":"计算机基础知识"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.yyshino.top/posts/288.html","name":"一个月入门计算机基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","keywords":null,"description":"向着远方不断前进","author":{"@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/","description":"向着远方不断前进"},"publisher":{"@type":"Organization","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.yyshino.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"一个月入门计算机基础知识","description":"计算机科学","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.yyshino.top/posts/288.html"},"author":{"@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/"},"publisher":{"@type":"Organization","name":"yyshino []~(￣▽￣)~*","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.yyshino.top/posts/288.html","wordCount":0,"datePublished":"2022-08-27T02:41:33.000Z","dateModified":"2022-09-09T08:17:27.228Z","articleSection":"计算机基础知识","keywords":"计算机科学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/","sameAs":["https://github.com/volantis-x"],"description":"向着远方不断前进"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.yyshino.top/","name":"yyshino []~(￣▽￣)~*"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.yyshino.top/categories/计算机基础知识/","name":"计算机基础知识"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.yyshino.top/posts/288.html","name":"一个月入门计算机基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","keywords":null,"description":"向着远方不断前进","author":{"@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/","description":"向着远方不断前进"},"publisher":{"@type":"Organization","name":"yyshino []~(￣▽￣)~*","url":"https://blog.yyshino.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.yyshino.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"一个月入门计算机基础知识","description":"计算机科学","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.yyshino.top/posts/288.html"},"author":{"@type":"Person","name":"YyShino","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.yyshino.top/"},"publisher":{"@type":"Organization","name":"yyshino []~(￣▽￣)~*","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.yyshino.top/posts/288.html","wordCount":0,"datePublished":"2022-08-27T02:41:33.000Z","dateModified":"2022-09-10T01:17:01.861Z","articleSection":"计算机基础知识","keywords":"计算机科学","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
