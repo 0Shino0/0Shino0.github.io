@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>项目总结</title>
+      <link href="/posts/21270.html"/>
+      <url>/posts/21270.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="echarts展示电商数据-（-e-admin-yyshino-top-）"><a href="#echarts展示电商数据-（-e-admin-yyshino-top-）" class="headerlink" title="echarts展示电商数据 （ e-admin.yyshino.top ）"></a>echarts展示电商数据 （ e-admin.yyshino.top ）</h3><p>2022.8.20 - 2022.9.10</p><p>技术栈：Vue3+Element+Webpack+Koa2</p><p>通过echarts展示数据，柱状图、折线图、饼图、map图 | 自定义主题、一键切换主题。后台采用WebSocket主动向前台推送数据。可以实现不同浏览器之间的联动。</p><h3 id="通用后台管理系统-c-admin-yyshino-top"><a href="#通用后台管理系统-c-admin-yyshino-top" class="headerlink" title="通用后台管理系统 ( c-admin.yyshino.top )"></a>通用后台管理系统 ( c-admin.yyshino.top )</h3><p>2022.6.25– 2022.7.15</p><p>个人开发 </p><p>技术栈：Vue3+Element Plus+Vite+Koa2+MongoDB </p><p>开发为通用型公司管理系统，可扩展性强</p><p>实现模块&#x3D;&gt;用户登录、系统首页、用户管理、菜单管 理角色管理、部门管理、休假申请、带我审批。 </p><p>难点：动态菜单，动态路由利于维护，后端递归拼接 菜单利于前端渲染数据。</p><h3 id="网易云音乐小程序-music-api-yyshino-top"><a href="#网易云音乐小程序-music-api-yyshino-top" class="headerlink" title="网易云音乐小程序 ( music-api.yyshino.top )"></a>网易云音乐小程序 ( music-api.yyshino.top )</h3><p>2022.6.05– 2022.6..20</p><p> • 个人开发</p><p> • 技术栈：微信小程序</p><p> • 采用 NodeJs 的 Koa2 框架搭建服务器，接口为网易 云接口，页面为仿网易云 App，实现了主要的三个页 面，首页、登录页、视频页面，播放音乐交互、以及 音乐推送等功能。</p><p> • 项目难点：登录接口使用微信 API wx.getUserInfo 无 法获取获取用户数据，查阅文档后发现需要更换为 wx.getUserProfile 并且使用官方解决方案解决了问 题。</p><h4 id="电商平台-PC-（https-c-shop-yyshino-top-）"><a href="#电商平台-PC-（https-c-shop-yyshino-top-）" class="headerlink" title="电商平台 PC （https://c-shop.yyshino.top/）"></a>电商平台 PC （<a href="https://c-shop.yyshino.top/%EF%BC%89">https://c-shop.yyshino.top/）</a></h4><p>2022.4-2022.5 个人开发项目 | 结合网络资源 • 技术栈 Vue 全家桶+Element-UI+Swiper 轮播图。 • 实现了前端部分和上线，后端接口为网路资源。 结合网络 资源开发实现了 axios 二次封装、vue-router 路由守卫 (由于接口只支持 http，我的域名是强制 https 的，会产生 https 访问 http 报错，这里给出 ip 地址)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实战 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> react </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>大前端</title>
       <link href="/posts/10308.html"/>
       <url>/posts/10308.html</url>
@@ -158,7 +185,7 @@
       <link href="/posts/21810.html"/>
       <url>/posts/21810.html</url>
       
-        <content type="html"><![CDATA[<h3 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h3><h3 id="宝塔面板"><a href="#宝塔面板" class="headerlink" title="宝塔面板"></a>宝塔面板</h3><h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>FinalShell</p><p>XShell</p><h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>主域名</p><p>二级域名</p><h3 id="Nginx-代理配置"><a href="#Nginx-代理配置" class="headerlink" title="Nginx 代理配置"></a>Nginx 代理配置</h3><h4 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h4><h4 id="配置-接口-HTTPS"><a href="#配置-接口-HTTPS" class="headerlink" title="配置 接口 HTTPS"></a>配置 接口 HTTPS</h4>]]></content>
+        <content type="html"><![CDATA[<h3 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h3><h3 id="宝塔面板"><a href="#宝塔面板" class="headerlink" title="宝塔面板"></a>宝塔面板</h3><h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>FinalShell</p><p>XShell</p><h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>主域名</p><p>二级域名</p><p>我的域名</p><ul><li>yyshino.top<ol><li>e-api<ul><li>echarts展示电商数据后台接口</li></ul></li><li>e-admin.yyshino.top<ul><li>echarts展示电商数据</li></ul></li><li>c-shop.yyshino.top<ul><li>电商平台前台</li></ul></li><li>music-api.yyshino.top<ul><li>网易云音乐API</li></ul></li><li>c-admin.yyshino.top<ul><li>通用后台管理系统</li></ul></li><li>manager-server.yyshino.top<ul><li>通用后台管理系统接口</li></ul></li><li>shinoimg.yyshino.top<ul><li>七牛云图床</li></ul></li><li>blog.yyshino.top<ul><li>个人博客</li></ul></li></ol></li></ul><h3 id="Nginx-代理配置"><a href="#Nginx-代理配置" class="headerlink" title="Nginx 代理配置"></a>Nginx 代理配置</h3><h4 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h4><h4 id="配置-接口-HTTPS"><a href="#配置-接口-HTTPS" class="headerlink" title="配置 接口 HTTPS"></a>配置 接口 HTTPS</h4>]]></content>
       
       
       <categories>
@@ -571,7 +598,11 @@
       
         <tags>
             
-            <tag> webpack vue react </tag>
+            <tag> webpack </tag>
+            
+            <tag> vue </tag>
+            
+            <tag> react </tag>
             
         </tags>
       
