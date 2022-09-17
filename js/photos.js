@@ -1,7 +1,7 @@
 var imgDataPath = "./photos.json"; //图片名称高宽信息json文件路径
-var imgPath = "https://cdn.jsdelivr.net/gh/Goopher97/blog_volantis_auto@main/photos/"; //图片访问路径
+var imgPath = "https://cdn.jsdelivr.net/gh/0Shino0/0Shino0Picture/img"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
- 
+
 var windowWidth =
     window.innerWidth ||
     document.documentElement.clientWidth ||
@@ -11,7 +11,7 @@ if (windowWidth < 768) {
 } else {
     var imageWidth = 250; //图片显示宽度
 }
- 
+
 const photo = {
     page: 1,
     offset: imgMaxNum,
@@ -34,7 +34,7 @@ const photo = {
             imgNameWithPattern,
         } = options;
         const htmlEle = `<div class="card lozad" style="width:${imageWidth}px">
-                  <div class="ImageInCard" style="height:${ (imageWidth * imageY) / imageX }px">
+                  <div class="ImageInCard" style="height:${(imageWidth * imageY) / imageX}px">
                     <a data-fancybox="gallery" href="${imgPath}${name}/${imgNameWithPattern}" data-caption="${imgName}" title="${imgName}">
                             <img src="${imgPath}${name}/${imgNameWithPattern}">
                     </a>
@@ -52,10 +52,10 @@ const photo = {
             imageX,
             imageY,
             li = "";
- 
+
         let liHtml = "";
         let contentHtml = "";
- 
+
         data.forEach((item, index) => {
             const activeClass = index === 0 ? "active" : "";
             liHtml += `<li class="nav-item" role="presentation">
@@ -63,7 +63,7 @@ const photo = {
         </li>`;
         });
         const [initData = {}] = data;
-        const {children = [], name} = initData;
+        const { children = [], name } = initData;
         children.forEach((item, index) => {
             imgNameWithPattern = item.split(" ")[1];
             imgName = imgNameWithPattern.split(".")[0];
@@ -82,10 +82,10 @@ const photo = {
             li += this.constructHtml(imgOptions);
         });
         contentHtml += ` <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">${li}</div>`;
- 
+
         const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${liHtml}</ul>`;
         const tabContent = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
- 
+
         $("#imageTab").append(ulHtml);
         $(".ImageGrid").append(tabContent);
         this.minigrid();
@@ -103,7 +103,7 @@ const photo = {
             $(".ImageGrid").empty();
             const selectId = $(e.target).attr("photo-uuid");
             const selectedData = data.find((data) => data.name === selectId) || {};
-            const {children, name} = selectedData;
+            const { children, name } = selectedData;
             let li = "";
             children.forEach((item, index) => {
                 imgNameWithPattern = item.split(" ")[1];
