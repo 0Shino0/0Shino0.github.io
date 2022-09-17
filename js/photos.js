@@ -1,5 +1,5 @@
 var imgDataPath = "./photos.json"; //图片名称高宽信息json文件路径
-var imgPath = "https://cdn.jsdelivr.net/gh/0Shino0/0Shino0Picture/img"; //图片访问路径
+var imgPath = "https://cdn.jsdelivr.net/gh/0Shino0/0Shino0Picture/img/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
@@ -35,11 +35,12 @@ const photo = {
         } = options;
         const htmlEle = `<div class="card lozad" style="width:${imageWidth}px">
                   <div class="ImageInCard" style="height:${(imageWidth * imageY) / imageX}px">
-                    <a data-fancybox="gallery" href="${imgPath}${name}/${imgNameWithPattern}" data-caption="${imgName}" title="${imgName}">
-                            <img src="${imgPath}${name}/${imgNameWithPattern}">
+                    <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}" data-caption="${imgName}" title="${imgName}">
+                            <img src="${imgPath}${imgNameWithPattern}">
                     </a>
                   </div>
                 </div>`;
+        // ${name}/${imgNameWithPattern}
         return htmlEle;
     },
     render: function (page, data = []) {

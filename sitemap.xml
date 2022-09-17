@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.yyshino.top/photos/photos.json</loc>
+    <loc>https://blog.yyshino.top/photos/photosInfo.json</loc>
     
     <lastmod>2022-09-17</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/photos/photosInfo.json</loc>
+    <loc>https://blog.yyshino.top/photos/photos.json</loc>
     
     <lastmod>2022-09-17</lastmod>
     
@@ -493,13 +493,6 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/Vue%E5%AE%9E%E6%88%98/</loc>
-    <lastmod>2022-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.yyshino.top/tags/Diffing/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -507,7 +500,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/ES6/</loc>
+    <loc>https://blog.yyshino.top/tags/Vue%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -521,7 +514,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/HTML/</loc>
+    <loc>https://blog.yyshino.top/tags/ES6/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -529,6 +522,13 @@
   
   <url>
     <loc>https://blog.yyshino.top/tags/HTTP/</loc>
+    <lastmod>2022-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yyshino.top/tags/HTML/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -605,13 +605,6 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2022-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.yyshino.top/tags/git%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -640,7 +633,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <loc>https://blog.yyshino.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -648,6 +641,13 @@
   
   <url>
     <loc>https://blog.yyshino.top/tags/%E6%95%B4%E5%90%88/</loc>
+    <lastmod>2022-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yyshino.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -675,14 +675,14 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E6%A0%B9%E5%9F%BA/</loc>
+    <loc>https://blog.yyshino.top/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://blog.yyshino.top/tags/%E6%A0%B9%E5%9F%BA/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -817,14 +817,14 @@
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/categories/%E6%A0%B9%E5%9F%BA/</loc>
+    <loc>https://blog.yyshino.top/categories/%E6%88%91/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.yyshino.top/categories/%E6%88%91/</loc>
+    <loc>https://blog.yyshino.top/categories/%E6%A0%B9%E5%9F%BA/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
