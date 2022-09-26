@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>EJS模板引擎</title>
+      <link href="/posts/58109.html"/>
+      <url>/posts/58109.html</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="EJS"><a href="#EJS" class="headerlink" title="EJS"></a>EJS</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>高效的嵌入式 JavaScript 模板引擎。</p><p>“E” 代表什么？可以表示 “可嵌入（Embedded）”，也可以是“高效（Effective）”、“优雅（Elegant）”或者是“简单（Easy）”。EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。EJS 没有如何组织内容的教条；也没有再造一套迭代和控制流语法；有的只是普通的 JavaScript 代码而已。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 模板引擎 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ejs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo个性化配置</title>
       <link href="/posts/46302.html"/>
       <url>/posts/46302.html</url>
@@ -323,7 +348,7 @@
       <link href="/posts/3740.html"/>
       <url>/posts/3740.html</url>
       
-        <content type="html"><![CDATA[<div class="story post-story"><h2 id="Koa2"><a href="#Koa2" class="headerlink" title="Koa2"></a>Koa2</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 </p><p>通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>npm install -S koa</code></p><h4 id="版本依赖"><a href="#版本依赖" class="headerlink" title="版本依赖"></a>版本依赖</h4><p>nodejs&gt;v7.6.0</p><h3 id="Koa脚手架-koa-generator"><a href="#Koa脚手架-koa-generator" class="headerlink" title="Koa脚手架 koa-generator"></a>Koa脚手架 koa-generator</h3><p>快速生成koa服务的脚手架工具</p><ol><li>安装 <code>yarn global add koa-generator</code> or <code>npm install -g koa-generator</code></li><li>生成文件 <code>koa2 + 项目名</code></li><li>安装依赖 <code>npm install</code> or <code>yarn</code></li><li>启动服务 <code>npm start</code> or <code>node .bin/www</code></li></ol><h3 id="koa工作原理"><a href="#koa工作原理" class="headerlink" title="koa工作原理"></a>koa工作原理</h3><p>洋葱模型</p><ul><li>执行顺序：顺序执行</li><li>回调的顺序：反向执行</li><li>先进后出：</li></ul><h3 id="koa-generator创建的koa2框架目录"><a href="#koa-generator创建的koa2框架目录" class="headerlink" title="koa-generator创建的koa2框架目录"></a>koa-generator创建的koa2框架目录</h3><h3 id="koa中间件"><a href="#koa中间件" class="headerlink" title="koa中间件"></a>koa中间件</h3><h3 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h3><ol><li>路由<ul><li>koa-router</li></ul></li><li>跨域处理<ul><li>@koa&#x2F;cors</li></ul></li><li>压缩<ul><li>koa-compress</li></ul></li><li>静态资源<ul><li>koa-static</li></ul></li><li>协议处理<ul><li>koa-json</li><li>koa-body</li></ul></li><li>安全<ul><li>鉴权方式<ul><li>koa-session</li><li>kos-jwt</li></ul></li><li>通信头<ul><li>koa-helmet</li></ul></li></ul></li><li>日志<ul><li>koa-logger</li></ul></li><li><a href="https://github.com/koajs/koa/wiki">更多 koa-wiki</a></li></ol><h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><p><code>app.use</code></p><p><code>app.listene</code></p><p><code>app.on</code></p><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><h3 id="pm2-部署Koa项目"><a href="#pm2-部署Koa项目" class="headerlink" title="pm2 部署Koa项目"></a>pm2 部署Koa项目</h3></div>]]></content>
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="Koa2"><a href="#Koa2" class="headerlink" title="Koa2"></a>Koa2</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 </p><p>通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>npm install -S koa</code></p><h4 id="版本依赖"><a href="#版本依赖" class="headerlink" title="版本依赖"></a>版本依赖</h4><p>nodejs&gt;v7.6.0</p><h3 id="Koa脚手架-koa-generator"><a href="#Koa脚手架-koa-generator" class="headerlink" title="Koa脚手架 koa-generator"></a>Koa脚手架 koa-generator</h3><p>快速生成koa服务的脚手架工具</p><ol><li>安装 <code>yarn global add koa-generator</code> or <code>npm install -g koa-generator</code></li><li>生成文件 <code>koa2 + 项目名</code></li><li>安装依赖 <code>npm install</code> or <code>yarn</code></li><li>启动服务 <code>npm start</code> or <code>node .bin/www</code></li></ol><h3 id="koa工作原理"><a href="#koa工作原理" class="headerlink" title="koa工作原理"></a>koa工作原理</h3><p>洋葱模型</p><ul><li>执行顺序：顺序执行</li><li>回调的顺序：反向执行</li><li>先进后出</li></ul><h3 id="koa-generator创建的koa2框架目录"><a href="#koa-generator创建的koa2框架目录" class="headerlink" title="koa-generator创建的koa2框架目录"></a>koa-generator创建的koa2框架目录</h3><h3 id="koa中间件"><a href="#koa中间件" class="headerlink" title="koa中间件"></a>koa中间件</h3><h3 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h3><ol><li>路由<ul><li>koa-router</li></ul></li><li>跨域处理<ul><li>@koa&#x2F;cors</li></ul></li><li>压缩<ul><li>koa-compress</li></ul></li><li>静态资源<ul><li>koa-static</li></ul></li><li>协议处理<ul><li>koa-json</li><li>koa-body</li></ul></li><li>安全<ul><li>鉴权方式<ul><li>koa-session</li><li>kos-jwt</li></ul></li><li>通信头<ul><li>koa-helmet</li></ul></li></ul></li><li>日志<ul><li>koa-logger</li></ul></li><li><a href="https://github.com/koajs/koa/wiki">更多 koa-wiki</a></li></ol><h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><p><code>app.use</code></p><p><code>app.listene</code></p><p><code>app.on</code></p><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><h3 id="pm2-部署Koa项目"><a href="#pm2-部署Koa项目" class="headerlink" title="pm2 部署Koa项目"></a>pm2 部署Koa项目</h3></div>]]></content>
       
       
       <categories>
